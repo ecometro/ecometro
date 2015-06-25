@@ -1,3 +1,4 @@
+.htaccess
 application/configs/*
 public/logs/*
 
