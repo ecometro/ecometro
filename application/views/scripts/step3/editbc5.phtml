@@ -1,0 +1,89 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: M5 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bc5'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bc5'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('m5'); ?></span> <?php echo $this->translate('Equipos refrigerantes.'); ?> <span><?php echo $this->translate('Evitar la emisión de gases que perjudiquen la capa de ozono.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+			<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Comprobar los equipos de refrigeración, aire acondicionado y bombas de calor que contengan determinados gases fluorados de efecto invernadero.'); ?></p>
+		</div>                     
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bc_5; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+			    	<p><?php echo $this->translate('Comprobar el etiquetado.'); ?></p>				
+			    </div>
+			    <div class="tab-pane" id="tab2">						
+			    	<p><?php echo $this->translate('A partir del 1 de enero de 2015, NO se podrán usar HCFC de ningún tipo; incluidos reciclados o regenerados para el mantenimiento y revisión de equipos aún comprados antes de esta fecha.'); ?></p>
+			    	<p><?php echo $this->translate('Fuente: MARM. NORMATIVA AMBIENTAL SOBRE GASES FLUORADOS PARA EMPRESAS INSTALADORAS Y MANTENEDORAS DE SISTEMAS DE REFRIGERACIÓN Y CLIMATIZACIÓN.'); ?></p>
+			    </div>
+			    <div class="tab-pane" id="tab3">			    	
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Pol 1 Refrigerant GWP- Building services.'); ?></p>
+					<p><?php echo $this->translate('No utilizar refrigerantes / usar refrigerante con GWP menor que 5.'); ?></p>
+					<p><?php echo $this->translate('Pol 2 Preventing refrigerant leaks.'); ?></p>
+					<p><?php echo $this->translate('No utilizar refrigerantes/ Detección de fugas y sistemas de recuperación para refrigerantes.'); ?></p>
+					<p><?php echo $this->translate('Pol 3 Refrigerant GWP- cold storage.'); ?></p>
+					<p><?php echo $this->translate('No aplicable en multi-residencial.'); ?></p>
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('EA PR3 Fundamental refrigerant management. No utilizar CFCs en sistemas (refrigeración, ventilación).'); ?></p>
+					<p><?php echo $this->translate('EA C4 Enhanced refrigerant management. o utilizar refrigerantes, o utilizar refrigerantes que eliminen los componentes más perjudiciales.'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('LR2 Resources & materials.'); ?></p>
+					<p><?php echo $this->translate('3.2 Elimination of CFCs & halons.'); ?>
+						<ul>
+							<li><?php echo $this->translate('3.2.1 Fire retardant. '); ?></li>
+							<li><?php echo $this->translate('3.2.2 Foaming agents. Máxima puntuación para gases retardantes inertes. Puntuación del 1/2/3/5 según ODP (0,2/ 0,01-0,2/ 0-0,01/0).'); ?></li>
+							<li><?php echo $this->translate('3.2.3 Refrigerants. Puntuación 2/3/4 según: Uso de HCFC como refrigerante/ refrigerante con ODP=0 / refrigerantes naturales y sistemas de refrigeración ODP=0 y GWP<50.'); ?></li>
+						</ul>
+					</p>
+					<h3><?php echo $this->translate('HQE'); ?></h3>
+					<p><?php echo $this->translate('Cible 4 (Energie Management)/ Cible 4.2 - Pollution Control (through energetic aspects).'); ?></p>
+					<p><?php echo $this->translate('Cible 2 (Integrated choice of products, systems and processes) / Cible 2.3 - Environmental impacts (FDES sheets) due to construction.'); ?></p>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

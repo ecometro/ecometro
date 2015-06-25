@@ -1,0 +1,12 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Cuenta de usuario :: ')); 
+?>
+<?php echo $this->partial('partials/_admin_menu.phtml'); ?>
+<div class="row-fluid">
+	<div class="span5">
+		<?php $this->successMessages($this->messages); ?>
+		<?php echo $this->translate('Página de administración'); ?>
+	</div><!-- .span5 -->
+	<div class="span7">	            
+	</div><!-- .span7 -->
+</div><!-- .row-fluid -->

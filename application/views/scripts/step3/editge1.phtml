@@ -1,0 +1,104 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: E1 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'ge1'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'ge1'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">	
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('e1'); ?></span> <?php echo $this->translate('Energías renovables in-situ.'); ?> <?php echo $this->translate('Emisiones de CO2 eq.'); ?> <span><?php echo $this->translate('Reducción de la dependencia energética y de impactos derivados del consumo energético en la fase de uso.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Reducir las emisiones de CO2 eq. a través del uso de energías renovables en el sitio.');
+		?></p>
+		</div>                      
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_ge_1; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>                       
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">					
+			    	<p><?php echo $this->translate('Calener. Certificación energética de edificios.'); ?></p>
+			    	<p><?php echo $this->translate('Se tomará la calificación energética asociada a las emisiones de CO2eq para los diferentes sistemas energéticos.'); ?></p>
+			    	<p><?php echo $this->translate('UE. Radiación y potencial fotovoltaico:'); ?></p>
+			    	<a href="http://re.jrc.ec.europa.eu/pvgis/imaps/index.htm" title="http://re.jrc.ec.europa.eu/pvgis/imaps/index.htm">http://re.jrc.ec.europa.eu/pvgis/imaps/index.htm</a>
+			    </div>
+			    <div class="tab-pane" id="tab2">	
+			    	<p><?php echo $this->translate('CTE DB-HE Ahorro de energía.'); ?>
+			    		<ul>
+			    			<li><?php echo $this->translate('HE 2 Rendimiento de las instalaciones térmicas.'); ?></li>
+			    			<li><?php echo $this->translate('HE 3 Eficiencia energética de las instalaciones de iluminación.'); ?></li>
+			    			<li><?php echo $this->translate('HE 4 Contribución solar mínima de agua caliente sanitaria.'); ?></li>
+			    			<li><?php echo $this->translate('HE 5 Contribución fotovoltaica mínima de energía eléctrica.'); ?></li>
+			    		</ul>
+			    	</p>
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('HADES'); ?></h3>
+					<p><?php echo $this->translate('EA3. Producción de energías renovables en la parcela'); ?></p>					
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('EA C2 On-site renewable energy. Según el porcentaje de coste energético anual cubierto con energía renovable'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('LR1 Energy.'); ?>
+					</p>
+					<p><?php echo $this->translate('2 Natural energy utilization.'); ?></p>
+					<p><?php echo $this->translate('2.2 Converted use of renewable energy. En apartamentos hasta 15MJ/ m2 yr de renovables.');?></p>
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+					<p><?php echo $this->translate('4 Metabolismo urbano.'); ?></p>
+					<p><?php echo $this->translate('15 Producción local de energías renovables.'); ?></p>
+					<p><?php echo $this->translate('Autosuficiencia energética local a partir de energías renovables (%): producción local de EERR/consumo total energético del municipio. Deseable: Autosuficiencia energética >35%.'); ?></p>
+					<p><?php echo $this->translate('Enlace al documento:'); ?></p>
+					<a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf</a>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

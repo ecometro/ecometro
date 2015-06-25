@@ -1,0 +1,58 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp16 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+			<?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>
+		<div class="mp">
+            <h2><span class="big"><?php echo $this->translate('mp16'); ?></span> <?php echo $this->translate('Cargas existentes. Energía y agua. '); ?> <span><?php echo $this->translate('Consumos reales de energía y agua con el edificio en uso.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Consumos existentes.'); ?></p>
+		</div>
+		<hr>            
+		<?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors); ?> 
+		<?php echo $this->form_step2_mp_16; ?>
+        <hr>
+            <div class="tabbable">
+			    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			    <div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">			    		
+			    	</div>
+			    	<div class="tab-pane" id="tab2">			    		
+			    	</div>
+					<div class="tab-pane" id="tab3">	
+						<h3><?php echo $this->translate('MARM. BPIA. Banco público de indicadores ambientales.'); ?></h3>
+						<p><?php echo $this->translate('HOGARES:'); ?></p>		<p><?php echo $this->translate('Consumo de agua por hogar.'); ?></p>
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Hogares-Consumo_de_agua_por_hogar_tcm7-164643.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Hogares-Consumo_de_agua_por_hogar_tcm7-164643.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Hogares-Consumo_de_agua_por_hogar_tcm7-164643.pdf)</a></p>
+						<p><?php echo $this->translate('Consumo de energía por hogar.'); ?></p>		
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Ficha_Web_Hogares-Intensidad_energ%C3%A9tica_por_hogar_tcm7-164647.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Ficha_Web_Hogares-Intensidad_energ%C3%A9tica_por_hogar_tcm7-164647.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Ficha_Web_Hogares-Intensidad_energ%C3%A9tica_por_hogar_tcm7-164647.pdf)</a></p>
+						<p><?php echo $this->translate('Eficiencia ambiental en el sector doméstico.'); ?></p>
+						<p><?php echo $this->translate('Emisiones de CO2 del sector residencial.'); ?></p>
+						<p><?php echo $this->translate('Número de turismos por hogar.'); ?></p>
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Hogares-Turismos_por_hogar_tcm7-164653.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Hogares-Turismos_por_hogar_tcm7-164653.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Hogares-Turismos_por_hogar_tcm7-164653.pdf)</a></p>
+						<p><?php echo $this->translate('Producción de residuos urbanos por hogar.'); ?></p>
+						<p><?php echo $this->translate('Renta disponible bruta en los hogares.'); ?></p>
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Ficha_Web_Hogares-_Renta_Disponible_Bruta_tcm7-164651.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Ficha_Web_Hogares-_Renta_Disponible_Bruta_tcm7-164651.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/informacion-ambiental-indicadores-ambientales/BPIA_2012_Ficha_Web_Hogares-_Renta_Disponible_Bruta_tcm7-164651.pdf)</a></p>
+					</div>
+					<div class="tab-pane" id="tab4">	
+						<h3><?php echo $this->translate('OTROS'); ?></h3>
+						<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf)</a></p>
+						<p><?php echo $this->translate('Ámbito 4 Metabolismo urbano.'); ?></p>
+						<p><?php echo $this->translate('Punto 14 Consumo final de energía. (municipal por tipos de energía y sectores de actividad) deseable: Consumo final de energía (sin contabilizar el sector industrial): < 10.000 kWh/hab y año.'); ?></p>
+						<p><?php echo $this->translate('Punto 15 Producción local de energías renovables: tendencia deseable Autosuficiencia energética >35%.'); ?></p>
+					</div>
+					<div class="tab-pane" id="tab5">	
+						<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+					</div>
+			    </div>
+			</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

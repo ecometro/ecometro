@@ -1,0 +1,3455 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ecometro\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-04 21:20+0200\n"
+"PO-Revision-Date: 2013-11-04 21:21+0200\n"
+"Last-Translator: Alex <iskander482@yahoo.com>\n"
+"Language-Team: Ecometro\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate;_;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /var/www/ecometro/application\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: controllers/AdminController.php:94
+#: controllers/AccountController.php:185
+msgid "Login Ok"
+msgstr ""
+
+#: controllers/AdminController.php:103
+#: controllers/AccountController.php:194
+msgid "Login Not Ok"
+msgstr ""
+
+#: controllers/Step2Controller.php:334
+#: controllers/Step2Controller.php:617
+#: controllers/Step2Controller.php:853
+#: controllers/Step2Controller.php:1089
+#: controllers/Step2Controller.php:1301
+#: controllers/Step2Controller.php:1535
+#: controllers/Step2Controller.php:1682
+#: controllers/Step2Controller.php:1805
+#: controllers/Step2Controller.php:2089
+#: controllers/Step2Controller.php:2358
+#: controllers/Step2Controller.php:2488
+#: controllers/Step2Controller.php:2681
+#: controllers/Step2Controller.php:2876
+#: controllers/Step2Controller.php:3026
+#: controllers/Step2Controller.php:3124
+#: controllers/Step2Controller.php:3383
+#: controllers/Step1Controller.php:275
+#: controllers/Step3Controller.php:560
+#: controllers/Step3Controller.php:767
+#: controllers/Step3Controller.php:943
+#: controllers/Step3Controller.php:1093
+#: controllers/Step3Controller.php:1336
+#: controllers/Step3Controller.php:1535
+#: controllers/Step3Controller.php:1688
+#: controllers/Step3Controller.php:1838
+#: controllers/Step3Controller.php:1969
+#: controllers/Step3Controller.php:2210
+#: controllers/Step3Controller.php:2365
+#: controllers/Step3Controller.php:2654
+#: controllers/Step3Controller.php:2856
+#: controllers/Step3Controller.php:2983
+#: controllers/Step3Controller.php:3221
+#: controllers/Step3Controller.php:3397
+#: controllers/Step3Controller.php:3615
+#: controllers/Step3Controller.php:3859
+#: controllers/Step3Controller.php:4038
+#: controllers/Step3Controller.php:4165
+#: controllers/Step3Controller.php:4334
+#: controllers/Step3Controller.php:4579
+#: controllers/Step3Controller.php:4759
+#: controllers/Step3Controller.php:4913
+#: controllers/Step3Controller.php:5066
+#: controllers/Step3Controller.php:5195
+#: controllers/Step3Controller.php:5415
+#: controllers/Step3Controller.php:5616
+#: controllers/Step3Controller.php:5862
+#: controllers/Step3Controller.php:6088
+#: controllers/Step3Controller.php:6335
+#: controllers/Step3Controller.php:6491
+#: controllers/Step3Controller.php:6665
+#: controllers/Step3Controller.php:6795
+#: controllers/Step4Controller.php:555
+msgid "Hay errores en el formulario. Por favor, revise los campos."
+msgstr ""
+
+#: controllers/AccountController.php:138
+msgid "Estás registrado. Comprueba tu correo para confirmar la cuenta"
+msgstr ""
+
+#: controllers/AccountController.php:145
+msgid "Hemos encontrado un problema al crear su cuenta."
+msgstr ""
+
+#: controllers/AccountController.php:150
+msgid "Este usuario o email ya existe."
+msgstr ""
+
+#: controllers/AccountController.php:156
+#: controllers/ProfileController.php:154
+msgid "Las contraseñas no son identicas."
+msgstr ""
+
+#: controllers/AccountController.php:224
+msgid "Cuenta confirmada"
+msgstr ""
+
+#: controllers/AccountController.php:231
+#: controllers/AccountController.php:296
+#: controllers/AccountController.php:348
+#: controllers/ProjectController.php:162
+#: controllers/ProfileController.php:170
+msgid "Hemos encontrado un problema al confirmar su cuenta."
+msgstr ""
+
+#: controllers/AccountController.php:237
+msgid "Cuenta no confirmada"
+msgstr ""
+
+#: controllers/AccountController.php:253
+msgid "Logout Ok."
+msgstr ""
+
+#: controllers/AccountController.php:290
+msgid "Comprueba su correo para seguir las instrucciones"
+msgstr ""
+
+#: controllers/AccountController.php:302
+#: controllers/AccountController.php:398
+msgid "Este email no existe."
+msgstr ""
+
+#: controllers/AccountController.php:342
+msgid "Se ha generado otra contraseña. Comprueba su correo."
+msgstr ""
+
+#: controllers/AccountController.php:354
+msgid "No key"
+msgstr ""
+
+#: controllers/AccountController.php:391
+msgid "Comprueba su correo para ver su usuario"
+msgstr ""
+
+#: controllers/ProjectController.php:178
+msgid "Proyecto borrado."
+msgstr ""
+
+#: controllers/ProfileController.php:146
+#: controllers/ProfileController.php:161
+msgid "Perfil actualizado."
+msgstr ""
+
+#: controllers/Step4Controller.php:547
+msgid "Producto guardado."
+msgstr ""
+
+#: controllers/Step4Controller.php:658
+msgid "Material(es) guardado(s)."
+msgstr ""
+
+#: controllers/Step4Controller.php:685
+msgid "Material borrado."
+msgstr ""
+
+#: views/helpers/ProfileLink.php:34
+msgid "Ir a página de usuario"
+msgstr ""
+
+#: views/helpers/ProfileLink.php:35
+msgid "Abandonar sesión"
+msgstr ""
+
+#: views/helpers/ProfileLink.php:36
+msgid "Has iniciado sesión como "
+msgstr ""
+
+#: views/helpers/ProfileLink.php:38
+msgid "Admin"
+msgstr ""
+
+#: views/helpers/ProfileLink.php:42
+msgid "Iniciar sesión"
+msgstr ""
+
+#: views/helpers/ProfileLink.php:42
+msgid "Registrarse"
+msgstr ""
+
+#: forms/LostPswdForm.php:14
+msgid "Correo electrónico"
+msgstr ""
+
+#: forms/LostPswdForm.php:23
+msgid "requerido"
+msgstr ""
+
+#: forms/LostPswdForm.php:36
+msgid "Recordar contraseña"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:22
+msgid "Producto/Material"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:36
+msgid "Fabricante"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:54
+msgid "Origen del producto"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:71
+#: forms/AcvNewMaterialForm.php:100
+#: forms/AcvNewMaterialForm.php:129
+#: forms/AcvNewMaterialForm.php:186
+#: forms/AcvNewMaterialForm.php:257
+#: forms/AcvNewMaterialForm.php:300
+#: forms/AcvNewMaterialForm.php:427
+msgid "Seleccione..."
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:83
+msgid "Familia de productos/materiales"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:112
+msgid "Familia de productos"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:138
+msgid "Información adicional"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:152
+msgid "Cantidad"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:169
+msgid "Unidad"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:195
+msgid "Densidad (g/cm3)"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:209
+msgid "Espesor (cm)"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:223
+msgid "Vida útil producto (años)"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:240
+msgid "Emplazamiento fabricante"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:266
+msgid "Distancia Distribuidor (origen)-Obra (km)"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:283
+msgid "Tipo de transporte"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:309
+msgid "Potencial de acidificación [kg SO2-eq.]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:323
+msgid "Potencial de eutrofización [kgPO43-eq.]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:337
+msgid "Potencial de calentamiento global (100 años) [kg CO2-eq.]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:351
+msgid "Potencial de agotamiento de capa de ozono [kg R11-eq.]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:365
+msgid "Potencial de formación de oxidantes fotoquímicos [kg C2H4-eq.]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:379
+msgid "Agotamiento de recursos abióticos [kg Sb-eq.]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:393
+msgid "Consumo de energía primaria total [MJ]"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:410
+msgid "Origen información de impactos"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:436
+msgid "Documentación adjunta"
+msgstr ""
+
+#: forms/AcvNewMaterialForm.php:474
+#: forms/Step3Bc9Form.php:52
+#: forms/Step2Mp9Form.php:161
+#: forms/Step3Re6Form.php:95
+#: forms/Step3Bl2Form.php:100
+#: forms/Step2Mp4Form.php:133
+#: forms/Step2Mp14Form.php:89
+#: forms/Step1F1Form.php:281
+#: forms/Step3Bl1Form.php:59
+#: forms/Step3Re11Form.php:64
+#: forms/Step3Bc4Form.php:119
+#: forms/Step3Ga2Form.php:76
+#: forms/Step2Mp11Form.php:70
+#: forms/Step3Re3Form.php:83
+msgid "Guardar"
+msgstr ""
+
+#: forms/Step3Bc9Form.php:22
+msgid "Contratación responsable"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:23
+#: forms/Step3Re6Form.php:23
+#: forms/Step2Mp4Form.php:23
+#: forms/Step2Mp14Form.php:23
+#: forms/Step1F1Form.php:25
+#: forms/Step3Bl1Form.php:23
+#: forms/Step3Bc4Form.php:23
+#: forms/Step3Re3Form.php:23
+msgid "'%value%' es un valor incorrecto"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:29
+msgid "Radiación cósmica"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:41
+msgid "(External) terrestrial γ dose rate"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:53
+msgid "Exposición a antenas de telefonía movil"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:65
+msgid "Alteraciones geofisicas (radiación gamma)"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:77
+msgid "Campos eléctricos bf"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:89
+msgid "Campos electromagneticos alta frecuencia"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:101
+msgid "Campos magnéticos bf"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:113
+msgid "Radioactividad ambiental"
+msgstr ""
+
+#: forms/Step2Mp9Form.php:125
+msgid "Redes geomagnéticas"
+msgstr ""
+
+#: forms/Step3Re6Form.php:29
+msgid "Indice de reflectancia cubiertas y suelos"
+msgstr ""
+
+#: forms/Step3Re6Form.php:41
+msgid "Equipos emisores de calor"
+msgstr ""
+
+#: forms/Step3Re6Form.php:53
+msgid "Área verde en cubiertas y suelos"
+msgstr ""
+
+#: forms/Step3Re6Form.php:65
+msgid "Obstrucción solar y de vientos"
+msgstr ""
+
+#: forms/Step3Bl2Form.php:22
+msgid "Factor luz día"
+msgstr ""
+
+#: forms/Step3Bl2Form.php:34
+msgid "Control de sistemas de sombreamiento"
+msgstr ""
+
+#: forms/Step3Bl2Form.php:46
+msgid "Acceso solar en estancias principales"
+msgstr ""
+
+#: forms/Step3Bl2Form.php:58
+msgid "linea visual.  profundidad> 10m en estancias"
+msgstr ""
+
+#: forms/Step3Bl2Form.php:70
+msgid "Confort acústico. Atenuación de ruido"
+msgstr ""
+
+#: forms/Step2Mp4Form.php:29
+msgid "Naturaleza. Riqueza de especies. Fauna y flora."
+msgstr ""
+
+#: forms/Step2Mp4Form.php:41
+msgid "Naturaleza. Número de especies identificadas."
+msgstr ""
+
+#: forms/Step2Mp4Form.php:53
+msgid "Ecosistemas. Tipo de Paisaje. Inventario nacional INP"
+msgstr ""
+
+#: forms/Step2Mp4Form.php:64
+msgid "Ecosistemas. Hábitat"
+msgstr ""
+
+#: forms/Step2Mp4Form.php:75
+msgid "Agricultura. Cultivos sobrecarga"
+msgstr ""
+
+#: forms/Step2Mp4Form.php:86
+msgid "Agricultura. Cultivos uso"
+msgstr ""
+
+#: forms/Step2Mp4Form.php:97
+msgid "Naturaleza. Espacio protegido o de interés."
+msgstr ""
+
+#: forms/Step2Mp14Form.php:29
+msgid "Distancia a contenedores de papel/envases/vidrio"
+msgstr ""
+
+#: forms/Step2Mp14Form.php:41
+msgid "Distania a un punto limpio"
+msgstr ""
+
+#: forms/Step2Mp14Form.php:53
+msgid "Distancia a un punto para compostaje"
+msgstr ""
+
+#: forms/LoginForm.php:14
+msgid "Nombre de usuario"
+msgstr ""
+
+#: forms/LoginForm.php:25
+msgid "Contraseña"
+msgstr ""
+
+#: forms/Step1F1Form.php:31
+msgid "Foto"
+msgstr ""
+
+#: forms/Step1F1Form.php:53
+msgid "Nombre del proyecto"
+msgstr ""
+
+#: forms/Step1F1Form.php:67
+msgid "Fase del proyecto"
+msgstr ""
+
+#: forms/Step1F1Form.php:88
+msgid "Lugar"
+msgstr ""
+
+#: forms/Step1F1Form.php:102
+msgid "Latitud"
+msgstr ""
+
+#: forms/Step1F1Form.php:116
+msgid "Longitud"
+msgstr ""
+
+#: forms/Step1F1Form.php:130
+msgid "Uso principal del edificio"
+msgstr ""
+
+#: forms/Step1F1Form.php:151
+msgid "Tipo de proyecto"
+msgstr ""
+
+#: forms/Step1F1Form.php:170
+msgid "Breve descripción"
+msgstr ""
+
+#: forms/Step1F1Form.php:184
+msgid "No de ocupantes"
+msgstr ""
+
+#: forms/Step1F1Form.php:199
+msgid "Superficie de parcela"
+msgstr ""
+
+#: forms/Step1F1Form.php:214
+msgid "Superficie ocupada"
+msgstr ""
+
+#: forms/Step1F1Form.php:230
+msgid "Superficie edificada"
+msgstr ""
+
+#: forms/Step1F1Form.php:245
+msgid "Volumen edificado"
+msgstr ""
+
+#: forms/Step1F1Form.php:260
+msgid "Superficie cubierta"
+msgstr ""
+
+#: forms/Step3Bl1Form.php:29
+msgid "Horas fuera de la zona de confort (8-24)"
+msgstr ""
+
+#: forms/BugReportListToolsForm.php:23
+msgid "Sort Records:"
+msgstr ""
+
+#: forms/BugReportListToolsForm.php:28
+msgid "Filter Field:"
+msgstr ""
+
+#: forms/BugReportListToolsForm.php:35
+msgid "Filter Value:"
+msgstr ""
+
+#: forms/BugReportListToolsForm.php:47
+msgid "Update List"
+msgstr ""
+
+#: forms/Step3Re11Form.php:22
+msgid "Hay espacio disponible para reciclar basuras?"
+msgstr ""
+
+#: forms/Step3Re11Form.php:34
+msgid "Hay espacio disponible para compostaje?"
+msgstr ""
+
+#: forms/Step3Bc4Form.php:29
+msgid "Maderas"
+msgstr ""
+
+#: forms/Step3Bc4Form.php:41
+msgid "Pétreos"
+msgstr ""
+
+#: forms/Step3Bc4Form.php:53
+msgid "Cerámicos"
+msgstr ""
+
+#: forms/Step3Bc4Form.php:65
+msgid "Plásticos"
+msgstr ""
+
+#: forms/Step3Bc4Form.php:77
+msgid "Metales"
+msgstr ""
+
+#: forms/Step3Bc4Form.php:89
+msgid "Materiales compuestos"
+msgstr ""
+
+#: forms/Step3Ga2Form.php:22
+msgid "Control de la calidad del agua de suministro"
+msgstr ""
+
+#: forms/Step3Ga2Form.php:34
+msgid "Control del consumo de agua"
+msgstr ""
+
+#: forms/Step3Ga2Form.php:46
+msgid "Sistema de detección de fugas"
+msgstr ""
+
+#: forms/Step2Mp11Form.php:23
+msgid "Es posible aportar energía eléctrica a la red"
+msgstr ""
+
+#: forms/Step2Mp11Form.php:35
+msgid "Otras redes locales"
+msgstr ""
+
+#: forms/Step3Re3Form.php:29
+msgid "Permeabilidad del suelo"
+msgstr ""
+
+#: forms/Step3Re3Form.php:41
+msgid "Cargas de agua pluvial a la red"
+msgstr ""
+
+#: forms/Step3Re3Form.php:53
+msgid "Erosión del suelo"
+msgstr ""
+
+#: forms/Step2Mp15Form.php:29
+msgid "Distancia a vertedero"
+msgstr ""
+
+#: forms/Step3Ga4Form.php:22
+msgid "Control de depración in situ"
+msgstr ""
+
+#: forms/Step3Ga4Form.php:34
+msgid "Control de calidad de agua evacuada"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:30
+msgid "Densidad de habitantes"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:42
+msgid "Densidad de viviendas"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:54
+msgid "Superficie urbana"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:78
+msgid "Área verde urbana"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:90
+msgid "Superficie de uso no residencial"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:102
+msgid "Número de actividades diferentes"
+msgstr ""
+
+#: forms/Step2Mp1Form.php:114
+msgid "Superficie artificial"
+msgstr ""
+
+#: forms/Step3Bc2Form.php:29
+msgid "Cantidad de material reutilizado"
+msgstr ""
+
+#: forms/Step3Bc2Form.php:41
+msgid "Cantidad de material reciclado"
+msgstr ""
+
+#: forms/Step3Bc2Form.php:53
+msgid "Cantidad de material virgen"
+msgstr ""
+
+#: forms/Step3Bc2Form.php:65
+msgid "Cantidad de material renovable"
+msgstr ""
+
+#: forms/Step3Bc5Form.php:30
+msgid "Se utilizan refrigerantes"
+msgstr ""
+
+#: forms/Step3Bc5Form.php:42
+msgid "ODP segun el tipo de refrigerante"
+msgstr ""
+
+#: forms/Step3Bc5Form.php:54
+msgid "GWP segun el tipo de refrigerante"
+msgstr ""
+
+#: forms/Step2Mp13Form.php:29
+msgid "Materiales locales"
+msgstr ""
+
+#: forms/Step2Mp13Form.php:40
+msgid "Masa de agua subterránea"
+msgstr ""
+
+#: forms/Step2Mp13Form.php:52
+msgid "Afloramientos permeables"
+msgstr ""
+
+#: forms/Step2Mp13Form.php:64
+msgid "Red de control de estado químico"
+msgstr ""
+
+#: forms/Step2Mp13Form.php:76
+msgid "Pluviometría"
+msgstr ""
+
+#: forms/BugReportForm.php:18
+msgid "Enter your name:"
+msgstr ""
+
+#: forms/BugReportForm.php:25
+msgid "Your email address:"
+msgstr ""
+
+#: forms/BugReportForm.php:37
+msgid "Date the issue occurred (mm-dd-yyyy):"
+msgstr ""
+
+#: forms/BugReportForm.php:45
+msgid "Issue URL:"
+msgstr ""
+
+#: forms/BugReportForm.php:52
+msgid "Issue description:"
+msgstr ""
+
+#: forms/BugReportForm.php:60
+msgid "Issue priority:"
+msgstr ""
+
+#: forms/BugReportForm.php:63
+msgid "Low"
+msgstr ""
+
+#: forms/BugReportForm.php:64
+msgid "Medium"
+msgstr ""
+
+#: forms/BugReportForm.php:65
+msgid "High"
+msgstr ""
+
+#: forms/BugReportForm.php:71
+msgid "Current status:"
+msgstr ""
+
+#: forms/BugReportForm.php:73
+msgid "New"
+msgstr ""
+
+#: forms/BugReportForm.php:74
+msgid "In Progress"
+msgstr ""
+
+#: forms/BugReportForm.php:75
+msgid "Resolved"
+msgstr ""
+
+#: forms/BugReportForm.php:84
+msgid "Submit"
+msgstr ""
+
+#: forms/Step3Re7Form.php:23
+msgid "Emisión CO2eq (medio urbano)"
+msgstr ""
+
+#: forms/Step3Re7Form.php:35
+msgid "Emisiones NOx (medio urbano)"
+msgstr ""
+
+#: forms/Step3Re2Form.php:29
+msgid "Aplicación de medidas para la regeneración"
+msgstr ""
+
+#: forms/Step3Re2Form.php:41
+msgid "Descontaminar"
+msgstr ""
+
+#: forms/Step3Re2Form.php:53
+msgid "Se han tratado otros riesgos"
+msgstr ""
+
+#: forms/Step3Re2Form.php:65
+msgid "Suelo ocupado"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:30
+msgid "Evapotranspiración real"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:42
+msgid "Evapotranspiración potencial"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:54
+msgid "Humedad del suelo"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:66
+msgid "Escorrentías. Zonas vulnerables"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:78
+msgid "Escorrentías. Zonas sensibles"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:90
+msgid "Escorrentías. Zona de captación de zona sensible"
+msgstr ""
+
+#: forms/Step2Mp3Form.php:102
+msgid "Litoestratigrafía. Permeabilidad"
+msgstr ""
+
+#: forms/Step3Ge4Form.php:22
+msgid "Emisiones NOx de sistemas"
+msgstr ""
+
+#: forms/Step3Re9Form.php:22
+msgid "Medidas correctoras"
+msgstr ""
+
+#: forms/Step2Mp7Form.php:29
+msgid "Ruido aéreo ambiental diurno"
+msgstr ""
+
+#: forms/Step2Mp7Form.php:41
+msgid "Ruid aéreo ambiental nocturno"
+msgstr ""
+
+#: forms/Step2Mp7Form.php:53
+msgid "Contaminación lumínica"
+msgstr ""
+
+#: forms/Step3Bc6Form.php:29
+msgid "Materiales en base madera"
+msgstr ""
+
+#: forms/Step3Bc6Form.php:41
+msgid "Acabados suelos"
+msgstr ""
+
+#: forms/Step3Bc6Form.php:53
+msgid "Adhesivos y sellantes"
+msgstr ""
+
+#: forms/Step3Bc6Form.php:65
+msgid "Acabados, tabiquería"
+msgstr ""
+
+#: forms/Step3Bc6Form.php:77
+msgid "Acabados, pinturas."
+msgstr ""
+
+#: forms/Step2Mp10Form.php:29
+msgid "Distancia a parada de metro-travía"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:41
+msgid "Distancia a parada de tren"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:53
+msgid "Distancia a parada de autobus"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:65
+msgid "Metros lineales de viario"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:77
+msgid "Metros l de viario para peatones y bicicletas"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:89
+msgid "Superficie vial, aparcamiento, zona peatonal sin vegetación"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:101
+msgid "Sup. de viario para peatones y bicicletas"
+msgstr ""
+
+#: forms/Step2Mp10Form.php:113
+msgid "Capacidad de aparcamiento"
+msgstr ""
+
+#: forms/RegisterForm.php:52
+msgid "Repetir contraseña"
+msgstr ""
+
+#: forms/RegisterForm.php:63
+msgid "Acepto las condiciones"
+msgstr ""
+
+#: forms/Step3Ge3Form.php:22
+msgid "Sistema de control de temperatura por zonas"
+msgstr ""
+
+#: forms/Step3Ge3Form.php:34
+msgid "Sistema de monitorización"
+msgstr ""
+
+#: forms/Step3Ge3Form.php:46
+msgid "Guía de uso y mantenimiento"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:29
+msgid "Energía. Calefacción"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:41
+msgid "Energía. Refrigeración"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:53
+msgid "Energía. ACS"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:65
+msgid "Energía. Iluminación exterior"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:77
+msgid "Energía. Iluminación interior"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:89
+msgid "Energía. Equipos"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:101
+msgid "Energía. Compañía de suministro"
+msgstr ""
+
+#: forms/Step2Mp16Form.php:112
+msgid "Agua. Consumo de agua potable"
+msgstr ""
+
+#: forms/Step3Re1Form.php:30
+msgid "Número de viviendas"
+msgstr ""
+
+#: forms/Step3Re1Form.php:42
+msgid "Suelo de uso púlbico"
+msgstr ""
+
+#: forms/Step3Re1Form.php:66
+msgid "Superficie verde"
+msgstr ""
+
+#: forms/LostUserForm.php:36
+msgid "Recordar usuario"
+msgstr ""
+
+#: forms/Step3Bl4Form.php:29
+msgid "Calificación demanda de calefacción"
+msgstr ""
+
+#: forms/Step3Bl4Form.php:40
+msgid "Calificación demanda de refrigeración"
+msgstr ""
+
+#: forms/Step3Bl4Form.php:51
+#: forms/Step3Bl4Form.php:87
+msgid "Demanda de ACS"
+msgstr ""
+
+#: forms/Step3Bl4Form.php:63
+msgid "Demanda de calefacción"
+msgstr ""
+
+#: forms/Step3Bl4Form.php:75
+msgid "Demanda de refrigeración"
+msgstr ""
+
+#: forms/Step3Bc3Form.php:29
+msgid "Distacia media de recorrido de transporte"
+msgstr ""
+
+#: forms/Step3Ge1Form.php:29
+msgid "Calificación energética emisiones por calefacción"
+msgstr ""
+
+#: forms/Step3Ge1Form.php:40
+msgid "Calificación energética  emisiones por  refrigeración"
+msgstr ""
+
+#: forms/Step3Ge1Form.php:51
+msgid "Calificación energética  emisiones por ACS"
+msgstr ""
+
+#: forms/Step3Ge1Form.php:62
+msgid "Emisiones por calefacción"
+msgstr ""
+
+#: forms/Step3Ge1Form.php:74
+msgid "Emisiones por refrigeración"
+msgstr ""
+
+#: forms/Step3Ge1Form.php:86
+msgid "Emisiones por ACS"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:22
+msgid "Categorización urbana SIOSE"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:55
+msgid "Ocupación del suelo CORINE 2000"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:83
+msgid "Ocupación del suelo CORINE 2006"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:111
+msgid "Cambios significativos en la ocupación del suelo"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:123
+msgid "¿Hay indicios de contaminación del suelo?"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:135
+msgid "BDN. Riesgo de erosión potencial del suelo"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:156
+msgid "Riesgo potencial significativo de inundacion"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:168
+msgid "Agua. Zona inundable. Probabilidad"
+msgstr ""
+
+#: forms/Step2Mp2Form.php:188
+msgid "¿Algún otro riesgo o valor ambiental relevante?"
+msgstr ""
+
+#: forms/Step3Bc10Form.php:29
+msgid "Facilidad de mantenimiento y limpieza"
+msgstr ""
+
+#: forms/Step3Bc10Form.php:41
+msgid "Facilidad de separación de componentes. Adaptabilidad y desmontaje"
+msgstr ""
+
+#: forms/Step3Bc10Form.php:53
+#: forms/Step3Bc1Form.php:113
+msgid "Vida útil del edificio"
+msgstr ""
+
+#: forms/Step3Bl3Form.php:22
+msgid "Ventilación cruzada"
+msgstr ""
+
+#: forms/Step3Bl3Form.php:34
+msgid "Sensores de CO2"
+msgstr ""
+
+#: forms/Step3Bl3Form.php:46
+msgid "Control de las zonas de admisión"
+msgstr ""
+
+#: forms/Step3Bl3Form.php:58
+msgid "Mantenimiento y limpieza"
+msgstr ""
+
+#: forms/Step3Re8Form.php:22
+msgid "Emisión de ruido"
+msgstr ""
+
+#: forms/Step3Re8Form.php:34
+msgid "Emisión de luz"
+msgstr ""
+
+#: forms/Step2Mp8Form.php:29
+msgid "Radón interior"
+msgstr ""
+
+#: forms/Step2Mp8Form.php:41
+msgid "Radiación gamma natural"
+msgstr ""
+
+#: forms/Step3Bl5Form.php:29
+msgid "Demanda para iluminación interior"
+msgstr ""
+
+#: forms/Step3Bl5Form.php:41
+msgid "Demanda para iluminación exterior"
+msgstr ""
+
+#: forms/Step3Bl5Form.php:53
+msgid "Equipos y electrodomésticos eficientes"
+msgstr ""
+
+#: forms/Step3Bl5Form.php:65
+msgid "Espacio para tender la ropa"
+msgstr ""
+
+#: forms/Step3Bl5Form.php:77
+msgid "Ascensores y escaleras mecánicas eficientes"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:29
+msgid "Calentamiento global"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:41
+msgid "Agotamiento de la capa de ozoono"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:53
+msgid "Acidificación"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:65
+msgid "Eutrofización"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:77
+msgid "Creación de ozono fotoquímico"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:89
+msgid "Agotamiento de recursos abióticos-elementos"
+msgstr ""
+
+#: forms/Step3Bc1Form.php:101
+msgid "Agotamiento de recursos abióticos-combustibles f"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:30
+msgid "SO2: Número de días que se supera el límite"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:42
+msgid "CO: Número de días que se supera el límite"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:54
+msgid "NOx: Número de días que se supera el límite"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:66
+msgid "O3: Número de días que se supera el límite"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:78
+msgid "PM10: Número de días que se supera el límite"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:90
+msgid "Localización de fuentes de contaminación cercanas"
+msgstr ""
+
+#: forms/Step2Mp6Form.php:102
+msgid "Olores"
+msgstr ""
+
+#: forms/Step2Mp5Form.php:30
+msgid "Horas fuera de la zona de confort"
+msgstr ""
+
+#: forms/Step2Mp5Form.php:42
+msgid "Radiación solar directa (horizontal)"
+msgstr ""
+
+#: forms/Step2Mp5Form.php:54
+msgid "Obstruccion solar y de vientos"
+msgstr ""
+
+#: forms/Step2Mp5Form.php:66
+msgid "Isla de calor. Indice de reflectancia medio local"
+msgstr ""
+
+#: forms/Step2Mp5Form.php:78
+msgid "Isla de calor. Número de equipos emisores de calor"
+msgstr ""
+
+#: forms/Step2Mp5Form.php:89
+msgid "Isla de calor. Área verde"
+msgstr ""
+
+#: forms/Step3Re5Form.php:29
+msgid "Aparcamiento para bicicletas"
+msgstr ""
+
+#: forms/Step3Re5Form.php:41
+msgid "Accesibilidad"
+msgstr ""
+
+#: forms/Step3Re5Form.php:53
+msgid "Aparcamiento para coches"
+msgstr ""
+
+#: forms/Step3Re5Form.php:65
+msgid "Aparcamiento para coches eléctricos"
+msgstr ""
+
+#: forms/Step3Re5Form.php:77
+msgid "Aparcamiento para coches compartidos"
+msgstr ""
+
+#: forms/Step3Re5Form.php:89
+msgid "Demanda energética transporte (v. eléctricos)"
+msgstr ""
+
+#: forms/Step3Ga1Form.php:29
+msgid "Consumo de agua potable ducha/ bañera"
+msgstr ""
+
+#: forms/Step3Ga1Form.php:41
+msgid "Consumo de agua potable cocina"
+msgstr ""
+
+#: forms/Step3Ga1Form.php:53
+msgid "Consumo agua potable lavadora"
+msgstr ""
+
+#: forms/Step3Ga1Form.php:65
+msgid "Consumo de agua potable lavavajillas"
+msgstr ""
+
+#: forms/Step3Ga1Form.php:77
+msgid "Consumo de agua potable inodoro"
+msgstr ""
+
+#: forms/Step3Ga1Form.php:89
+msgid "Consumo de agua potable para riego"
+msgstr ""
+
+#: forms/ProfileForm.php:37
+msgid "Nombre(s)"
+msgstr ""
+
+#: forms/ProfileForm.php:48
+msgid "Apellido(s)"
+msgstr ""
+
+#: forms/ProfileForm.php:59
+msgid "Compañía"
+msgstr ""
+
+#: forms/ProfileForm.php:70
+msgid "Ciudad"
+msgstr ""
+
+#: forms/ProfileForm.php:81
+msgid "Provincia"
+msgstr ""
+
+#: forms/ProfileForm.php:92
+msgid "País"
+msgstr ""
+
+#: forms/ProfileForm.php:103
+msgid "Web"
+msgstr ""
+
+#: forms/ProfileForm.php:114
+msgid "Nueva Contraseña"
+msgstr ""
+
+#: forms/ProfileForm.php:125
+msgid "Repetir Contraseña"
+msgstr ""
+
+#: forms/ProfileForm.php:142
+msgid "Actualizar Perfil"
+msgstr ""
+
+#: forms/Step3Ge2Form.php:29
+msgid "Contrato con la empresa \"verde\""
+msgstr ""
+
+#: forms/Step3Ge2Form.php:41
+msgid "Energía aportada a la red"
+msgstr ""
+
+#: forms/Step3Bc8Form.php:29
+msgid "Consumo de energía en obra"
+msgstr ""
+
+#: forms/Step3Bc8Form.php:41
+msgid "Consumo de agua en obra"
+msgstr ""
+
+#: forms/Step3Bc8Form.php:53
+msgid "Control en obra de la calidad del aire interior"
+msgstr ""
+
+#: forms/Step2Mp12Form.php:23
+msgid "Suministro de agua potable"
+msgstr ""
+
+#: forms/Step2Mp12Form.php:35
+msgid "Suministro de agua reciclada/ no potable"
+msgstr ""
+
+#: forms/Step2Mp12Form.php:47
+msgid "Red separativa de evacuación"
+msgstr ""
+
+#: forms/Step2Mp12Form.php:59
+msgid "Estacion depuradora de aguas residuales EDAR"
+msgstr ""
+
+#: forms/Step2Mp12Form.php:71
+msgid "Tipo de tratamiento de la depuradora"
+msgstr ""
+
+#: forms/Step3Re4Form.php:29
+msgid "Aportaciones a la restauración del hábitat"
+msgstr ""
+
+#: forms/Step3Re4Form.php:41
+msgid "Número de especies identificadas. Vegetación"
+msgstr ""
+
+#: forms/Step3Bc7Form.php:29
+msgid "Separación selectiva"
+msgstr ""
+
+#: forms/Step3Bc7Form.php:41
+msgid "Residuos derivados a vertedero"
+msgstr ""
+
+#: forms/Step3Bc7Form.php:53
+msgid "Resíduos separados"
+msgstr ""
+
+#: forms/Step3Bc7Form.php:65
+msgid "Residos peligrosos"
+msgstr ""
+
+#: forms/Step3Bc7Form.php:77
+msgid "Movimiento de tierras"
+msgstr ""
+
+#: forms/Step3Bc7Form.php:89
+msgid "Transporte a vertedero"
+msgstr ""
+
+#: forms/Step3Ga3Form.php:29
+msgid "Agua evacuada a la red local. Doméstica."
+msgstr ""
+
+#: forms/Step3Ga3Form.php:41
+msgid "Agua evacuada a la red local. Pluviales."
+msgstr ""
+
+#: layouts/scripts/layout.phtml:87
+msgid "Qué hacemos"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:101
+msgid "Evaluar un proyecto"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:102
+msgid "Proyectos evaluados"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:120
+msgid "Ecómetro"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:124
+msgid "ESP"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:125
+msgid "ENG"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:137
+msgid "Contacta"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:138
+msgid "FAQ"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:139
+msgid "Hosting Verde"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:140
+msgid "Copy"
+msgstr ""
+
+#: layouts/scripts/layout.phtml:142
+msgid "Fork me on Github"
+msgstr ""
+
+#: views/scripts/_form_step_2_mp_8.phtml:24
+#: views/scripts/_form_step_2_mp_5.phtml:43
+#: views/scripts/_form_step_2_mp_13.phtml:38
+#: views/scripts/_form_step_3_bl_2.phtml:42
+#: views/scripts/_form_step_2_mp_1.phtml:53
+#: views/scripts/_form_step_3_bc_10.phtml:32
+#: views/scripts/_form_step_3_re_5.phtml:47
+msgid "Pinche sobre la x si no procede."
+msgstr ""
+
+#: views/scripts/_form_step_2_mp_8.phtml:29
+#: views/scripts/_form_step_2_mp_5.phtml:48
+#: views/scripts/_form_step_2_mp_13.phtml:43
+#: views/scripts/_form_step_3_bl_2.phtml:46
+#: views/scripts/_form_step_2_mp_1.phtml:58
+#: views/scripts/_form_step_3_bc_10.phtml:36
+#: views/scripts/_form_step_3_re_5.phtml:51
+msgid "Comentarios y especificaciones para la valoración"
+msgstr ""
+
+#: views/scripts/_form_lost_user.phtml:3
+msgid "Escribe tu correo para iniciar el proceso de recuperación del nombre de usuario."
+msgstr ""
+
+#: views/scripts/_form_profile.phtml:4
+msgid "Editar perfil:"
+msgstr ""
+
+#: views/scripts/_form_step_4_acv_new_material.phtml:4
+msgid "REGISTRO de PRODUCTO/MATERIAL"
+msgstr ""
+
+#: views/scripts/_form_step_4_acv_new_material.phtml:24
+msgid "Unidad declarada (p.ej. 2m2 de panel)"
+msgstr ""
+
+#: views/scripts/_form_step_4_acv_new_material.phtml:41
+msgid "Transporte"
+msgstr ""
+
+#: views/scripts/_form_step_4_acv_new_material.phtml:52
+msgid "Indicadores de impacto"
+msgstr ""
+
+#: views/scripts/_form_step_4_acv_new_material.phtml:82
+msgid "Comentarios"
+msgstr ""
+
+#: views/scripts/_form_register.phtml:3
+msgid "Registrarse (nuevos usuarios). Necesario para iniciar sesión"
+msgstr ""
+
+#: views/scripts/_form_register.phtml:18
+msgid "Leer las condiciones"
+msgstr ""
+
+#: views/scripts/_form_lost_pswd.phtml:3
+msgid "Escribe tu correo para iniciar el proceso de recuperación de contraseña."
+msgstr ""
+
+#: views/scripts/_form_login.phtml:14
+msgid "He olvidado mi contraseña"
+msgstr ""
+
+#: views/scripts/_form_login.phtml:15
+msgid "He olvidado mi nombre de usuario"
+msgstr ""
+
+#: views/scripts/admin/index.phtml:2
+msgid "Cuenta de usuario :: "
+msgstr ""
+
+#: views/scripts/admin/login.phtml:2
+msgid "Iniciar sesión :: "
+msgstr ""
+
+#: views/scripts/error/noauth.phtml:2
+msgid "Ecómetro :: Error: Not Authorized!"
+msgstr ""
+
+#: views/scripts/error/noauth.phtml:4
+msgid "Error: Not Authorized!"
+msgstr ""
+
+#: views/scripts/error/noauth.phtml:5
+msgid "Sorry, you are not authorized to access this resource."
+msgstr ""
+
+#: views/scripts/error/notfound.phtml:2
+msgid "Ecómetro :: 404 Error: Not Found!"
+msgstr ""
+
+#: views/scripts/error/notfound.phtml:4
+msgid "404 Error: Not Found!"
+msgstr ""
+
+#: views/scripts/error/notfound.phtml:5
+msgid "Sorry, we didn't find the page you are looking."
+msgstr ""
+
+#: views/scripts/profile/edit.phtml:2
+msgid "Editar Perfil :: "
+msgstr ""
+
+#: views/scripts/profile/index.phtml:2
+msgid "Evaluar un Proyecto :: "
+msgstr ""
+
+#: views/scripts/profile/index.phtml:13
+msgid "Perfil:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:16
+msgid "Editar perfil"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:19
+msgid "Nombre usuario:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:21
+msgid "Correo electrónico:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:23
+msgid "Datos de la empresa: "
+msgstr ""
+
+#: views/scripts/profile/index.phtml:25
+msgid "Ciudad:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:27
+msgid "Provincia:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:29
+msgid "País:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:31
+msgid "Web:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:42
+msgid "Proyectos:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:45
+msgid "Añadir nuevo proyecto"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:51
+msgid "Otros proyectos:"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:62
+msgid "Proyecto completo"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:64
+msgid "Proyecto incompleto"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:86
+msgid "Editar"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:87
+msgid "Eliminar"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:89
+msgid "Público"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:90
+msgid "si"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:90
+msgid "no"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:92
+msgid "Compartir en redes"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:93
+msgid "Ver informe"
+msgstr ""
+
+#: views/scripts/profile/index.phtml:101
+msgid "No hay proyectos"
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:2
+msgid "Paso 2 :: Mp14 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:9
+#: views/scripts/step2/editmp15.phtml:9
+#: views/scripts/step2/editmp12.phtml:9
+#: views/scripts/step2/editmp7.phtml:9
+#: views/scripts/step2/editmp9.phtml:9
+#: views/scripts/step2/editmp13.phtml:9
+#: views/scripts/step2/editmp6.phtml:9
+#: views/scripts/step2/editmp16.phtml:9
+#: views/scripts/step2/editmp11.phtml:9
+#: views/scripts/step2/editmp5.phtml:9
+#: views/scripts/step2/editmp8.phtml:10
+#: views/scripts/step2/editmp4.phtml:9
+#: views/scripts/step2/editmp2.phtml:9
+msgid ""
+"Ve rellenando las fichas. Lent es ant ad quas dis asperun dantiis am ut re modignim etur? Quiame presti coriae rernam imus quam as res apide vel iur? Quis doluptatis der-\n"
+"cipide ped etur aut ped estrum secus."
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:14
+#: views/scripts/step2/index.phtml:112
+msgid "mp14"
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:14
+msgid "Redes locales. Gestión de residuos en uso. "
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:14
+msgid "Conocer las redes de residuos para garantizar una gestión sostenible de los residuos domésticos."
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:17
+#: views/scripts/step2/editmp15.phtml:17
+#: views/scripts/step2/editmp12.phtml:17
+#: views/scripts/step2/editmp7.phtml:17
+#: views/scripts/step2/editmp9.phtml:17
+#: views/scripts/step2/editmp1.phtml:17
+#: views/scripts/step2/editmp13.phtml:17
+#: views/scripts/step2/editmp6.phtml:17
+#: views/scripts/step2/editmp16.phtml:17
+#: views/scripts/step2/editmp11.phtml:17
+#: views/scripts/step2/editmp5.phtml:17
+#: views/scripts/step2/editmp8.phtml:18
+#: views/scripts/step2/editmp4.phtml:17
+#: views/scripts/step2/editmp2.phtml:17
+#: views/scripts/step2/editmp3.phtml:18
+msgid "Descripción:"
+msgstr ""
+
+#: views/scripts/step2/editmp14.phtml:18
+msgid ""
+"Conocer la ubicación más cercana de contenedores para reciclaje doméstico.\n"
+"Distancia a contenedores de papel, envases y vidrio.\n"
+"Distancia a un “punto limpio”\n"
+"Distancia a un punto para compostaje"
+msgstr ""
+
+#: views/scripts/step2/editmp15.phtml:2
+msgid "Paso 2 :: Mp15 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp15.phtml:14
+#: views/scripts/step2/index.phtml:113
+msgid "mp15"
+msgstr ""
+
+#: views/scripts/step2/editmp15.phtml:14
+msgid "Redes locales. RCD. "
+msgstr ""
+
+#: views/scripts/step2/editmp15.phtml:14
+msgid "Conocer el destino de los resíduos de Costrucción y Demolición."
+msgstr ""
+
+#: views/scripts/step2/editmp15.phtml:18
+msgid "Localización de posibles destinos para el tratamiento de residuos de construcción y demolición."
+msgstr ""
+
+#: views/scripts/step2/editmp12.phtml:2
+msgid "Paso 2 :: Mp12 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp12.phtml:14
+#: views/scripts/step2/index.phtml:110
+msgid "mp12"
+msgstr ""
+
+#: views/scripts/step2/editmp12.phtml:14
+msgid "Redes locales. Agua. "
+msgstr ""
+
+#: views/scripts/step2/editmp12.phtml:14
+msgid "Conocer las posibilidades de conectividad de aguas."
+msgstr ""
+
+#: views/scripts/step2/editmp12.phtml:18
+msgid ""
+"Conocer si existe una red de distribución de agua separativa, agua no potable para riego, inodoros u otros usos.\n"
+"Conocer la red de saneamiento. Conexión al sistema de saneamiento y existencia de una red separada para aguas de lluia, grises o negras. Detectar si existe un sistema local de depuración de agua."
+msgstr ""
+
+#: views/scripts/step2/editmp7.phtml:2
+msgid "Paso 2 :: Mp7 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp7.phtml:14
+#: views/scripts/step2/index.phtml:103
+msgid "mp7"
+msgstr ""
+
+#: views/scripts/step2/editmp7.phtml:14
+#: views/scripts/step2/index.phtml:103
+msgid "Ambiente local. Ruido exterior. Luz."
+msgstr ""
+
+#: views/scripts/step2/editmp7.phtml:14
+msgid "Conocer los niveles de exposición a ruido, luz, olores,..."
+msgstr ""
+
+#: views/scripts/step2/editmp7.phtml:18
+msgid "Niveles sonoros equivalentes de ruido día, tarde y noche en el área y las principales fuentes de emisión para considerar medidas de protección."
+msgstr ""
+
+#: views/scripts/step2/editmp9.phtml:2
+msgid "Paso 2 :: Mp9 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp9.phtml:14
+#: views/scripts/step2/index.phtml:105
+msgid "mp9"
+msgstr ""
+
+#: views/scripts/step2/editmp9.phtml:14
+#: views/scripts/step2/index.phtml:105
+msgid "Radiación no ionizante. Campos electromagnéticos."
+msgstr ""
+
+#: views/scripts/step2/editmp9.phtml:18
+msgid "Conocer los niveles de radiación no ionizante en la zona para considerar medidas de protección."
+msgstr ""
+
+#: views/scripts/step2/editmp1.phtml:2
+msgid "Paso 2 :: Mp1 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp1.phtml:9
+msgid ""
+"Ve rellenando las fichas. Lent es ant ad quas dis asperun dantiis am ut re modignim etur? Quiame presti coriae rernam imus quam as res apide vel iur? Quis doluptatis der-\n"
+"\t\tcipide ped etur aut ped estrum secus."
+msgstr ""
+
+#: views/scripts/step2/editmp1.phtml:14
+#: views/scripts/step2/index.phtml:95
+msgid "mp1"
+msgstr ""
+
+#: views/scripts/step2/editmp1.phtml:14
+#: views/scripts/step2/index.phtml:95
+msgid "Compacidad y complejidad."
+msgstr ""
+
+#: views/scripts/step2/editmp1.phtml:14
+msgid "Conocer la compacidad y complejidad del área, caracterizando la eficiencia urbana."
+msgstr ""
+
+#: views/scripts/step2/editmp1.phtml:18
+msgid "Desidad de habitantes (hab/ha), densidad de viviendas (nºviv/ha), suelo urbano municipal (m2/ha), volumen edificado (m3), zonas verdes (m2), número y tipo de actividades, superficie de uso no residencial (m2) Cálculo para un radio de 500m del lugar (o total barrio)"
+msgstr ""
+
+#: views/scripts/step2/editmp13.phtml:2
+msgid "Paso 2 :: Mp13 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp13.phtml:14
+#: views/scripts/step2/index.phtml:111
+msgid "mp13"
+msgstr ""
+
+#: views/scripts/step2/editmp13.phtml:14
+msgid "Redes locales. Recursos. "
+msgstr ""
+
+#: views/scripts/step2/editmp13.phtml:14
+msgid "Conocer los recursos locales."
+msgstr ""
+
+#: views/scripts/step2/editmp13.phtml:18
+msgid ""
+"Conocer si existen materiales locales reutilizables o reciclables y las posibilidades de reutilización de elementos constructivos existentes.\n"
+"Gestión de recursos subterránes. Conocer el estado de los recursos subterráneos y las posibilidades y riesgos de utilización."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:2
+msgid "Paso 2 :: "
+msgstr ""
+
+#: views/scripts/step2/index.phtml:8
+msgid ""
+"Introduce aqúí los datos básicos del proyecto para que eo-\n"
+"\tsapit et quam que nobition num pa comnihicius."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:34
+msgid "Uso general"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:46
+msgid "No ocupantes"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:71
+msgid "Resumen de situación:"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:73
+msgid "Vid quodi resedi ommolore, ute vollige nihiligeniam ea deliatem."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:74
+msgid "Ut quis rendi ipsum iur autem atem quo in et explacc aesequis."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:75
+msgid "Genda ipisqui del eiume doluptaque simus molorrum si blate."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:76
+msgid "Aut prectem hario inihictas molorpos ad quia perernatem."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:77
+msgid "Pudam, te volorero volupti busciae pudantor aspienet."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:85
+msgid ""
+"Introduce aqúí los datos básicos del proyecto para que eosapit et quam que nobition num pa comnihicius\n"
+"\tAtius aciaepr emporeped qui autemque repuda esti occaborepra essit etur anti ommos volestrum."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:89
+msgid "Ficha sin empezar"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:90
+msgid "Ficha incompleta"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:91
+msgid "Ficha completa"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:96
+#: views/scripts/step2/editmp2.phtml:14
+msgid "mp2"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:96
+#: views/scripts/step2/editmp2.phtml:14
+msgid "Valor del suelo. Ocupación y riesgos."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:97
+#: views/scripts/step2/editmp3.phtml:14
+msgid "mp3"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:97
+#: views/scripts/step2/editmp3.phtml:15
+msgid "Valor del suelo. Permeabilidad y gestión de escorrentías."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:98
+#: views/scripts/step2/editmp4.phtml:14
+msgid "mp4"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:98
+#: views/scripts/step2/editmp4.phtml:14
+msgid "Valor del suelo. Ecosistemas."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:99
+#: views/scripts/step2/editmp5.phtml:14
+msgid "mp5"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:99
+#: views/scripts/step2/editmp5.phtml:14
+msgid "Clima local y efecto isla de calor."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:102
+#: views/scripts/step2/editmp6.phtml:14
+msgid "mp6"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:102
+#: views/scripts/step2/editmp6.phtml:14
+msgid "Calidad del aire exterior."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:104
+#: views/scripts/step2/editmp8.phtml:15
+msgid "mp8"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:104
+#: views/scripts/step2/editmp8.phtml:15
+msgid "Radiación ionizante."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:106
+msgid "mp10"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:106
+msgid "Redes locales. Movilidad. Dotaciones y acceso al transporte público."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:109
+#: views/scripts/step2/editmp11.phtml:14
+msgid "mp11"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:109
+msgid "Redes locales. Energía."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:110
+msgid "Redes locales. Agua."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:111
+msgid "Redes locales. Recursos."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:112
+msgid "Redes locales. Gestión de residuos en uso."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:113
+msgid "Redes locales. RCD."
+msgstr ""
+
+#: views/scripts/step2/index.phtml:116
+#: views/scripts/step2/editmp16.phtml:14
+msgid "mp16"
+msgstr ""
+
+#: views/scripts/step2/index.phtml:116
+msgid "Cargas existentes. Energía y agua."
+msgstr ""
+
+#: views/scripts/step2/editmp6.phtml:2
+msgid "Paso 2 :: Mp6 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp6.phtml:14
+msgid "Conocer los niveles de contaminacion atmosférica y las estrategias locales para mejora de la calidad del aire."
+msgstr ""
+
+#: views/scripts/step2/editmp6.phtml:19
+msgid "Niveles de SO2, NO2, O3, CO, PM10, (PM2,5, BTX, HC)."
+msgstr ""
+
+#: views/scripts/step2/editmp6.phtml:20
+msgid "Detectar las fuentes de emisión locales (chimeneas, tráfico rodado). Localizacion de fuentes para el control de entradas y salidas de aire y distribución de usos exteriores e interiores."
+msgstr ""
+
+#: views/scripts/step2/editmp16.phtml:2
+msgid "Paso 2 :: Mp16 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp16.phtml:14
+msgid "Cargas existentes. Energía y agua. "
+msgstr ""
+
+#: views/scripts/step2/editmp16.phtml:14
+msgid "Consumos reales de energía y agua con el edificio en uso."
+msgstr ""
+
+#: views/scripts/step2/editmp16.phtml:18
+msgid "Consumos existentes."
+msgstr ""
+
+#: views/scripts/step2/editmp11.phtml:2
+msgid "Paso 2 :: Mp11 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp11.phtml:14
+msgid "Redes locales. Energía. "
+msgstr ""
+
+#: views/scripts/step2/editmp11.phtml:14
+msgid "Conocer las posibilidades de conectividad energética."
+msgstr ""
+
+#: views/scripts/step2/editmp11.phtml:18
+msgid ""
+"Conocer si existe la posibilidad de suministrar energá renovable a la red eléctrica.\n"
+"Conocer las redes de suministro y evacuación locales y las posibilidades de conexión, por ejemplo si existe  una red de distribución local para calefacción."
+msgstr ""
+
+#: views/scripts/step2/editmp5.phtml:2
+msgid "Paso 2 :: Mp5 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp5.phtml:14
+msgid "Conocer las características climáticas locales."
+msgstr ""
+
+#: views/scripts/step2/editmp5.phtml:18
+msgid ""
+"Temperatura y humedad: Número de días que se alean de la zona de confort.\n"
+"Radiación y acceso solar: Conocer las posibilidades de uso de la radiación solar para el diseño solar pasivo y el potencial de generación de renovables.\n"
+"Efecto isla de calor: Identificar las posibles variaciones sobre los datos climaticos de la estación de medicion más cercana. Este efecto se prodce por lo general en núcleos urbanos, con un aumento medio de la temperatura local."
+msgstr ""
+
+#: views/scripts/step2/editmp8.phtml:2
+msgid "Paso 2 :: Mp8 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp8.phtml:15
+msgid "Conocer la cantidad de radiación y las fuentes origen."
+msgstr ""
+
+#: views/scripts/step2/editmp8.phtml:19
+msgid "Conocer los niveles de gas radón en la zona para considerar medidas de protección."
+msgstr ""
+
+#: views/scripts/step2/editmp4.phtml:2
+msgid "Paso 2 :: Mp4 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp4.phtml:14
+msgid "Conocer los ecosistemas y hábitat en los que se situa el proyecto."
+msgstr ""
+
+#: views/scripts/step2/editmp4.phtml:18
+msgid "Identificar el número de especies autóctonas, el tipo de paisaje y grado de protección de la zona."
+msgstr ""
+
+#: views/scripts/step2/editmp2.phtml:2
+msgid "Paso 2 :: Mp2 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp2.phtml:14
+msgid "Conocer  las características del suelo."
+msgstr ""
+
+#: views/scripts/step2/editmp2.phtml:18
+msgid "Uso previo. Indicios de contaminación. Riesgos."
+msgstr ""
+
+#: views/scripts/step2/editmp3.phtml:2
+msgid "Paso 2 :: Mp3 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp3.phtml:9
+msgid ""
+"Ve rellenando las fichas. Lent es ant ad quas dis asperun dantiis am ut re modignim etur? Quiame presti coriae rernam imus quam as res apide vel iur? Quis doluptatis der-\n"
+"\t\t\tcipide ped etur aut ped estrum secus."
+msgstr ""
+
+#: views/scripts/step2/editmp3.phtml:15
+#: views/scripts/step2/editmp3.phtml:19
+msgid "Conocer la capacidad de retención de agua del terreno, y las posibles cargas de agua en temporadas lluviosas."
+msgstr ""
+
+#: views/scripts/step2/editmp10.phtml:2
+msgid "Paso 2 :: Mp10 :: "
+msgstr ""
+
+#: views/scripts/step2/editmp10.phtml:14
+msgid "Conocer las redes de transporte locales para garantizar una movilidad sostenible de los usuarios del edificio."
+msgstr ""
+
+#: views/scripts/step2/editmp10.phtml:18
+msgid ""
+"Asegurar que la situación del edificio tiene un buen acceso a transporte público y redes para peatones y bicicletas.\n"
+"Distancia a tren, metro, tranvía, autbus. Frecuencia de servicio. Metros lineales y superficie de viario para coches, peatones y bicicletas."
+msgstr ""
+
+#: views/scripts/index/index.phtml:2
+msgid "Herramienta Ecómetro"
+msgstr ""
+
+#: views/scripts/partials/project_footer.phtml:2
+msgid "Ayuda / FAQ"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:3
+msgid "Información general"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:4
+msgid "Normativa"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:5
+msgid "Documentación"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:6
+msgid "Otras certificaciones"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:7
+msgid "Debate / Blog"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:11
+#: views/scripts/partials/form_footer.phtml:19
+#: views/scripts/partials/form_footer.phtml:23
+#: views/scripts/partials/form_footer.phtml:31
+#: views/scripts/partials/form_footer.phtml:35
+msgid "Background:"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:12
+#: views/scripts/partials/form_footer.phtml:24
+#: views/scripts/partials/form_footer.phtml:36
+msgid "Para ver las referencias completas de la documentación pinche aquí."
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:13
+#: views/scripts/partials/form_footer.phtml:25
+#: views/scripts/partials/form_footer.phtml:37
+msgid "Normativa:"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:14
+#: views/scripts/partials/form_footer.phtml:26
+#: views/scripts/partials/form_footer.phtml:38
+msgid "UE. 2008. Valores límite y umbrales para la protección de la salud y la vegetación. DIRECTIVA 2008/50/CE DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 21 de mayo de 2008 relativa a la calidad del aire ambiente y a una atmósfera más limpia en Europa. DIRECTIVA 2004/107/CE DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 15 de diciembre de 2004 relativa al arséni- co, el cadmio, el mercurio, el níquel y los hidrocarburos aromáticos policíclicos en el aire ambiente BOE. 2011. Valores límite para diferentes contaminantes. Real Decreto 102/2011, de 28 de enero relativo a la mejora de la calidad del aire."
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:15
+#: views/scripts/partials/form_footer.phtml:27
+#: views/scripts/partials/form_footer.phtml:39
+msgid "Documentación:"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:16
+#: views/scripts/partials/form_footer.phtml:28
+#: views/scripts/partials/form_footer.phtml:40
+msgid "OMS 2005. Valores máximos fijados: PM2,5: 10 μg/m3de media anual, 25 μg/m3 de edia en 24h. PM10 20 μg/m3 media anual, 50 μg/m3 de media en 24h. O3: 100μg/m3 de media en 8h. NO2: 40 μg/m3 de media anual, 200 μg/m3 de media en1h. SO2: 20 μg/m3 de media en 24h, 500 μg/m3 de media en 10 min. http://www.who.int/phe/health_topics/outdoorair_aqg/es/index"
+msgstr ""
+
+#: views/scripts/partials/form_footer.phtml:20
+#: views/scripts/partials/form_footer.phtml:32
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus dui, pellentesque a feugiat vel, adipiscing ac ligula. Fusce ultrices pellentesque lectus eget mattis. Donec adipiscing dolor purus, sit amet faucibus velit. Aliquam euismod elementum tortor ac porttitor. Pellentesque mauris est, gravida vitae pulvinar a, porttitor nec lorem. Sed et tellus quam. Sed condimentum lectus quis ipsum facilisis euismod consectetur ipsum pellentesque. Aliquam ac sapien ac nisl porttitor porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan, arcu ac elementum consectetur, nisl neque eleifend tellus, ut cursus nunc augue vitae dolor. Sed porta scelerisque tortor, sed auctor nisi accumsan a. Suspendisse fringilla imperdiet arcu, in euismod nibh consectetur sit amet. Nulla facilisi. In hac habitasse platea dictumst. Integer orci nunc, convallis a molestie vel, egestas quis augue."
+msgstr ""
+
+#: views/scripts/partials/admin_menu.phtml:3
+msgid "USERS"
+msgstr ""
+
+#: views/scripts/partials/admin_menu.phtml:4
+msgid "ACV"
+msgstr ""
+
+#: views/scripts/partials/bug_pagination.phtml:14
+#: views/scripts/partials/bug_pagination.phtml:17
+msgid "Previous"
+msgstr ""
+
+#: views/scripts/partials/bug_pagination.phtml:33
+#: views/scripts/partials/bug_pagination.phtml:36
+msgid "Next"
+msgstr ""
+
+#: views/scripts/partials/project_pagination.phtml:14
+#: views/scripts/partials/project_pagination.phtml:17
+msgid "Anterior"
+msgstr ""
+
+#: views/scripts/partials/project_pagination.phtml:33
+#: views/scripts/partials/project_pagination.phtml:36
+msgid "Siguiente"
+msgstr ""
+
+#: views/scripts/partials/form_grades.phtml:15
+msgid "Cerrar"
+msgstr ""
+
+#: views/scripts/partials/project_menu.phtml:2
+msgid "Pasos a seguir:"
+msgstr ""
+
+#: views/scripts/partials/project_menu.phtml:4
+msgid "1. Datos básicos"
+msgstr ""
+
+#: views/scripts/partials/project_menu.phtml:5
+msgid "2. Mapa de aproximación"
+msgstr ""
+
+#: views/scripts/partials/project_menu.phtml:6
+msgid "3. Datos sobre el proyecto"
+msgstr ""
+
+#: views/scripts/partials/project_menu.phtml:7
+msgid "4. Análisis del ciclo de vida"
+msgstr ""
+
+#: views/scripts/partials/project_menu.phtml:8
+msgid "5. Resultado final"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:2
+msgid "Gráfico provisional:"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:10
+msgid "Puntuación provisional:"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:14
+msgid "r"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:15
+msgid "Relación con el Entorno"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:22
+#: views/scripts/partials/form_results.phtml:41
+msgid "Total"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:43
+msgid "HUELLA HIDRICA"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:49
+msgid "HUELLA CARBONO"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:55
+msgid "CERTIF. ENERGETICA"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:67
+msgid "m"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:68
+msgid "Materiales Bioconstrucción"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:72
+msgid "d"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:73
+msgid "Diseño"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:77
+msgid "a"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:78
+msgid "Agua"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:82
+msgid "e"
+msgstr ""
+
+#: views/scripts/partials/graph_points.phtml:83
+msgid "Energía"
+msgstr ""
+
+#: views/scripts/partials/form_navigation.phtml:10
+msgid "Volver"
+msgstr ""
+
+#: views/scripts/partials/form_navigation.phtml:13
+#: views/scripts/partials/form_navigation.phtml:15
+msgid "Ficha Anterior"
+msgstr ""
+
+#: views/scripts/partials/form_navigation.phtml:20
+#: views/scripts/partials/form_navigation.phtml:22
+msgid "Ficha Siguiente"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:4
+msgid "Factor ponderación"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:5
+msgid "Máximo Posible"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:6
+msgid "Puntuación Obtenida"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:32
+msgid "No se valora!"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:49
+msgid "Puntuación obtenida"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:52
+msgid "de"
+msgstr ""
+
+#: views/scripts/partials/form_results.phtml:52
+msgid "posibles"
+msgstr ""
+
+#: views/scripts/account/lostpswd.phtml:2
+msgid "Recuperar contraseña :: "
+msgstr ""
+
+#: views/scripts/account/register.phtml:2
+msgid "Registro usuario :: "
+msgstr ""
+
+#: views/scripts/account/register.phtml:13
+msgid "Ya estoy registrado. "
+msgstr ""
+
+#: views/scripts/account/lostuser.phtml:2
+msgid "Recuperar usuario :: "
+msgstr ""
+
+#: views/scripts/step1/edit.phtml:2
+msgid "Paso 1 :: "
+msgstr ""
+
+#: views/scripts/step1/edit.phtml:7
+msgid "Introduce aqúí los datos básicos del proyecto para que eo-sapit et quam que nobition num pa comnihicius."
+msgstr ""
+
+#: views/scripts/step1/edit.phtml:19
+msgid "Instrucciones:"
+msgstr ""
+
+#: views/scripts/step3/editbl2.phtml:2
+msgid "Paso 3 :: D2 :: "
+msgstr ""
+
+#: views/scripts/step3/editbl2.phtml:18
+#: views/scripts/step3/index.phtml:107
+msgid "d2"
+msgstr ""
+
+#: views/scripts/step3/editbl2.phtml:18
+#: views/scripts/step3/index.phtml:107
+msgid "Calidad de la luminación, acceso solar, vistas, ruido."
+msgstr ""
+
+#: views/scripts/step3/editbl2.phtml:22
+#: views/scripts/step3/editre9.phtml:22
+#: views/scripts/step3/editga2.phtml:22
+#: views/scripts/step3/editre11.phtml:22
+#: views/scripts/step3/editga1.phtml:22
+#: views/scripts/step3/editbl3.phtml:22
+#: views/scripts/step3/editge2.phtml:22
+#: views/scripts/step3/editbc2.phtml:22
+#: views/scripts/step3/editre10.phtml:22
+#: views/scripts/step3/editbc6.phtml:22
+msgid ""
+"Conocer la compacidad y complejidad del área, caracterizando la eficiencia urbana. \n"
+"Desidad de habitantes (hab/ha), densidad de viviendas (nºviv/ha), suelo urbano municipal (m2/ha), volumen edificado (m3), zonas verdes (m2), número y tipo de actividades, superficie de uso no residencial (m2) \n"
+"Cálculo para un radio de 500m del lugar (o total barrio)"
+msgstr ""
+
+#: views/scripts/step3/editbl2.phtml:29
+#: views/scripts/step3/editre9.phtml:29
+#: views/scripts/step3/editga2.phtml:29
+#: views/scripts/step3/editre11.phtml:29
+#: views/scripts/step3/editga1.phtml:29
+#: views/scripts/step3/editbl3.phtml:29
+#: views/scripts/step3/editge2.phtml:29
+#: views/scripts/step3/editbc2.phtml:29
+#: views/scripts/step3/editre10.phtml:29
+#: views/scripts/step3/editbc6.phtml:29
+msgid "Conocer los niveles de contaminacion atmosférica y las estrategias locales para mejora de la calidad del aire. Niveles de SO2, NO2, O3, CO, PM10, (PM2,5, BTX, HC)."
+msgstr ""
+
+#: views/scripts/step3/editbl2.phtml:37
+#: views/scripts/step3/editre9.phtml:37
+#: views/scripts/step3/editga2.phtml:37
+#: views/scripts/step3/editre11.phtml:37
+#: views/scripts/step3/editga1.phtml:37
+#: views/scripts/step3/editbl3.phtml:37
+#: views/scripts/step3/editge2.phtml:37
+#: views/scripts/step3/editre10.phtml:37
+msgid "Recuerda los siguientes datos:"
+msgstr ""
+
+#: views/scripts/step3/editre9.phtml:2
+msgid "Paso 3 :: R9 :: "
+msgstr ""
+
+#: views/scripts/step3/editre9.phtml:18
+#: views/scripts/step3/index.phtml:154
+msgid "r9"
+msgstr ""
+
+#: views/scripts/step3/editre9.phtml:18
+msgid "Gas radón."
+msgstr ""
+
+#: views/scripts/step3/editga2.phtml:2
+msgid "Paso 3 :: A2 :: "
+msgstr ""
+
+#: views/scripts/step3/editga2.phtml:18
+#: views/scripts/step3/index.phtml:108
+msgid "a2"
+msgstr ""
+
+#: views/scripts/step3/editga2.phtml:18
+msgid "Control del agua de suministro."
+msgstr ""
+
+#: views/scripts/step3/editga2.phtml:18
+msgid "(Calidad del agua)."
+msgstr ""
+
+#: views/scripts/step3/editre11.phtml:2
+msgid "Paso 3 :: R11 :: "
+msgstr ""
+
+#: views/scripts/step3/editre11.phtml:18
+#: views/scripts/step3/index.phtml:168
+msgid "r11"
+msgstr ""
+
+#: views/scripts/step3/editre11.phtml:18
+#: views/scripts/step3/index.phtml:168
+msgid "Espacio para reciclar basuras y compostaje."
+msgstr ""
+
+#: views/scripts/step3/editga1.phtml:2
+msgid "Paso 3 :: A1 :: "
+msgstr ""
+
+#: views/scripts/step3/editga1.phtml:18
+#: views/scripts/step3/index.phtml:101
+msgid "a1"
+msgstr ""
+
+#: views/scripts/step3/editga1.phtml:18
+#: views/scripts/step3/index.phtml:101
+msgid "Consumo de agua potable (cantidad)."
+msgstr ""
+
+#: views/scripts/step3/editbl3.phtml:2
+msgid "Paso 3 :: D3 :: "
+msgstr ""
+
+#: views/scripts/step3/editbl3.phtml:18
+#: views/scripts/step3/index.phtml:114
+msgid "d3"
+msgstr ""
+
+#: views/scripts/step3/editbl3.phtml:18
+msgid " Calidad del aire."
+msgstr ""
+
+#: views/scripts/step3/editbl3.phtml:18
+msgid "Ventilación. Control."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:2
+msgid "Paso 3 :: "
+msgstr ""
+
+#: views/scripts/step3/index.phtml:89
+msgid "Relación Entorno"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:90
+msgid "Materiales"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:98
+msgid "r1"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:98
+msgid "Compacidad y complejidad  edificatoria."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:99
+msgid "m1"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:99
+msgid "Recursos. Ciclo de vida de los materiales."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:100
+msgid "d1"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:100
+msgid "Confort higrotérmico."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:102
+msgid "e1"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:102
+msgid "Energías renovables in-situ. Emisiones de CO2eq."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:105
+msgid "r2"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:105
+msgid "Suelo desarrollado."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:106
+#: views/scripts/step3/editbc2.phtml:18
+msgid "m2"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:106
+msgid "Recursos. Origen de los materiales."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:108
+msgid "Control del agua de suministro. (calidad del agua)."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:109
+#: views/scripts/step3/editge2.phtml:18
+msgid "e2"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:109
+#: views/scripts/step3/editge2.phtml:18
+msgid "Tecnologías para la reducción de emisiones de carbono."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:112
+msgid "r3"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:112
+msgid "Cargas de escorrentía y erosión del suelo."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:113
+msgid "m3"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:113
+msgid "Recursos de la cuna a la puerta. Transporte a obra."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:114
+msgid "Calidad del aire. Ventilación. Control."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:115
+msgid "a3"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:115
+msgid "Cargas de aguas residuales (cantidad)."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:116
+msgid "e3"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:116
+msgid "Control en uso de la energía. Información. Monitorización. Mantenimiento."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:119
+msgid "r4"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:119
+msgid "Biodiversidad y hábitat en el proyecto."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:120
+msgid "m4"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:120
+msgid "Recursos. Materiales con certificación."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:121
+msgid "d4"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:121
+msgid "Energía en uso. Térmicos."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:122
+msgid "a4"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:122
+msgid "Control del agua evacuada."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:123
+msgid "e4"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:123
+msgid "Otras Emisiones."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:126
+msgid "r5"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:126
+msgid "Dotaciones y accesibilidad para bicicletas, peatones y coches."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:127
+msgid "m5"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:127
+msgid "Equipos refrigerantes. Evitar la emisión de gases que perjudiquen la capa de ozono."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:128
+msgid "d5"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:128
+msgid "Energía en uso. Otros."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:133
+msgid "r6"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:134
+#: views/scripts/step3/editbc6.phtml:18
+msgid "m6"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:134
+msgid "Compuestos Orgánicos Volátiles en uso. Tasa de emisión."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:140
+msgid "r7"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:140
+msgid "Calidad del aire. Emisones locales."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:141
+msgid "m7"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:141
+msgid "Control en obra. Gestión de residuos."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:147
+msgid "r8"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:147
+msgid "Ambiente local. Otras emisiones. Luz. Ruido, vibraciones."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:148
+msgid "m8"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:148
+msgid "Control en obra. Calidad del aire, energía agua materiales."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:154
+msgid "Radiación ionizante. Gas radón."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:155
+msgid "m9"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:155
+msgid "Contratación responsable. construcción."
+msgstr ""
+
+#: views/scripts/step3/index.phtml:161
+#: views/scripts/step3/editre10.phtml:18
+msgid "r10"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:162
+msgid "m10"
+msgstr ""
+
+#: views/scripts/step3/index.phtml:162
+msgid "Vida útil y fin de vida de los materiales."
+msgstr ""
+
+#: views/scripts/step3/editge2.phtml:2
+msgid "Paso 3 :: E2 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc2.phtml:2
+msgid "Paso 3 :: M2 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc2.phtml:18
+msgid "Recursos."
+msgstr ""
+
+#: views/scripts/step3/editbc2.phtml:18
+msgid "Origen de los materiales."
+msgstr ""
+
+#: views/scripts/step3/editre10.phtml:2
+msgid "Paso 3 :: R10 :: "
+msgstr ""
+
+#: views/scripts/step3/editre10.phtml:18
+msgid "Radiación no ionizante."
+msgstr ""
+
+#: views/scripts/step3/editre10.phtml:18
+msgid "Campos electromagnéticos."
+msgstr ""
+
+#: views/scripts/step3/editbc6.phtml:2
+msgid "Paso 3 :: M6 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc6.phtml:18
+msgid "Compuestos Orgánicos Volátiles en uso."
+msgstr ""
+
+#: views/scripts/step3/editbc6.phtml:18
+msgid "Tasa de emisión."
+msgstr ""
+
+#: views/scripts/step3/editre8.phtml:2
+msgid "Paso 3 :: R8 :: "
+msgstr ""
+
+#: views/scripts/step3/editre8.phtml:18
+msgid "Ambiente local."
+msgstr ""
+
+#: views/scripts/step3/editre8.phtml:18
+msgid "Otras emisiones. Luz. Ruido, vibraciones."
+msgstr ""
+
+#: views/scripts/step3/editge1.phtml:2
+msgid "Paso 3 :: E1 :: "
+msgstr ""
+
+#: views/scripts/step3/editge1.phtml:18
+msgid "Energías renovables in-situ."
+msgstr ""
+
+#: views/scripts/step3/editge1.phtml:18
+msgid "Emisiones de CO2eq."
+msgstr ""
+
+#: views/scripts/step3/editbc1.phtml:2
+msgid "Paso 3 :: M1 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc1.phtml:18
+msgid "Ciclo de vida de los materiales."
+msgstr ""
+
+#: views/scripts/step3/editbc10.phtml:2
+msgid "Paso 3 :: M10 :: "
+msgstr ""
+
+#: views/scripts/step3/editre2.phtml:2
+msgid "Paso 3 :: R2 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc8.phtml:2
+msgid "Paso 3 :: M8 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc8.phtml:18
+#: views/scripts/step3/editbc7.phtml:18
+msgid "Control en obra."
+msgstr ""
+
+#: views/scripts/step3/editbc8.phtml:18
+msgid "Calidad del aire, energía agua materiales."
+msgstr ""
+
+#: views/scripts/step3/editre5.phtml:2
+msgid "Paso 3 :: R5 :: "
+msgstr ""
+
+#: views/scripts/step3/editre1.phtml:2
+msgid "Paso 3 :: R1 :: "
+msgstr ""
+
+#: views/scripts/step3/editbl1.phtml:2
+msgid "Paso 3 :: D1 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc9.phtml:2
+msgid "Paso 3 :: M9 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc9.phtml:18
+msgid "Contratación responsable."
+msgstr ""
+
+#: views/scripts/step3/editbc9.phtml:18
+msgid "Construcción."
+msgstr ""
+
+#: views/scripts/step3/editbc5.phtml:2
+msgid "Paso 3 :: M5 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc5.phtml:18
+msgid "Equipos refrigerantes."
+msgstr ""
+
+#: views/scripts/step3/editbc5.phtml:18
+msgid "Evitar la emisión de gases que perjudiquen la capa de ozono."
+msgstr ""
+
+#: views/scripts/step3/editbl4.phtml:2
+msgid "Paso 3 :: D4 :: "
+msgstr ""
+
+#: views/scripts/step3/editbl4.phtml:18
+msgid "Energía en uso."
+msgstr ""
+
+#: views/scripts/step3/editbl4.phtml:18
+msgid "Térmicos."
+msgstr ""
+
+#: views/scripts/step3/editre4.phtml:2
+msgid "Paso 3 :: R4 :: "
+msgstr ""
+
+#: views/scripts/step3/editre7.phtml:2
+msgid "Paso 3 :: R7 :: "
+msgstr ""
+
+#: views/scripts/step3/editre7.phtml:18
+msgid "Calidad del aire."
+msgstr ""
+
+#: views/scripts/step3/editre7.phtml:18
+msgid "Emisones locales."
+msgstr ""
+
+#: views/scripts/step3/editbc7.phtml:2
+msgid "Paso 3 :: M7 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc7.phtml:18
+msgid "Gestión de residuos."
+msgstr ""
+
+#: views/scripts/step3/editbc3.phtml:2
+msgid "Paso 3 :: M3 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc3.phtml:18
+msgid "Recursos de la cuna a la puerta."
+msgstr ""
+
+#: views/scripts/step3/editbc3.phtml:18
+msgid "Transporte a obra."
+msgstr ""
+
+#: views/scripts/step3/editbl5.phtml:2
+msgid "Paso 3 :: D5 :: "
+msgstr ""
+
+#: views/scripts/step3/editbl5.phtml:18
+msgid "Otros."
+msgstr ""
+
+#: views/scripts/step3/editre3.phtml:2
+msgid "Paso 3 :: R3 :: "
+msgstr ""
+
+#: views/scripts/step3/editge3.phtml:2
+msgid "Paso 3 :: E3 :: "
+msgstr ""
+
+#: views/scripts/step3/editge3.phtml:18
+msgid "Control en uso de la energía."
+msgstr ""
+
+#: views/scripts/step3/editge3.phtml:18
+msgid "Información. Monitorización. Mantenimiento."
+msgstr ""
+
+#: views/scripts/step3/editga3.phtml:2
+msgid "Paso 3 :: A3 :: "
+msgstr ""
+
+#: views/scripts/step3/editge4.phtml:2
+msgid "Paso 3 :: E4 :: "
+msgstr ""
+
+#: views/scripts/step3/editga4.phtml:2
+msgid "Paso 3 :: A4 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc4.phtml:2
+msgid "Paso 3 :: M4 :: "
+msgstr ""
+
+#: views/scripts/step3/editbc4.phtml:18
+msgid "Materiales con certificación."
+msgstr ""
+
+#: views/scripts/step3/editre6.phtml:2
+msgid "Paso 3 :: R6 :: "
+msgstr ""
+
+#: views/scripts/step5/index.phtml:2
+msgid "Paso 5 :: "
+msgstr ""
+
+#: views/scripts/step5/index.phtml:10
+msgid "Ve rellenando las fichas. Lent es ant ad quas dis asperun dantiis am ut re modignim etur? Quiame presti coriae rernam imus quam as res apide vel iur? Quis doluptatis dercipide ped etur aut ped estrum secus."
+msgstr ""
+
+#: views/scripts/step5/index.phtml:21
+msgid "Área"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:22
+msgid "Ficha"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:24
+msgid "Unidades"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:25
+msgid "Proyecto"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:26
+msgid "Obra"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:27
+msgid "Uso A1"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:28
+msgid "Uso A2"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:29
+msgid "Uso A3"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:30
+msgid "Uso A4"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:31
+msgid "Uso A5"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:36
+#: views/scripts/step5/index.phtml:137
+msgid "re 3"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:40
+msgid "Cargas de escorrentía y erosión del suelo "
+msgstr ""
+
+#: views/scripts/step5/index.phtml:141
+msgid "Dotaciones y accesibilidad para bicicletas, peatones y coches"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:238
+msgid "re 9"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:241
+msgid "Radiacion ionizante. Gas radón"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:338
+msgid "re 10"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:341
+msgid "Radiacion no ionizante. Campos electromagnéticos"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:437
+msgid "bc 1"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:440
+msgid "Recursos. Ciclo de vida de los materiales"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:445
+#: views/scripts/step5/index.phtml:1181
+#: views/scripts/step5/index.phtml:1639
+#: views/scripts/step5/index.phtml:1848
+msgid "TOTAL"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:448
+#: views/scripts/step5/index.phtml:1184
+#: views/scripts/step5/index.phtml:1642
+#: views/scripts/step5/index.phtml:1851
+msgid "TOTAL/m2"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:451
+#: views/scripts/step5/index.phtml:1187
+#: views/scripts/step5/index.phtml:1645
+#: views/scripts/step5/index.phtml:1854
+msgid "TOTAL/pers."
+msgstr ""
+
+#: views/scripts/step5/index.phtml:487
+msgid "CAMBIO CLIMÁTICO"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:503
+msgid "Kg CO2 eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:507
+#: views/scripts/step5/index.phtml:556
+#: views/scripts/step5/index.phtml:654
+#: views/scripts/step5/index.phtml:702
+#: views/scripts/step5/index.phtml:750
+#: views/scripts/step5/index.phtml:798
+#: views/scripts/step5/index.phtml:894
+#: views/scripts/step5/index.phtml:902
+#: views/scripts/step5/index.phtml:906
+#: views/scripts/step5/index.phtml:910
+#: views/scripts/step5/index.phtml:995
+#: views/scripts/step5/index.phtml:1096
+#: views/scripts/step5/index.phtml:1100
+msgid "S"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:536
+msgid "CAPA DE OZONO"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:552
+msgid "Kg CF C11eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:585
+msgid "ACIDIFICACIÓN"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:601
+msgid "Kg So2 eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:605
+#: views/scripts/step5/index.phtml:999
+msgid "N"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:634
+msgid "EUTROFIZACIÓN"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:650
+msgid "Kg PO4 eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:682
+msgid "OXIDANTES FOTOQUÍMICOS"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:698
+msgid "Kg C2H4 eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:730
+msgid "RECURSOS ABIÓTICOS"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:746
+msgid "Kg SB eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:778
+msgid "CONSUMO ENERGÍA PRIMARIA TOTAL"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:794
+msgid "MJ"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:871
+msgid "bc 2"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:875
+msgid "Recursos. Origen de los materiales"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:972
+msgid "bc 6"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:976
+msgid "Compuestos orgánicos. Volátiles en uso. Tasas emisión"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1073
+msgid "bc 7"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1077
+msgid "Control en obra. Gestión de residuos"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1173
+msgid "ga 1"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1176
+msgid "Consumo de agua potable (cantidad)"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1240
+msgid "l/m2"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1244
+#: views/scripts/step5/index.phtml:1248
+#: views/scripts/step5/index.phtml:1252
+#: views/scripts/step5/index.phtml:1256
+#: views/scripts/step5/index.phtml:1260
+#: views/scripts/step5/index.phtml:1264
+#: views/scripts/step5/index.phtml:1268
+#: views/scripts/step5/index.phtml:1298
+#: views/scripts/step5/index.phtml:1306
+#: views/scripts/step5/index.phtml:1310
+#: views/scripts/step5/index.phtml:1314
+#: views/scripts/step5/index.phtml:1318
+#: views/scripts/step5/index.phtml:1322
+#: views/scripts/step5/index.phtml:1352
+#: views/scripts/step5/index.phtml:1360
+#: views/scripts/step5/index.phtml:1364
+#: views/scripts/step5/index.phtml:1368
+#: views/scripts/step5/index.phtml:1372
+#: views/scripts/step5/index.phtml:1376
+#: views/scripts/step5/index.phtml:1453
+#: views/scripts/step5/index.phtml:1461
+#: views/scripts/step5/index.phtml:1465
+#: views/scripts/step5/index.phtml:1469
+#: views/scripts/step5/index.phtml:1473
+#: views/scripts/step5/index.phtml:1477
+#: views/scripts/step5/index.phtml:1554
+#: views/scripts/step5/index.phtml:1562
+#: views/scripts/step5/index.phtml:1566
+#: views/scripts/step5/index.phtml:1570
+#: views/scripts/step5/index.phtml:1574
+#: views/scripts/step5/index.phtml:1578
+#: views/scripts/step5/index.phtml:1702
+#: views/scripts/step5/index.phtml:1710
+#: views/scripts/step5/index.phtml:1714
+#: views/scripts/step5/index.phtml:1718
+#: views/scripts/step5/index.phtml:1722
+#: views/scripts/step5/index.phtml:1726
+#: views/scripts/step5/index.phtml:1756
+#: views/scripts/step5/index.phtml:1764
+#: views/scripts/step5/index.phtml:1768
+#: views/scripts/step5/index.phtml:1772
+#: views/scripts/step5/index.phtml:1776
+#: views/scripts/step5/index.phtml:1780
+#: views/scripts/step5/index.phtml:1810
+#: views/scripts/step5/index.phtml:1818
+#: views/scripts/step5/index.phtml:1822
+#: views/scripts/step5/index.phtml:1826
+#: views/scripts/step5/index.phtml:1830
+#: views/scripts/step5/index.phtml:1834
+#: views/scripts/step5/index.phtml:1911
+#: views/scripts/step5/index.phtml:1919
+#: views/scripts/step5/index.phtml:1923
+#: views/scripts/step5/index.phtml:1927
+#: views/scripts/step5/index.phtml:1931
+#: views/scripts/step5/index.phtml:1935
+#: views/scripts/step5/index.phtml:1965
+#: views/scripts/step5/index.phtml:1973
+#: views/scripts/step5/index.phtml:1977
+#: views/scripts/step5/index.phtml:1981
+#: views/scripts/step5/index.phtml:1985
+#: views/scripts/step5/index.phtml:1989
+#: views/scripts/step5/index.phtml:2019
+#: views/scripts/step5/index.phtml:2027
+#: views/scripts/step5/index.phtml:2031
+#: views/scripts/step5/index.phtml:2035
+#: views/scripts/step5/index.phtml:2039
+#: views/scripts/step5/index.phtml:2043
+msgid "n"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1294
+msgid "l/m3"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1348
+msgid "lts/persona"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1430
+msgid "ga 3"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1434
+msgid "Cargas de aguas residuales (cantidad)"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1531
+msgid "bl 1"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1535
+msgid "Confort higrotérmico"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1550
+msgid "%horas/año"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1631
+msgid "ga 4"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1634
+msgid "Energía en uso Térmicos"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1698
+#: views/scripts/step5/index.phtml:1752
+#: views/scripts/step5/index.phtml:1806
+msgid "Kwh"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1840
+msgid "ge 1"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1843
+msgid "Energías renovables in-situ. Emisiones de CO2eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:1907
+#: views/scripts/step5/index.phtml:1961
+#: views/scripts/step5/index.phtml:2015
+msgid "Kg CO2eq"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:2048
+msgid "Generar PDF Ficha"
+msgstr ""
+
+#: views/scripts/step5/index.phtml:2049
+msgid "PDF datos"
+msgstr ""
+
+#: views/scripts/listprojects/index.phtml:2
+msgid "Proyectos Evaluados :: "
+msgstr ""
+
+#: views/scripts/step4/index.phtml:2
+#: views/scripts/step4/results.phtml:2
+#: views/scripts/step4/newmaterial.phtml:2
+msgid "Paso 4 :: "
+msgstr ""
+
+#: views/scripts/step4/index.phtml:9
+msgid "Etapas de producción de materiales, transporte y mantenimiento"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:16
+msgid "Familia de materiales"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:18
+msgid "Producto/ Material"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:21
+msgid "Densidad"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:25
+msgid "Distancia Distribuidor-Obra (km)"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:84
+msgid "Nuevo material"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:85
+msgid "Insertar material"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:86
+#: views/scripts/step4/results.phtml:12
+msgid "Resultados"
+msgstr ""
+
+#: views/scripts/step4/index.phtml:90
+msgid "La elección de una familia de materiales determina el conjunto de Productos/Materiales. Por ejemplo, si se elige la Familia de los aislantes, en esta columna sólo se tendrá acceso a estos materiales."
+msgstr ""
+
+#: views/scripts/step4/index.phtml:91
+msgid "Datos a rellenar obtenidos a partir del presupuesto. En algunos casos será necesario introducir algun campo más (por ejemplo: la canditad de aislante queda determinada por su superficie y su espesor). Al elegir el Producto aparecerían automáticamente dichos campos con sus Unidades correspondientes."
+msgstr ""
+
+#: views/scripts/step4/index.phtml:92
+msgid "Las Unidades quedan determinadas en función del Producto de construcción elegido. De esta forma se informa al usuario qué Cantidad se le está pidiendo."
+msgstr ""
+
+#: views/scripts/step4/index.phtml:93
+msgid "Previamente ha de definirse la vida útil del edificio según diseño (dato a pedir). Por defecto debería aparecer dicho valor en este campo aunque luego se pueda cambiar tecleando un valor distinto para dicho Producto."
+msgstr ""
+
+#: views/scripts/step4/results.phtml:16
+msgid "Impacto"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:20
+msgid "Agotamiento de capa de ozono"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:21
+msgid "Formación de oxidantes fotoquímicos"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:22
+msgid "Agotamiento de recursos abióticos"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:23
+msgid "Consumo de energía primaria total"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:27
+#: views/scripts/step4/results.phtml:28
+#: views/scripts/step4/results.phtml:29
+#: views/scripts/step4/results.phtml:30
+#: views/scripts/step4/results.phtml:31
+#: views/scripts/step4/results.phtml:32
+#: views/scripts/step4/results.phtml:33
+msgid "[kg SO2-eq.]"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:88
+msgid "Total/m2"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:108
+msgid "Total/persona"
+msgstr ""
+
+#: views/scripts/step4/results.phtml:118
+msgid "Etapa de producción de materiales, transporte y mantenimiento"
+msgstr ""
+
+#: views/scripts/report/download.phtml:2
+#: views/scripts/report/index.phtml:2
+msgid "Informe :: "
+msgstr ""
+
+#: views/scripts/report/index.phtml:6
+msgid "Descarga PDF"
+msgstr ""
+
+#: views/scripts/bug/submit.phtml:1
+msgid "Submit a bug report"
+msgstr ""
+
+#: views/scripts/bug/submit.phtml:2
+msgid "To submit a new bug report please fill out this form completely:"
+msgstr ""
+
+#: views/scripts/bug/edit.phtml:1
+msgid "Edit a bug report"
+msgstr ""
+
+#: views/scripts/bug/edit.phtml:3
+msgid ""
+"To update this bug report make any changes you need to in this form,\n"
+"and then click update."
+msgstr ""
+
+#: views/scripts/bug/confirm.phtml:1
+msgid "Thanks for submitting your bug report!"
+msgstr ""
+
+#: views/scripts/bug/confirm.phtml:2
+msgid "We will review it shortly..."
+msgstr ""
+
+#: views/scripts/bug/list.phtml:1
+msgid "Current Bugs"
+msgstr ""
+
+#: views/scripts/bug/list.phtml:8
+msgid "Date"
+msgstr ""
+
+#: views/scripts/bug/list.phtml:9
+msgid "Priority"
+msgstr ""
+
+#: views/scripts/bug/list.phtml:10
+msgid "Status"
+msgstr ""
+
+#: views/scripts/bug/list.phtml:11
+msgid "URL"
+msgstr ""
+
+#: views/scripts/bug/list.phtml:12
+msgid "Submitter"
+msgstr ""
+
+#: views/scripts/bug/list.phtml:13
+msgid "Description"
+msgstr ""
+
+#: views/scripts/bug/table-row.phtml:2
+msgid "Edit"
+msgstr ""
+
+#: views/scripts/bug/table-row.phtml:3
+msgid "Delete"
+msgstr ""
+
+#: views/scripts/sessionexpired/index.phtml:2
+msgid "Su sesión ha terminado. Por favor"
+msgstr ""
+
+#: views/scripts/sessionexpired/index.phtml:2
+msgid "inicie sesión de nuevo."
+msgstr ""
+
+#~ msgid "Blog"
+#~ msgstr "Blog"

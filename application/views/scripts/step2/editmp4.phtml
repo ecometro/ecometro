@@ -1,0 +1,69 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp4 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">		
+		<p class="intro">
+			<?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>
+		<div class="mp">
+            <h2><span class="big"><?php echo $this->translate('mp4'); ?></span> <?php echo $this->translate('Valor del suelo. Ecosistemas.'); ?> <span><?php echo $this->translate('Conocer los ecosistemas y hábitat en los que se sitúa el proyecto.'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Identificar el número de especies autóctonas, el tipo de paisaje y grado de protección de la zona.'); ?></p>
+		</div>
+        <hr>
+        <?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors);	?>	
+		<?php echo $this->form_step2_mp_4; ?>
+        <hr>
+		<div class="tabbable">
+		    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		    <div class="tab-content">
+		    	<div class="tab-pane active" id="tab1">
+					<h3><?php echo $this->translate('Herramientas'); ?></h3>
+					<p><?php echo $this->translate('Infraestructura de datos espaciales del MARM. Geoportal'); ?></p>
+					<p><a href="http://sig.marm.es/geoportal/" title="http://sig.marm.es/geoportal/" target="_blank">http://sig.marm.es/geoportal/</a></p>	  
+				</div>
+		    	<div class="tab-pane" id="tab2">		      	
+					<p><?php echo $this->translate('Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad.'); ?></p>
+		    	</div>
+				<div class="tab-pane" id="tab3">
+					<h3><?php echo $this->translate('MARM. BPIA. Banco público de indicadores ambientales.'); ?></h3>
+					<p><?php echo $this->translate('AGRICULTURA:'); ?></p>
+					<p><?php echo $this->translate('Agricultura ecológica.'); ?></p>
+					<p><?php echo $this->translate('Consumo de fertilizantes.'); ?></p>
+					<p><?php echo $this->translate('Consumo de productos fitosanitarios.'); ?></p>
+					<p><?php echo $this->translate('Eficiencia ambiental en la ganadería.'); ?></p>
+					<p><?php echo $this->translate('Ganadería ecológica.'); ?></p>
+					<p><?php echo $this->translate('Superficie de regadío.'); ?></p>
+					<p><?php echo $this->translate('COSTAS:'); ?></p>
+					<p><?php echo $this->translate('Agregaciones de medusas.'); ?></p>
+					<p><?php echo $this->translate('Arrecifes artificiales.'); ?></p>
+					<p><?php echo $this->translate('Biodiversidad marina: espacios protegidos marinos.'); ?></p>
+					<p><?php echo $this->translate('NATURALEZA Y BIODIVERSIDAD:'); ?></p>
+					<p><?php echo $this->translate('Espacios naturales protegidos.'); ?></p>
+					<p><?php echo $this->translate('Catalogación de las especies amenazadas en España.'); ?></p>
+					<p><?php echo $this->translate('Defoliación de las masas forestales.'); ?></p>
+					<p><?php echo $this->translate('Superficie de bosques y otras formaciones forestales.'); ?></p>
+					<p><?php echo $this->translate('Taxones de vertebrados amenazados en España.'); ?></p>
+					<p><?php echo $this->translate('Tendencias de las poblaciones de aves comunes.'); ?></p>
+					<p><?php echo $this->translate('Vigilancia ambiental.'); ?></p>
+		    	</div>
+				<div class="tab-pane" id="tab4">
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('US Department of Agriculture. Natural Resources Conservation Service. Soil Quality / Soil Health Assessment'); ?></p>
+					<p><a href="http://soils.usda.gov/sqi/assessment/assessment.html" title="http://soils.usda.gov/sqi/assessment/assessment.html" target="_blank">http://soils.usda.gov/sqi/assessment/assessment.html</a></p>
+					<p><?php echo $this->translate('USDA Natural Resources Conservation Service. Soil Quality Indicators. Physical, Chemical and Biological Indicators for Soil Quality Assessment and Management.'); ?></p>
+					<p><a href="http://soils.usda.gov/sqi/assessment/files/indicator_sheet_guide_sheet.pdf" title="http://soils.usda.gov/sqi/assessment/files/indicator_sheet_guide_sheet.pdf" target="_blank">http://soils.usda.gov/sqi/assessment/files/indicator_sheet_guide_sheet.pdf</a></p>
+		    	</div>
+				<div class="tab-pane" id="tab5">	
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>	      	
+				</div>
+		    </div>
+		</div><!-- .tabbable -->            
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

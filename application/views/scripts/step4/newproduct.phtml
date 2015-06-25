@@ -1,0 +1,20 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 4 :: '));
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 4)); ?>
+
+<div class="row-fluid">
+	<div class="span12">
+		<div class="mp">
+			<h2><?php echo $this->translate('Nuevos productos'); ?></h2>
+		</div>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span7">
+		<?php $this->successMessages($this->messages); ?>	
+		<?php $this->errorMessages($this->errors); ?>
+		<?php echo $this->form_step4_new_material; ?>			
+	</div>
+</div>
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step4/step4functions-newproduct.js'; ?>"></script>

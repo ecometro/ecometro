@@ -1,0 +1,13 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<form class="<?php echo $this->element->getAttrib('class'); ?>" id="<?php echo $this->element->getAttrib('id'); ?>" action="<?php echo $this->element->getAction(); ?>#step4-bc3" method="<?php echo $this->element->getMethod(); ?>" enctype="<?php echo $this->element->getAttrib('enctype'); ?>" onsubmit="return notEmpty()">
+	<fieldset>
+		<strong><?php echo $this->translate('Archivo CSV de mediciones*'); ?></strong>
+		<div class="control-group">
+			<?php echo $this->element->fichero; ?>
+		</div>
+		<div class="controls">
+			<?php echo $this->element->submit; ?>
+		</div>
+		<?php echo $this->translate('Campos requeridos. Formato CSV. Tamaño máximo 40kB.'); ?>
+	</fieldset>
+</form>

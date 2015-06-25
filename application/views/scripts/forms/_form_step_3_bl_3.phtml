@@ -1,0 +1,42 @@
+<?php 
+	$view = Zend_Layout::getMvcInstance()->getView(); 
+?>
+<?php 
+	// load in object session fields aplicable si/no from database
+	$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    $myNamespace->{'aplicable_' . $view->project_id . 'bl3'} = $view->fieldsAplicable;
+?>
+<form class="<?php echo $this->element->getAttrib('class'); ?> re" id="<?php echo $this->element->getAttrib('id'); ?>" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<table class="forms">
+		<thead>
+			<tr><th colspan="3">&nbsp</th></tr>
+		</thead>
+		<tbody>	
+			<tr class="<?php if($view->fieldsAplicable[1]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+				<td class="column1">x</td>   				  
+					<?php echo $this->element->ventilacion_cruzada; ?>
+				<td class="column4"><?php echo $view->units[1]; ?></td>
+			</tr>
+			<tr class="<?php if($view->fieldsAplicable[2]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+				<td class="column1">x</td>   				  
+					<?php echo $this->element->sensores_de_co2; ?>
+				<td class="column4"><?php echo $view->units[2]; ?></td>
+			</tr>
+			<tr class="<?php if($view->fieldsAplicable[3]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+				<td class="column1">x</td>   				  
+					<?php echo $this->element->control_de_las_zonas_de_admision; ?>
+				<td class="column4"><?php echo $view->units[3]; ?></td>
+			</tr>
+			<tr class="<?php if($view->fieldsAplicable[4]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+				<td class="column1">x</td>   				  
+					<?php echo $this->element->mantenimiento_y_limpieza; ?>
+				<td class="column4"><?php echo $view->units[4]; ?></td>
+			</tr>
+		</tbody>					
+	</table>
+	<span class="not-applicable"><?php echo $this->translate('Pinche sobre la x si no procede.'); ?></span>	
+	<?php echo $this->partial('partials/_form_navigation.phtml', array('attribs' => $this->element->getAttrib('id'), 'prev' => true, 'next' => true, 'prev_s' => null, 'next_s' => null)); ?>	
+	<div class="clr"></div>	
+	<label><?php echo $this->translate('Comentarios y especificaciones para la valoración'); ?></label>
+    <?php echo $this->element->comentarios; ?>
+</form>

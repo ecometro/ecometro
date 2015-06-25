@@ -1,0 +1,73 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp6 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+			<?php 
+				echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".');
+			?>
+		</p>
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('mp6'); ?></span> <?php echo $this->translate('Calidad del aire exterior.'); ?> <span><?php echo $this->translate('Conocer los niveles de contaminación atmosférica y las estrategias locales para mejora de la calidad del aire.'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+        	<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+	        <ul>
+				<li>- <?php echo $this->translate('Niveles de SO2, NO2, O3, CO, PM10, (PM2,5, BTX, HC).'); ?></li>
+				<li>- <?php echo $this->translate('Detectar las fuentes de emisión locales (chimeneas, tráfico rodado). Localización de fuentes para el control de entradas y salidas de aire y distribución de usos exteriores e interiores.'); ?></li>
+	        </ul>
+		</div>
+		<hr>
+		<?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors);	?>        
+        <?php echo $this->form_step2_mp_6; ?>
+		<hr>
+		<div class="tabbable">
+		    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		    <div class="tab-content">
+		    	<div class="tab-pane active" id="tab1">
+		        <h3><?php echo $this->translate('Herramientas'); ?></h3>
+					  <p><?php echo $this->translate('MARM. Redes de calidad del aire autonómicas y locales:'); ?></p>
+					  <p><a href="http://www.marm.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/mediciones/" title="http://www.marm.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/mediciones/" target="_blank">http://www.marm.es/es/calidad-y-evaluacion-ambiental/temas/atmosfera-y-calidad-del-aire/calidad-del-aire/mediciones/</a></p>
+					  <p><?php echo $this->translate('AEMET. Observación:'); ?></p>
+					  <p><a href="http://www.aemet.es/es/eltiempo/observacion" title="http://www.aemet.es/es/eltiempo/observacion" target="_blank">http://www.aemet.es/es/eltiempo/observacion</a></p>
+					  <p><?php echo $this->translate('Ground level ozone viewer:'); ?></p>
+					  <p><a href="http://www.eea.europa.eu/maps/ozone/map" title="http://www.eea.europa.eu/maps/ozone/map" target="_blank">http://www.eea.europa.eu/maps/ozone/map</a></p>		  
+		    	</div>
+		    	<div class="tab-pane" id="tab2">
+		    		<p><?php echo $this->translate('UE. 2008. Valores límite y umbrales para la protección de la salud y la vegetación.'); ?></p>
+		    		<p><?php echo $this->translate('DIRECTIVA 2008/50/CE DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 21 de mayo de 2008 relativa a la calidad del aire ambiente y a una atmósfera más limpia en Europa.'); ?></p>
+		    		<p><?php echo $this->translate('DIRECTIVA 2004/107/CE DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 15 de diciembre de 2004 relativa al arsénico, el cadmio, el mercurio, el níquel y los hidrocarburos aromáticos policíclicos en el aire ambiente'); ?></p>
+		    		<p><?php echo $this->translate('BOE. 2011. Valores límite para diferentes contaminantes. Real Decreto 102/2011, de 28 de enero, relativo a la mejora de la calidad del aire.'); ?></p>
+		    	</div>
+				<div class="tab-pane" id="tab3">		      	
+					<p><?php echo $this->translate('OMS 2005. Valores máximos fijados:'); ?></p>
+					<p><?php echo $this->translate('PM2,5: 10 μg/m3de media anual, 25 μg/m3 de media en 24h.'); ?></p>
+					<p><?php echo $this->translate('PM10: 20 μg/m3 media anual, 50 μg/m3 de media en 24h.'); ?></p>
+					<p><?php echo $this->translate('O3: 100 μg/m3 de media en 8h.'); ?></p>
+					<p><?php echo $this->translate('NO2: 40 μg/m3 de media anual, 200 μg/m3 de media en 1h.'); ?></p>
+					<p><?php echo $this->translate('SO2: 20 μg/m3 de media en 24h, 500 μg/m3 de media en 10 min.'); ?></p>
+					<p><a href="http://www.who.int/phe/health_topics/outdoorair_aqg/es/index.html" title="http://www.who.int/phe/health_topics/outdoorair_aqg/es/index.html" target="_blank">http://www.who.int/phe/health_topics/outdoorair_aqg/es/index.html</a></p>
+				</div>
+				<div class="tab-pane" id="tab4">
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+					<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf)</a></p>
+					<p><?php echo $this->translate('Ambito 04 Metabolismo urbano:'); ?></p>
+					<p><?php echo $this->translate('Punto 19 Calidad del aire. Número de días con mala calidad del aire (para cada contaminante.   Porcentaje de población expuesta a niveles de inmisión  inferiores a 40  µg/m3 (PM10 y NO2) (%): [número de habitantes expuestos a niveles < 40 µg/m3 /número total de habitantes] Cumplimiento Real  Decreto 1073/2002, de 18 de octubre, sobre evaluación y gestión calidad aire.'); ?></p>
+					<p><?php echo $this->translate('SO2: Número de días que se supera el valor límite: 125 μg/m3'); ?></p>
+					<p><?php echo $this->translate('CO: Número de días que se supera el valor límite: 10 mg/m3'); ?></p>
+					<p><?php echo $this->translate('NOx: Número de días que se supera el valor límite: 50 μg/m3'); ?></p>
+					<p><?php echo $this->translate('O3: Número de días que se supera el valor límite: 120 μg/m3'); ?></p>
+					<p><?php echo $this->translate('PM10: Número de días que se supera el valor límite: 50 μg/m'); ?></p>
+		    	</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+				</div>
+		    </div>
+		</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

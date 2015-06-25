@@ -1,0 +1,84 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R9 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're9'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're9'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">	
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r9'); ?></span> <?php echo $this->translate('Radiación no ionizante.'); ?> <span><?php echo $this->translate('Campos electromagnéticos.'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Conocer los niveles de radiación no ionizante en la zona para en caso necesario aplicar medidas de protección.');?></p>
+		</div>            
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_re_9; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">		    
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+				<p><?php echo $this->translate('Principio de precaución.'); ?></p>
+				<p><?php echo $this->translate('- MITYC. Infoantenas. Niveles de exposición a antenas de telefonía móvil.'); ?>
+				</p>
+				<a href="http://geoportal.mityc.es/VCTEL/vcne.do" title="http://geoportal.mityc.es/VCTEL/vcne.do">http://geoportal.mityc.es/VCTEL/vcne.do</a>
+				<p><?php echo $this->translate('- IGN. Cartografía Magnética.'); ?>					
+				</p>
+				<a href="http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Geofisica/Geomagnetismo/cartografia_magnetica/default.htm" title="http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Geofisica/Geomagnetismo/cartografia_magnetica/default.htm">http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Geofisica/Geomagnetismo/cartografia_magnetica/default.htm</a>				
+				<p><?php echo $this->translate('- Red eléctrica de España.'); ?></p>
+				<a href="http://wwww.ree.es/ingles/medio_ambiente/ma-campos-enlaces.asp" title="http://wwww.ree.es/ingles/medio_ambiente/ma-campos-enlaces.asp">http://wwww.ree.es/ingles/medio_ambiente/ma-campos-enlaces.asp</a>
+			</div>
+			<div class="tab-pane" id="tab2">
+			</div>
+			<div class="tab-pane" id="tab3">			      		
+			</div>
+			<div class="tab-pane" id="tab4">				
+			</div>
+			<div class="tab-pane" id="tab5">
+				<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>
+			</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

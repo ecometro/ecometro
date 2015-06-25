@@ -1,0 +1,14 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Borrar usuario :: ')); 
+?>
+<?php echo $this->partial('partials/_admin_menu.phtml'); ?>
+<?php if($this->messages || $this->errors): ?>
+<div class="row-fluid">
+	<div class="span5">
+		<?php $this->successMessages($this->messages); ?>	
+		<?php $this->errorMessages($this->errors); ?>		
+	</div><!-- .span5 -->
+	<div class="span7">	            
+	</div><!-- .span7 -->
+</div><!-- .row-fluid -->
+<?php endif; ?>

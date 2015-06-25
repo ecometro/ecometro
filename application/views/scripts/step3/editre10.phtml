@@ -1,0 +1,93 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R10 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're10'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're10'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r10'); ?></span> <?php echo $this->translate('Radiación ionizante.'); ?> <span><?php echo $this->translate('Gas radón.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Considerar medidas de protección para lugares con concentraciones importantes de gas radón.'); ?></p>
+		</div>            
+		<hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_re_10; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+					<p><?php echo $this->translate('Medidas correctoras para nueva construcción:'); ?></p>
+					<ul>
+						<li><?php echo $this->translate('-Ventilación efectiva (en espacios habitables y cámaras)'); ?></li>
+						<li><?php echo $this->translate('-Despresurización del suelo (activa o pasiva, para evitar la entrada en espacios habitables)'); ?></li>
+						<li><?php echo $this->translate('-Barreras o membranas impermeables.'); ?></li>
+						<li><?php echo $this->translate('-Tratamiento del agua (en caso necesario)'); ?></li>
+					</ul>
+					<p><?php echo $this->translate('Más info en:'); ?></p>
+					<a href="http://whqlibdoc.who.int/publications/2009/9789241547673_eng.pdf" title="http://whqlibdoc.who.int/publications/2009/9789241547673_eng.pdf">http://whqlibdoc.who.int/publications/2009/9789241547673_eng.pdf</a>
+			    </div>
+			    <div class="tab-pane" id="tab2">						
+			    </div>
+			    <div class="tab-pane" id="tab3">			      	
+					<p><?php echo $this->translate('OMS.2009. Concentraciones de radón en el interior. España, media aritmética 90 Bq/m3. Media geométrica 46 Bq/m3. Desviación geométrica estándar 2,9 Bq/m3.'); ?></p>
+					<p><?php echo $this->translate('WHO handbook on indoor radon.'); ?></p>
+					<p><?php echo $this->translate('OMS. 2009. A national reference level of 100 Bq/m3 is recommended. However, if this level cannot be reached under the prevailing country-specific conditions, the reference level should not exceed 300 Bq/m3.'); ?></p>
+					<a href="http://whqlibdoc.who.int/publications/2009/9789241547673_eng.pdf" title="http://whqlibdoc.who.int/publications/2009/9789241547673_eng.pdf">http://whqlibdoc.who.int/publications/2009/9789241547673_eng.pdf</a>
+					<p><?php echo $this->translate('EPA. 2001. Niveles medios de radón en el interior de las viviendas: 1,3 pCi/L. Media de niveles de radón en el exterior, donde está diluido: 0,4 pCi/L. Recomendación EPA de niveles máximos para tomar medidas: 4 pCi/L.'); ?></p>
+					<a href="http://www.epa.gov/radon/pdfs/buildradonout.pdf" title="http://www.epa.gov/radon/pdfs/buildradonout.pdf">http://www.epa.gov/radon/pdfs/buildradonout.pdf</a>
+					<p><?php echo $this->translate('IBN. 2008.  Valores indicativos en Baubiologie para zonas de descanso: no significativo <30 Bq/m3, 30-60 Bq/m3 // poco significativo, 60-200 Bq/m3 //  fuertemente significativo, y extremadamente significativo >200  Bq/m3.'); ?></p>
+					<p><?php echo $this->translate('Complemento a la Norma técnica de medición en baubiologie SBM-2008.'); ?></p>
+					<a href="http://www.baubiologie.es/pdf/Estandard%20SBMvalores.pdf" title="http://www.baubiologie.es/pdf/Estandard%20SBMvalores.pdf">http://www.baubiologie.es/pdf/Estandard%20SBMvalores.pdf</a>
+			    </div>
+				<div class="tab-pane" id="tab4">			      	
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->				
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

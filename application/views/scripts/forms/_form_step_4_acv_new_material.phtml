@@ -1,0 +1,93 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<form class="<?php echo $this->element->getAttrib('class'); ?>" id="<?php echo $this->element->getAttrib('id'); ?>" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<fieldset>
+		<legend class="intro"><?php echo $this->translate('REGISTRO de PRODUCTO/MATERIAL'); ?></legend>	
+		<div class="control-group">
+			<?php echo $this->element->producto; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->fabricante; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->origen_del_producto; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->familia_de_productos_materiales; ?>
+		</div>
+		<div class="control-group family-products">
+			<?php echo $this->element->familia_de_productos; ?>
+		</div>             
+		<div class="control-group">
+			<?php echo $this->element->informacion_adicional; ?>
+		</div>
+		<hr />
+		<legend class="intro"><?php echo $this->translate('Unidad declarada (p.ej. 2m2 de panel)'); ?></legend>
+		<div class="control-group">
+			<?php echo $this->element->cantidad; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->unidad; ?>
+		</div>
+		<div class="control-group densidad">
+			<?php echo $this->element->densidad; ?>
+		</div>
+		<div class="control-group espesor">
+			<?php echo $this->element->espesor; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->vida_util; ?>
+		</div>
+		<hr />
+		<legend class="intro"><?php echo $this->translate('Transporte'); ?></legend>
+		<div class="control-group">
+			<?php echo $this->element->emplazamiento_fabricante; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->distancia_distribuidor; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->tipo_de_transporte; ?>
+		</div>
+		<hr />
+		<legend class="intro"><?php echo $this->translate('Indicadores de impacto'); ?></legend>
+		<div class="control-group">
+			<?php echo $this->element->potencial_de_acidificacion; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->potencial_de_eutrofizacion; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->potencial_de_calentamiento_global; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->potencial_de_agotamiento_de_capa_de_ozono; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->potencial_de_formacion_de_oxidantes_fotoquimicos; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->agotamiento_de_recursos_abioticos; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->consumo_de_energia_primaria_total; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->origen_informacion_de_impactos; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->documentacion_adjunta; ?>
+		</div>
+		<hr />
+		<div class="control-group">
+			<label class="strong"><?php echo Zend_Registry::get('Zend_Translate')->translate('Comentarios'); ?></label>			
+			<?php echo $this->element->comentarios; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->csrfVerification; ?>
+		</div>			
+		<div class="controls">
+			<a class="boton black izquierda" href="<?php echo $this->url(array('controller' => 'step4', 'action' => 'index', 'project_id' => $this->project_id), 'step4Route'); ?>" title="<?php echo $this->translate('Volver a menú de Análisis de ciclo de vida'); ?>"> <?php echo $this->translate('Volver a menú de Análisis de ciclo de vida'); ?></a>
+			<?php echo $this->element->submit; ?>
+		</div>
+	</fieldset>
+</form>

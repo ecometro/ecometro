@@ -1,0 +1,56 @@
+<table class="results">
+	<thead>
+		<tr>
+			<th scope="col"><?php echo $this->translate('Factor ponderación'); ?></th>
+    		<th scope="col"><?php echo $this->translate('Máximo Posible'); ?></th>
+   			<th scope="col"><?php echo $this->translate('Puntuación Obtenida'); ?></th>
+ 		</tr>
+    </thead>
+	<tbody>
+	<?php 
+	$sumMax = 0;
+	for($count = 0; $count < $this->nrColumnsTotal; $count++):
+		if($this->weightingFactor[$count] != null && $this->maximumPoints[$count] != null):
+	?>                
+			<tr>
+				<td><?php echo $this->weightingFactor[$count]; ?></td>
+			   	<td>
+					<?php                                     
+						// max = v5 * factor_de_ponderacion
+						$max = $this->vectorPoints[$count]['v5'] * $this->weightingFactor[$count];
+						// max value
+						echo $max; 
+						// sum of maximum values
+						$sumMax += $max; 
+					?>
+					</td>
+					<td class="res-<?php echo $count + 1; ?>"><?php echo (!$this->valueOfEachField[$count + 1] == NULL) ? $this->valueOfEachField[$count + 1] : '0'; ?></td>
+				</tr>
+			<?php 
+			else:
+			?>
+				<tr><td colspan="3"><?php echo $this->translate('No se valora!'); ?></td></tr>
+			<?php 			
+	 							
+		endif;
+	endfor;
+	?>
+	</tbody>
+	<tfoot>
+		<tr>
+    		<th colspan="3" scope="col"><?php echo $this->translate('Total'); ?></th>
+   		</tr>
+		<tr>
+			<td><?php echo $this->total_max; ?></td>                    
+			<td><?php echo $sumMax; ?></td>
+			<td class="total-pct"><?php echo $this->total_pct; ?></td>
+		</tr>
+		<tr>
+			<th colspan="3" scope="col"><?php echo $this->translate('Puntuación obtenida'); ?></th>
+		</tr>
+		<tr>
+			<td colspan="3" class="resultado"><span class="total-pct"><?php echo $this->total_pct; ?></span> <?php echo $this->translate('de'); ?> <?php echo $sumMax; ?> <?php echo $this->translate('posibles'); ?></td>
+		</tr>
+	</tfoot>
+</table>
+<button class="boton red" type="submit"><?php echo $this->translate('Guardar'); ?></button>

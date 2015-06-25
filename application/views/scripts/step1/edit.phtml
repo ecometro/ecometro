@@ -1,0 +1,25 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 1 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 1)); ?>
+<div class="row-fluid">
+	<div class="span5">		
+		<h2><?php echo $this->translate('Introduce aquí los datos básicos del proyecto.'); ?></h2>
+		<p class="requerido"><?php echo $this->translate('Es necesario rellenar todas las casillas para continuar.'); ?></p>
+		<?php echo $this->errorMessages($this->errors);	?>			
+		<?php echo $this->form_step1_f_1; ?>
+		<hr>
+		<?php echo $this->partial('partials/_project_footer.phtml'); ?>
+	</div><!-- .span5 -->
+	<div class="span7">
+		<section>
+			<h2><?php echo $this->translate('Instrucciones:'); ?></h2>
+			<div class="video-container">				
+				<iframe
+src="http://prezi.com/embed/aoppclcmg2vs/?bgcolor=ffffff&amp;lock_to_path=0&
+amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_feat
+ures=undefined" width="500" height="400" frameBorder="0"></iframe>
+			</div>			                	
+        </section>						
+	</div><!-- .span7 -->
+</div><!-- .row-fluid -->

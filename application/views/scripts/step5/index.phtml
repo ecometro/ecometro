@@ -1,0 +1,2031 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 5 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 5)); ?>
+<div class="row-fluid">
+	<div class="span12">
+	<p class="intro">
+	    <?php 
+			echo $this->translate('Ve rellenando las fichas. Lent es ant ad quas dis asperun dantiis am ut re modignim etur? Quiame presti coriae rernam imus quam as res apide vel iur? Quis doluptatis dercipide ped etur aut ped estrum secus.');
+		?>
+	</p>
+	<?php echo $this->partial('partials/_graph_points.phtml', array(
+    'data' => $this->data, 'l_photo' => $this->l_photo, 'step5' => true)); ?>
+		<div class="clr"></div>
+		<hr />
+		<div id="flash" class="etapa-success">&nbsp;</div>
+        <div id="errors" class="etapa-error"></div>
+        <table class="table-bordered puntuacion-final">
+		  <tr>  	
+		    <th scope="col" class="first"><?php echo $this->translate('Área'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Ficha'); ?></th>
+		    <th scope="col" class="" colspan="3"><?php echo $this->translate('Total'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Unidades'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Proyecto'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Obra'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Uso A1'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Uso A2'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Uso A3'); ?></th>
+		    <th scope="col" class=""><?php echo $this->translate('Uso A4'); ?></th>
+		    <th scope="col" class="last"><?php echo $this->translate('Uso A5'); ?></th>  
+		  </tr>
+		  <tr class="no-border"><td colspan="11"></td></tr>
+		  <tr>  			    
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('re 3'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Cargas de escorrentía y erosión del suelo '); ?>
+		    </td>
+		    <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S				    	
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		   
+		  </tr>
+		   <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  
+		  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('re 3'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Dotaciones y accesibilidad para bicicletas, peatones y coches'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td class="azul">
+		    S
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		    
+		    <td class="azul">
+		    S		
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  
+		  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('re 9'); ?></strong>
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('Radiacion ionizante. Gas radón'); ?>
+		    </td>
+		    
+		     <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td class="red-light">
+		    N
+		    </td>
+		    
+		    <td class="medio">
+		    -	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S			    
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		   
+		  </tr> 
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('re 10'); ?></strong>
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('Radiacion no ionizante. Campos electromagnéticos'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td class="azul">
+		    S
+		    </td>
+		    
+		    <td class="azul">
+		    -	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S			    	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		    
+		    <td class="azul">
+		    S	
+		    </td>
+		   
+		  </tr> 
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		   <tr>  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('bc 1'); ?></strong>
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('Recursos. Ciclo de vida de los materiales'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/m²'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/pers.'); ?></strong>
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr> 
+		  <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('CAMBIO CLIMÁTICO'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('Kg CO2 eq'); ?>		    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?> 		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('CAPA DE OZONO'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('Kg CF C11eq'); ?>		    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>  
+		   <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('ACIDIFICACIÓN'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('Kg So2 eq'); ?>		    	    
+		    </td>
+		    
+		    <td class="red-light">
+		    	<?php echo $this->translate('N'); ?>		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>  
+		  <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('EUTROFIZACIÓN'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('Kg PO4 eq'); ?>		    	    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>		   
+		  </tr>
+		  <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('OXIDANTES FOTOQUÍMICOS'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('Kg C2H4 eq'); ?>	    	    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>		   
+		  </tr> 
+		  <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('RECURSOS ABIÓTICOS'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('Kg SB eq'); ?>		    	    	    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>		   
+		  </tr> 
+		   <tr>  	
+		    <td class="first-column">
+			    
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('CONSUMO ENERGÍA PRIMARIA TOTAL'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('MJ'); ?>		    	    	    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		    
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>		   
+		  </tr> 
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('bc 2'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Recursos. Origen de los materiales'); ?>
+		    </td>
+		    <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>				    	
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		   
+		  </tr>
+		    <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		    <tr>  	
+		    
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('bc 6'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Compuestos orgánicos. Volátiles en uso. Tasas emisión'); ?>
+		    </td>
+		    <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>	
+		    </td>
+		    
+		    <td class="red-light">
+		    	<?php echo $this->translate('N'); ?>		
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		    
+		    <td class="medio">
+		    -				    	
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		    
+		    <td class="medio">
+		    -		
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('bc 7'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Control en obra. Gestión de residuos'); ?>
+		    </td>
+		    <!-- Total -->
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <td class="medio">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>	
+		    </td>
+		    
+		    <td class="azul">
+		    	<?php echo $this->translate('S'); ?>		
+		    </td>
+		    
+		    <td>
+		    		
+		    </td>
+		    
+		    <td>
+		    				    	
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    
+		    <td>
+		    		
+		    </td>
+		    
+		    <td>
+		    		
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('ga 1'); ?></strong>
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('Consumo de agua potable (cantidad)'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/m²'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/pers.'); ?></strong>
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr> 
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td class="izq">
+			  
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('l/m²'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			  
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('l/m³'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		   <tr>  	
+		    
+		    <td class="first-column">
+			  
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	<?php echo $this->translate('lts/persona'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('ga 3'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Cargas de aguas residuales (cantidad)'); ?>
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		  <tr>  	
+		    
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('bl 1'); ?></strong>
+		    </td>
+		    
+		    <td class="izq">
+			   <?php echo $this->translate('Confort higrotérmico'); ?>
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    <?php echo $this->translate('%horas/año'); ?> 		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		    		    <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td>
+			   
+		    </td>
+		    <!-- Total -->
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr>
+		   <tr>  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('ga 4'); ?></strong>
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('Energía en uso Térmicos'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/m²'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/pers.'); ?></strong>
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr> 
+		  		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    <?php echo $this->translate('Kwh'); ?> 		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		    <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    <?php echo $this->translate('Kwh'); ?> 		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		    <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    <?php echo $this->translate('Kwh'); ?> 		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		  	   <tr>  	
+		    <td class="first-column">
+			    <strong><?php echo $this->translate('ge 1'); ?></strong>
+		    </td>
+		    <td class="izq">
+			   <?php echo $this->translate('Energías renovables in-situ. Emisiones de CO2eq'); ?>
+		    </td>
+		    
+		    <!-- Total -->
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/m²'); ?></strong>
+		    </td>
+		    <td class="red">
+		    	<strong><?php echo $this->translate('TOTAL/pers.'); ?></strong>
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    </td>
+		    
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		    <td>
+		    	
+		    </td>
+		   
+		  </tr> 
+		  		  <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    <?php echo $this->translate('Kg CO2eq'); ?> 		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		   
+		  </tr>
+		    <tr>  	
+		    
+		    <td class="first-column">
+			   
+		    </td>
+		    
+		    <td class="izq">
+			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <td class="amarillo">
+		    	
+		    </td>
+		    <!-- Fin Total -->
+		    
+		    <td>
+		    <?php echo $this->translate('Kg CO2eq'); ?> 		    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>
+		    
+		    <td class="medio">
+		    	-		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>
+		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>		   
+		  </tr>
+		    <tr>  			    
+		    <td class="first-column">			   
+		    </td>		    
+		    <td class="izq">			   
+		    </td>
+		    <!-- Total -->
+		    <td class="amarillo">		    	
+		    </td>
+		    <td class="amarillo">		    	
+		    </td>
+		    <td class="amarillo">		    	
+		    </td>
+		    <!-- Fin Total -->		    
+		    <td>
+		    <?php echo $this->translate('Kg CO2eq'); ?> 		    	
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>		    
+		    <td class="medio">
+		    	-		
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>		
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>			    	
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>		    
+		    <td class="amarillo">
+		    	<?php echo $this->translate('n'); ?>	
+		    </td>		   
+		  </tr>
+		</table>
+		<a class="boton black izquierda" href="<?php echo $this->url(array('controller' => 'step4', 'action' => 'newmaterial', 'project_id' => $this->project_id), 'step4Route'); ?>" title="<?php echo $this->translate('Generar PDF Ficha'); ?>"><?php echo $this->translate('Generar PDF Ficha'); ?></a>
+		<a class="boton black izquierda insert-material" href="#" title="<?php echo $this->translate('PDF datos'); ?>"> <?php echo $this->translate('PDF datos'); ?></a>
+	</div>
+</div>

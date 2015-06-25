@@ -1,0 +1,54 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp9 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+			<?php 
+				echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".');
+			?>
+		</p>
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('mp9'); ?></span> <?php echo $this->translate('Radiación ionizante. Conocer la cantidad de radiación y las fuentes origen.'); ?> <span></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Conocer los niveles de gas radón en la zona para considerar medidas de protección.'); ?></p>
+		</div>
+		<hr>        
+		<?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors); ?>
+		<?php echo $this->form_step2_mp_9; ?>
+		<hr>
+        <div class="tabbable">
+			    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			    <div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">
+			        	<h3><?php echo $this->translate('Herramientas'); ?></h3>
+						<p><?php echo $this->translate('CSN (2000). Mapa de radiación gamma natural (μR/hora):'); ?></p>
+						<p><a href="http://www.csn.es/images/stories/publicaciones/periodicas/alfa/proyecto_marna_.pdf" title="http://www.csn.es/images/stories/publicaciones/periodicas/alfa/proyecto_marna_.pdf" target="_blank">http://www.csn.es/images/stories/publicaciones/periodicas/alfa/proyecto_marna_.pdf</a></p>
+						<p><?php echo $this->translate('Se prevé la disponibilidad de un mapa para España de concentración de radón en el interior. (1 pCi/L equivale a 37 Bq/m³'); ?></p>						
+					</div>
+			    	<div class="tab-pane" id="tab2">			    		
+			    	</div>
+					<div class="tab-pane" id="tab3">
+						<p><?php echo $this->translate('En desarrollo: Atlas de radiación natural en Europa, con algunos datos de: indoor radon, geogenic radon, cosmic radiation. Y en proceso de discusión para: outdoor radon, terrestrial gamma dose rate,  Sources of terrestrial radiation (geochemical map),  Water (ground water, surface water),  Exposure (internal, external), Total dose by natural radiation.'); ?></p>
+						<p><a href="http://www.radon.eu/workshop2010/pres/gruber.pdf" title="http://www.radon.eu/workshop2010/pres/gruber.pdf" target="_blank">http://www.radon.eu/workshop2010/pres/gruber.pdf</a></p>
+						<p><?php echo $this->translate('Más información en: EU JRC, Radioactivity Environmental Monitoring (REM):'); ?></p>
+						<p><a href="http://rem.jrc.ec.europa.eu/RemWeb/Index.aspx" title="http://rem.jrc.ec.europa.eu/RemWeb/Index.aspx" target="_blank">http://rem.jrc.ec.europa.eu/RemWeb/Index.aspx</a></p>						
+					</div>
+					<div class="tab-pane" id="tab4">
+			      		<h3><?php echo $this->translate('OTROS'); ?></h3>
+						<p><?php echo $this->translate('Valores indicativos Baubiologie para las zonas de descanso.'); ?></p>
+						<p><a href="http://www.baubiologie.es/" title="http://www.baubiologie.es/" target="_blank">http://www.baubiologie.es/</a></p>
+						<p><?php echo $this->translate('Valores de referencia para campos eléctricos alternos (bajas frecuencias), campos magnéticos alternos (bajas frecuencias), ondas electromagnéticas (altas frecuencias), campos eléctricos continuos (electrostática) campos magnéticos continuos (magnetostática) perturbaciones geológicas (campo magnético y radiación terrestre)'); ?></p>
+					</div>
+					<div class="tab-pane" id="tab5">	
+						<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+					</div>
+			    </div>
+			</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

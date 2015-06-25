@@ -1,0 +1,184 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 4 :: '));
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 4)); ?>
+<?php if($this->messages || $this->errors): ?>
+    <div class="row-fluid"> 
+        <div class="span12">
+            <?php $this->successMessages($this->messages); ?>              
+            <?php $this->errorMessages($this->errors); ?>
+        </div>
+    <div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+    <div class="span12">
+        <p class="intro"><?php echo $this->translate('Cálculo de Análisis del Ciclo de Vida'); ?></p>
+        <p><?php echo $this->translate('A continuación encontrarás tres sencillos pasos donde incluir toda la información relativa al proyecto para hacer el cálculo del Análisis de Ciclo de Vida. Hemos organizado la introducción de información según las fases propias del desarrollo de un proyecto de arquitectura.'); ?></p>
+        <p><?php echo $this->translate('El Análisis de Ciclo de Vida que contempla el Ecómetrose encuentra alineado con la normativa existente sobre Sostenibilidad en los Trabajos de Construcción del Comité Europeo de Normalización -CEN/TC350- y del Comité Técnico de Normalización de AENOR -AEN/CTN 198-. La aplicación del ACV a nivel del edificio está contemplada en la norma EN 15978:2011.'); ?></p>
+        <p><?php echo $this->translate('En términos de la nomenclatura definida por las normas anteriores, el alcance del ACV que en la actualidad puede realizarse con el ecómetro incluye las siguientes etapas. A1, A2, A3, A4, A5, B4 y B6.'); ?></p>
+
+        <div class="accordion" id="accordion2">
+            <div class="accordion-group mp">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                        <strong>
+                            <?php echo $this->translate('4.1 - Proyecto. Productos y transporte'); ?>
+                        </strong>
+                    </a>
+                </div><!-- .accordion-heading -->
+                <div id="collapseOne" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        <p><strong><?php echo $this->translate('En esta fase están incluidas las etapas de producción de productos y su transporte.'); ?></strong></p>
+                        <hr class="hr-new">
+                        <p><?php echo $this->translate('Para poder calcular el ACV de un edificio, Ecómetro extrae casi toda la información de las mediciones del presupuesto del Proyecto.'); ?></p>
+                        <p><?php echo $this->translate('Para ello primero realizaremos el presupuesto del Proyecto cumpliendo unas condiciones específicas: emplear la Base de Precios CENTRO, respetando su estructura de Capítulos y Unidades de Obra.  Hecho el presupuesto, lo guardaremos como un archivo BC3.'); ?></p>
+                        <p><?php echo $this->translate('Por último utilizaremos la calculadora de Ecómetro, importando el archivo BC3 y siguiendo los pasos que van apareciendo.'); ?></p>                        
+                        <hr class="hr-new">       
+                        <div class="clr"></div>                  
+
+                        <?php echo $this->form_step4_bc3; ?>
+
+                        <?php if($this->topten): ?>
+                        <table class="table-bordered acv-b">
+                            <thead>
+                                <th scope="col" class="first"></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Producto'); ?><sup>(1)</sup></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Cantidad'); ?><sup>(2)</sup></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Unidad'); ?><sup>(3)</sup></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Origen del producto'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Emplazamiento fabricante'); ?>
+                                </th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Distancia distribuidor obra (km)'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Tipo de transporte'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Vida útil producto (años)'); ?></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nombre-capitulo" colspan="9"><?php echo $this->translate('Nombre del Capítulo'); ?></td>
+                                </tr>
+                                <?php if($this->topten): ?>
+                                    <?php foreach($this->topten as $material): ?>
+                                    <tr>
+                                        <td class="delete-x">X</td>
+                                        <td><?php echo $material['subtype']; ?></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td class="editable"><select class="arrow"><option>option1</option></select></td>
+                                        <td class="editable"><select class="arrow"><option>option1</option></select></td>
+                                        <td class="editable"><input type="text" name="dist_distrib_obra" class="section-b"></td>
+                                        <td class="editable"><select class="arrow"><option>option1</option></select></td>
+                                        <td class="editable"><input type="text" name="vida_util_producto" class="section-b"></td>
+                                    </tr>
+                                    <?php endforeach; ?>  
+                                <?php endif; ?>                             
+                            </tbody>
+                        </table>
+                        <span class="not-applicable"><?php echo $this->translate('Pinche sobre la X si no procede.'); ?></span> 
+                        <div class="clr"></div>    
+                        <a class="boton black derecha results" href="<?php echo $this->url(array('controller' => 'step4', 'action' => 'results', 'project_id' => $this->project_id), 'step4Route'); ?>" title="<?php echo $this->translate('Resultados'); ?>"><?php echo $this->translate('Resultados'); ?></a>        
+                        <button class="boton red derecha" type="submit"><?php echo $this->translate('Guardar'); ?></button>
+                        <?php endif; ?>  
+                        <div class="clr"></div>
+                        <hr class="hr-new">
+                        <p><span class="super">(1)</span> <?php echo $this->translate('La elección de una familia de materiales determina el conjunto de Productos/Materiales. Por ejemplo, si se elige la Familia de los aislantes, en esta columna sólo se tendrá acceso a estos materiales.'); ?></p>
+                        <p><span class="super">(2)</span> <?php echo $this->translate('Datos a rellenar obtenidos a partir del presupuesto. En algunos casos será necesario introducir algun campo más (por ejemplo: la canditad de aislante queda determinada por su superficie y su espesor). Al elegir el Producto aparecerían automáticamente dichos campos con sus Unidades correspondientes.'); ?></p>
+                        <p><span class="super">(3)</span> <?php echo $this->translate('Las Unidades quedan determinadas en función del Producto de construcción elegido. De esta forma se informa al usuario qué Cantidad se le está pidiendo.'); ?></p>
+                        <p><span class="super">(4)</span> <?php echo $this->translate('Previamente ha de definirse la vida útil del edificio según diseño (dato a pedir). Por defecto debería aparecer dicho valor en este campo aunque luego se pueda cambiar tecleando un valor distinto para dicho Producto.'); ?></p>            
+                                       
+                    </div><!-- .accordion-inner -->
+                </div><!-- #collapseOne -->
+            </div><!-- .accordion-group -->
+
+            <div class="accordion-group mp">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                        <strong><?php echo $this->translate('4.2 - Obra. Construcción'); ?></strong>
+                    </a>
+                </div><!-- .accordion-heading -->
+                <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        <p><strong><?php echo $this->translate('En esta fase está incluida la etapa de construcción, combustible empleado por maquinaria en trabajos distintos al movimiento de tierras y demolición.'); ?></strong></p>
+                        <ul>    
+                            <li><?php echo $this->translate('- Para el cálculo de esta fase es necesario la utilización de un programa externo para el cálculo de mediciones como Presto o Cype.'); ?></li>
+                            <li><?php echo $this->translate('- Una vez tengas tu medición actualizada con los cambios de obra. Introduce los valores en la siguiente tabla.'); ?></li>
+                        </ul>
+                        <hr class="hr-new">                
+                        <table class="table-bordered acv-c">
+                            <thead>
+                                <th scope="col" class="first"></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Cantidad'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Unidad'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Distancia hasta tratamiento (km)'); ?></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo $this->translate('Movimiento de tierras y demolición'); ?></strong>
+                                    </td>
+                                    <td class="editable"><input type="text" name="movimientos_tierras_qty" class="section-c"></td>
+                                    <td rowspan="3" style="text-align: center; vertical-align: middle;">m<sup>3</sup></td>
+                                    <td class="editable"><input type="text" name="movimientos_tierras_dist" class="section-c"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <strong><?php echo $this->translate('Residuos de construcción'); ?></td></stronng>
+                                    <td class="editable"><input type="text" name="residuos_construccion_qty" class="section-c"></td>                    
+                                    <td class="editable"><input type="text" name="residuos_construccion_dist" class="section-c"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><strong><?php echo $this->translate('Consumo de agua'); ?></strong></td>
+                                    <td class="editable"><input type="text" name="consumo_agua_qty" class="section-c"></td>                    
+                                    <td rowspan="3" style="text-align: center; vertical-align: middle;"><?php echo $this->translate('No se aplica'); ?>&nbsp;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><strong><?php echo $this->translate('Consumo de electricidad'); ?></strong></td>
+                                    <td class="editable"><input type="text" name="consumo_electricidad_qty" class="section-c"></td>
+                                    <td style="text-align: center;">kmh</td>
+                                </tr>
+                                <tr>
+                                    <td><strong><?php echo $this->translate('Consumo de diesel'); ?></strong></td>
+                                    <td class="editable"><input type="text" name="consumo_diesel_qty" class="section-c"></td>
+                                    <td style="text-align: center;">l</td>                    
+                                </tr>                
+                            </tbody>    
+                        </table>
+                        <a class="boton black derecha results" href="<?php echo $this->url(array('controller' => 'step4', 'action' => 'results', 'project_id' => $this->project_id), 'step4Route'); ?>/#fase-obra" title="<?php echo $this->translate('Resultados'); ?>"><?php echo $this->translate('Resultados'); ?></a>
+                        <button class="boton red derecha" type="submit"><?php echo $this->translate('Guardar'); ?></button>
+                    </div><!-- .accordion-inner -->
+                </div><!-- #collapseTwo -->
+            </div><!-- .accordion-group -->
+            <div class="accordion-group mp">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                        <strong><?php echo $this->translate('4.3 - Uso. Energía operacional'); ?></strong>
+                    </a>
+                </div>
+                <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        <p><strong><?php echo $this->translate('En esta fase está incluida la etapa consumo de energía de calefacción y refrigeración durante la vida de uso del proyecto.'); ?></strong></p>
+                        <hr class="hr-new"> 
+                            <ul>
+                                <li><?php echo $this->translate('- Para el cálculo de esta fase es necesario una estimación del consumo anual del edificio.'); ?></li> 
+                                <li><?php echo $this->translate('- Esta información se irá actualizando año a año, con el consumo real del edificio. De esta forma, el impacto en la etapa de Uso de Energía operacional B6 se irá ajustando al uso real del edificio.'); ?></li>
+                            </ul>
+                        <hr class="hr-new">    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-new">        
+        <p class="intro"><?php echo $this->translate('Otras opciones:'); ?></p>
+        <p><?php echo $this->translate('A continuación encontrarás la opción de "Añadir producto a la Base de Datos" (Declaración Ambiental de Producto) y la opción de "Comparar información medioambiental entre dos productos".'); ?></p>
+        <p><?php echo $this->translate('Esta última opción permite comparar el desempeño ambiental de dos productos. Los resultados de esta comparativa han de ser tomados con cautela ya que habría que tener en cuenta la manera en que ambos productos cumplen con las funciones a desempeñar dentro del del edificio a lo largo de si ciclo de vida.'); ?></p>
+        <p><?php echo $this->translate('En lo referente a los productos de construcción, Ecómetro ha utilizado la norma EN 15804:2012 que aporta uniformidad en cuanto a la información ambiental de los productos de construcción a través de las Declaraciones Ambientales de Producto (DAP).'); ?></p>        
+        <a class="boton red izquierda" href="<?php echo $this->url(array('controller' =>'step4', 'action' => 'newproduct', 'project_id' => $this->project_id), 'step4Route'); ?>" title="<?php echo $this->translate('Añadir producto a la Base de Datos'); ?>"><?php echo $this->translate('Añadir producto a la Base de Datos'); ?></a>
+        <div class="clr"></div>
+        <a class="boton red izquierda" href="<?php echo $this->url(array('controller' =>'step4', 'action' => 'compare', 'project_id' => $this->project_id), 'step4Route'); ?>" title="<?php echo $this->translate('Añadir producto a la Base de Datos'); ?>"><?php echo $this->translate('Comparar información medioambiental de productos'); ?></a>
+        <div class="clr"></div>        
+    </div>
+</div>        
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step4/step4functions.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step4/step4functions-graphs.js'; ?>"></script>        

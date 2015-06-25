@@ -1,0 +1,10 @@
+<div id="steps">
+	<p><?php echo $this->translate('Pasos a seguir:'); ?></p>
+        <ul class="breadcrumb">
+ 			<li <?php if($this->step == 1) echo 'class="active"'; ?>><a title="<?php echo $this->translate('Datos básicos'); ?>" href="<?php echo $this->url(array('controller' => 'step1', 'action' => 'edit', 'project_id' => $this->project_id), 'step1Route'); ?>"><?php echo $this->translate('1. Datos básicos'); ?></a><span class="divider"></span></li>
+  			<li <?php if($this->step == 2) echo 'class="active"'; ?>><a title="<?php echo $this->translate('Mapa de aproximación'); ?>" href="<?php echo $this->url(array('controller' => 'step2', 'action' => 'index', 'project_id' => $this->project_id), 'step2Route'); ?>"><?php echo $this->translate('2. Mapa de aproximación'); ?></a><span class="divider"></span></li>
+  			<li <?php if($this->step == 3) echo 'class="active"'; ?>><a title="<?php echo $this->translate('Datos sobre el proyecto'); ?>" href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'index', 'project_id' => $this->project_id), 'step3Route'); ?>"><?php echo $this->translate('3. Datos sobre el proyecto'); ?></a><span class="divider"></span></li>
+  			<li <?php if($this->step == 4) echo 'class="active"'; ?>><a title="<?php echo $this->translate('Análisis del ciclo de vida'); ?>" href="<?php echo $this->url(array('controller' => 'step4', 'action' => 'index', 'project_id' => $this->project_id), 'step4Route'); ?>"><?php echo $this->translate('4. Análisis del ciclo de vida'); ?></a><span class="divider"></span></li>            
+            <li <?php if($this->step == 5) echo 'class="active"'; ?>><a title="<?php echo $this->translate('Resultado final'); ?>" href="<?php echo $this->url(array('controller' => 'step5', 'action' => 'index', 'project_id' => $this->project_id), 'step5Route'); ?>"><?php echo $this->translate('5. Resultado final'); ?></a></li>
+		</ul>
+</div><!-- #steps -->

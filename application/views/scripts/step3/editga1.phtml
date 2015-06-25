@@ -1,0 +1,130 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: A1 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'ga1'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'ga1'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php 
+				echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".');
+			?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('a1'); ?></span> <?php echo $this->translate('Consumo de agua potable (cantidad).'); ?> <span></span></h2>
+		</div>
+        <div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Reducir el consumo de agua potable doméstica.'); ?></p>
+			<p><?php echo $this->translate('Los buenos hábitos de consumo son el primer paso para reducir el consumo de agua potable durante el uso de la vivienda. Existen además una serie de medidas para diferentes elementos que permiten optimizar el ahorro.'); ?></p>
+		</div>              
+		<hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_ga_1; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+			    	<ul>
+			    		<li><?php echo $this->translate('- Duchas y bañeras: Utilizar dispositivos reductores de caudal.'); ?></li>
+			    		<li><?php echo $this->translate('-Cocina: Grifería eficiente.')?></li>
+			    		<li><?php echo $this->translate('- Lavadora: Comprobar el consumo de agua en la etiqueta.'); ?></li>
+			    		<li><?php echo $this->translate('- Lavavajillas: Comprobar el consumo de agua en la etiqueta.'); ?></li>
+			    		<li><?php echo $this->translate('- Inodoro: Utilizar agua no potable para el inodoro, ya sea procedente de la red, como utilizando agua reciclada in situ.'); ?></li>
+			    		<li><?php echo $this->translate('- Riego: Utilizar plantas autóctonas que no necesiten riego, o utilizar agua no potable para su riego.'); ?></li>
+			    	</ul>		    	
+			    </div>
+			    <div class="tab-pane" id="tab2">
+			    	<?php echo $this->translate('CTE DB-HS. Salubridad. HS 4: Suministro de agua.'); ?>			    	
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('HADES'); ?></h3>
+					<p><?php echo $this->translate('RN1. Consumo de agua potable.'); ?></p>
+					<p><?php echo $this->translate('RN2. Recuperación y reutilización de aguas grises.'); ?></p>
+					<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Wat 1 Water consumption.'); ?>						
+					</p>
+					<p><?php echo $this->translate('Reducción del consumo con aparatos (grifos, electrodomésticos, sensores,...)'); ?></p>										
+					<p><?php echo $this->translate('Wat 2 Water meter.'); ?>
+					</p>
+					<p><?php echo $this->translate('Monitorización del consumo de agua.'); ?></p>
+					<p><?php echo $this->translate('Wat 3 Major leak detection.'); ?></p>
+					<p><?php echo $this->translate('Detección de fugas.'); ?></p>
+					<p><?php echo $this->translate('Wat 6 Irrigation systems.'); ?></p>
+					<p><?php echo $this->translate('Especificaciones para reducir el consumo de agua potable para riego.'); ?></p>
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('WE PR1 Water use reduction.'); ?></p>
+					<p><?php echo $this->translate('Reducir un 20% el consumo base de agua. Ver también Reciclaje de aguas.'); ?></p>
+					<p><?php echo $this->translate('WE 1 Water efficient landscaping.'); ?></p>
+					<p><?php echo $this->translate('Reducir (50%) o eliminar (sin agua o uso de agua de lluvia o reciclada)  el uso de agua potable para riego.'); ?></p>
+					<p><?php echo $this->translate('WE 3 Water use reduction.'); ?></p>
+					<p><?php echo $this->translate('Estrategias que reduzcan el uso de agua desde un 30% hasta un 40% respecto al consumo base (sin incluir riego).'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('LR2 Resources and materials.'); ?>
+						<ul>
+							<li><?php echo $this->translate('1 Water resources. '); ?></li>
+							<li><?php echo $this->translate('1.1 Water saving.  Griferías y otros aparatos con reductores de consumo.'); ?></li>
+						</ul>
+					</p>
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('MARM. Sistema de indicadores del agua.'); ?></p>
+					<p><a href="http://servicios2.marm.es/sia/indicadores/mapa_indic.jsp" title="http://servicios2.marm.es/sia/indicadores/mapa_indic.jsp" target="_blank">http://servicios2.marm.es/sia/indicadores/mapa_indic.jsp</a></p>
+					<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+					<p><?php echo $this->translate('4 Metabolismo urbano.'); ?></p>
+					<p><?php echo $this->translate('11 Consumo de agua urbano. '); ?>
+						<ul>
+							<li><?php echo $this->translate('Agua de la red de abastecimiento municipal/población total del municipio)/365 días. '); ?></li>
+							<li><?php echo $this->translate('Consumo  (doméstico, público, comercial, industrial)  de  agua de  la red de abastecimiento municipal facturado anualmente/población total del municipio)/365 días.'); ?></li>
+							<li><?php echo $this->translate('Volumen de agua distribuida en red  – volumen de agua facturada)/volumen de agua distribuida en red. '); ?></li>
+							<li><?php echo $this->translate('Deseable consumo doméstico< 100 litros por persona y día'); ?></li>
+						</ul>
+					</p>
+					<p><?php echo $this->translate('Enlace al documento:'); ?></p>
+					<a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf</a>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

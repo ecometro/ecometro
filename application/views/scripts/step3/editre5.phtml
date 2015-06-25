@@ -1,0 +1,166 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R5 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're5'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're5'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">	
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r5'); ?></span> <?php echo $this->translate('Dotaciones y accesibilidad para bicicletas, peatones y coches.'); ?> <span></span></h2>
+		</div>
+        <div class="descripcion">
+	        <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Favorecer y facilitar la movilidad peatonal y ciclista frente al uso del vehículo privado.'); ?></p>
+			<p><?php echo $this->translate('Metros lineales y superficie de viario con prioridad para peatones y bicicletas respecto al total de viario. Distancia.'); ?></p>
+			<p><?php echo $this->translate('Reducir los impactos asociados al uso del vehículo privado.'); ?></p>
+			<p><?php echo $this->translate('Transformar los espacios tradicionalmente dedicados al coche a otro tipo de usos más sostenibles.'); ?></p>
+		</div>            
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_re_5; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+			    <ul>
+			    	<li>- <?php echo $this->translate('Plazas de aparcamiento para bicicletas: Número de plazas accesibles, resguardadas y seguras, según la cantidad de ocupantes del edificio.'); ?></li>
+			    	<li>- <?php echo $this->translate('Aparcamiento para coches: Reducir el número de plazas respecto al total de ocupantes.'); ?></li>
+			    	<li>- <?php echo $this->translate('Coches eléctricos: Dotaciones de plazas de aparcamiento para vehículos más eficientes. Número de plazas respecto al total de ocupantes.'); ?></li>
+			    	<li>- <?php echo $this->translate('Demanda energética transporte.'); ?></li>
+			    </ul>	
+				<h3><?php echo $this->translate('Herramientas'); ?></h3>
+				<p><?php echo $this->translate('Observatorio de la movilidad metropolitana.'); ?></p>
+				<p><a href="http://www.observatoriomovilidad.es/es/enlaces-de-interes.html" title="http://www.observatoriomovilidad.es/es/enlaces-de-interes.html" target="_blank">http://www.observatoriomovilidad.es/es/enlaces-de-interes.html</a></p>
+			</div>
+			<div class="tab-pane" id="tab2">
+			</div>
+			<div class="tab-pane" id="tab3">
+			    <h3><?php echo $this->translate('MARM. BPIA. Banco público de indicadores ambientales.'); ?></h3>
+			    <p><?php echo $this->translate('TRANSPORTE'); ?>
+				    <ul>
+				    	<li><?php echo $this->translate('Consumo de biocarburantes.'); ?></li>
+				    	<li><?php echo $this->translate('Eficiencia ambiental del transporte.'); ?></li>
+				    	<li><?php echo $this->translate('Emisión de contaminantes a la atmósfera,  procedentes del transporte.'); ?></li>
+						<li><?php echo $this->translate('Residuos del transporte: neumáticos fuera de uso (NFU).'); ?></li>
+						<li><?php echo $this->translate('Transporte aéreo.'); ?></li>
+						<li><?php echo $this->translate('Volumen total del transporte interurbano: distribución modal.'); ?></li>
+				    </ul>
+			    </p>
+			</div>
+			<div class="tab-pane" id="tab4">
+				<h3><?php echo $this->translate('BREEAM'); ?></h3>
+				<p><?php echo $this->translate('Tra 3. Cyclist facilities.'); ?></p>
+				<p><?php echo $this->translate('Según el tipo de residencia o alojamiento (estudiantes, trabajadores, residencias).'); ?></p>
+				<p><?php echo $this->translate('Dotación de almacenamiento de bicicletas para el 10% del personal y el 50% de los residentes. O  dotación de almacenamiento de bicicletas para el 10% del personal y el 10% de los residentes, y al menos dos dotaciones (duchas, vestuarios y espacio para secar la ropa).'); ?></p>
+				<p><?php echo $this->translate('Tra 4. Pedestrian and cyclist safety.'); ?></p>
+				<p><?php echo $this->translate('Dimensiones y características técnicas de los accesos en el área exterior objeto de valoración.'); ?></p>
+				<p><?php echo $this->translate('Tra 6. Maximum car parking capacity.'); ?></p>
+				<p><?php echo $this->translate('Multi-residencial.'); ?></p>
+				<p><?php echo $this->translate('No más de una plaza para cada tres / cuatro usuarios.'); ?></p>
+				<p><?php echo $this->translate('Residencias y otros'); ?></p>
+				<p><?php echo $this->translate('No más de una plaza para cada cuatro / cinco usuarios.'); ?></p>
+			    <h3><?php echo $this->translate('LEED'); ?></h3>
+				<p><?php echo $this->translate('SS C 4.2 Alternative transportation - Bicycle storage and changing rooms.'); ?>
+					<ul>
+						<li><?php echo $this->translate('Residencial: espacio para almacenamiento de bicicletas seguro y cubierto para el 15% de los ocupantes. '); ?></li>
+						<li><?php echo $this->translate('Comercial e institucional: aparcamiento de bicicletas y vestuarios y duchas a menos de 200m para al menos el 5% de los ocupantes.'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('SS C4.3 Alternative transportation - Low emitting and fuel efficient vehicles.'); ?>	
+					<ul>
+						<li>- <?php echo $this->translate('5% de plazas de aparcamiento preferente para vehículos de baja emisión.'); ?></li>
+						<li>- <?php echo $this->translate('Proveer vehículos eficientes para el 3% de los ocupantes.'); ?></li>
+						<li>- <?php echo $this->translate('Programa para compartir vehículos eficientes para el 3% de los ocupantes.'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('SS C4.4 Alternative transportation - Parking capacity.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('No exceder los requerimientos locales y aparcamiento preferente para transporte compartido.'); ?></li>
+						<li>- <?php echo $this->translate('No aportar nuevo aparcamiento.'); ?></li>
+							</ul>
+				</p>
+				<h3><?php echo $this->translate('CASBEE'); ?></h3>
+				<p><?php echo $this->translate('LR3 Off-site environment.'); ?>
+					<ul>
+						<li><?php echo $this->translate('2.3 Load on local infrastructure.'); ?></li>
+						<li><?php echo $this->translate('2.3.3 Traffic load control.'); ?></li>
+						<li><?php echo $this->translate('Aparcamiento de bicicletas apropiado y adecuado en número y disposición.'); ?></li>
+						<li><?php echo $this->translate('Número de plazas adecuada para que los coches no aparquen en la calle.'); ?></li>
+						<li><?php echo $this->translate('Número de plazas adecuada para que los coches no aparquen en la calle.'); ?></li>
+						<li><?php echo $this->translate('Posición, forma y distribución respecto a accesos para evitar congestiones.'); ?></li>
+					</ul>
+				</p>
+				<h3><?php echo $this->translate('HQE'); ?></h3>
+				<p><?php echo $this->translate('F1 Eco-construction. Cible 1 : Relations des bâtiments avec leur environnement immédiat. Tener en cuenta las ventajas y desventajas del contexto: geográfico (clima, vistas, pluviales, ecosistemas, topografía) ventajas y restricciones (molestias, contaminantes, riesgos) social, y otros elementos remarcables. Ordenación de la parcela: Creación de un entorno agradable (zona de recreo, residuos, vegetación) y reducción de los impactos relacionados con el transporte (separación de accesos peatonales y rodados, aparcamientos, facilidades para bicicletas y vehículos eléctricos)'); ?></p>
+				<h3><?php echo $this->translate('BNB'); ?></h3>
+				<p><?php echo $this->translate('3 SOCIOCULTURAL AND FUNCTIONAL QUALITY.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('3.2 Functionality.'); ?></li>
+						<li>- <?php echo $this->translate('3.2.5 Bicycle comfort.'); ?></li>
+					</ul>
+				</p>
+				<h3><?php echo $this->translate('OTROS'); ?></h3>
+				<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+				<p><?php echo $this->translate('3 Movilidad. 08. Espacio viario para peatones.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('Metros lineales de viario con prioridad para peatones/metros lineales totales y superficie viaria para peatones/superficie total viario.'); ?></li>
+						<li>- <?php echo $this->translate('Proporción del número de calles con prioridad para peatones (deseable>65-75% de espacio viario para peatones).'); ?></li>
+					</ul>
+				</p>
+				<p>
+					<?php echo $this->translate('3 Movilidad. 09. Espacio viario para bicicletas.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('Metros lineales de carril bici / metros lineales totales de viario urbano.'); ?></li>
+						<li>- <?php echo $this->translate('Habitantes con cobertura a menos de 300 metros de un carril bici/ número total de habitantes (deseable >80%).'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('Enlace al documento:'); ?></p>
+				<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf</a></p>
+			</div>
+			<div class="tab-pane" id="tab5">
+				<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+			</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

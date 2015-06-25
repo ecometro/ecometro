@@ -1,0 +1,307 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 4 :: '));
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 4)); ?>
+<div class="row-fluid">
+    <div class="span12">
+        <div class="mp">
+            <h2><?php echo $this->translate('Resultados del Análisis del Ciclo de Vida en fase de proyecto'); ?></h2>
+        </div>
+        <table class="table-bordered resultados">
+            <tr>
+                <th scope="col"><?php echo $this->translate('Impacto'); ?></th>
+                <th scope="col"><?php echo $this->translate('Acidificación'); ?></th>
+                <th scope="col"><?php echo $this->translate('Eutrofización'); ?></th>
+                <th scope="col"><?php echo $this->translate('Calentamiento global'); ?></th>
+                <th scope="col"><?php echo $this->translate('Agotamiento de capa de ozono'); ?></th>
+                <th scope="col"><?php echo $this->translate('Formación de oxidantes fotoquímicos'); ?></th>
+                <th scope="col"><?php echo $this->translate('Agotamiento de recursos abióticos'); ?></th>
+                <th scope="col"><?php echo $this->translate('Consumo de energía primaria total'); ?></th>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Unidad'); ?></th>
+                <th scope="col"><?php echo $this->translate('[kg SO2-eq.]'); ?></th>
+                <th scope="col"><?php echo $this->translate('[kg PO43-eq.]'); ?></th>
+                <th scope="col"><?php echo $this->translate('[kg CO2-eq.]'); ?></th>
+                <th scope="col"><?php echo $this->translate('[kg R11-eq.]'); ?></th>
+                <th scope="col"><?php echo $this->translate('[kg C2H4-eq.]'); ?></th>
+                <th scope="col"><?php echo $this->translate('[kg Sb-eq.]'); ?></th>
+                <th scope="col"><?php echo $this->translate('[MJ]'); ?></th>
+            </tr>
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>            
+            <tr>
+                <th scope="row"><?php echo $this->translate('Etapa de fabricación A1, A2, A3'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Capítulo 1'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Capítulo 2'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Capítulo 3'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Capítulo n'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>            
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Etapa de construcción A4'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Etapa de construcción A5'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> 
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>           
+            <tr>
+                <th scope="row"><?php echo $this->translate('Etapa de uso B4'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+             <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Etapa de uso B6'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>                       
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Total'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Total/m2'); ?></th>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr class="vacio">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row"><?php echo $this->translate('Total/persona'); ?></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>        
+        <hr class="hr-new">
+        <p><strong><?php echo $this->translate('Impactos por capítulo del presupuesto del proyecto'); ?></strong></p>
+        <div class="tabbable impact-cap">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab" title="<?php echo $this->translate('Acidificación'); ?>"><?php echo $this->translate('Acidificación'); ?></a></li>
+                <li><a href="#tab2" data-toggle="tab" title="<?php echo $this->translate('Eutrofización'); ?>"><?php echo $this->translate('Eutrofización'); ?></a></li>
+                <li><a href="#tab3" data-toggle="tab" title="<?php echo $this->translate('Calentamiento global'); ?>"><?php echo $this->translate('Calentamiento global'); ?></a></li>
+                <li><a href="#tab4" data-toggle="tab" title="<?php echo $this->translate('Agotamiento de capa de ozono'); ?>"><?php echo $this->translate('Agotamiento de capa de ozono'); ?></a></li>
+                <li><a href="#tab5" data-toggle="tab" title="<?php echo $this->translate('Formación de oxidantes fotoquímicos'); ?>"><?php echo $this->translate('Formación de oxidantes fotoquímicos'); ?></a></li>
+                <li><a href="#tab5" data-toggle="tab" title="<?php echo $this->translate('Agotamiento de recursos abióticos'); ?>"><?php echo $this->translate('Agotamiento de recursos abióticos'); ?></a></li>
+                <li><a href="#tab5" data-toggle="tab" title="<?php echo $this->translate('Consumo de energía primaria total'); ?>"><?php echo $this->translate('Consumo de energía primaria total'); ?></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">  
+                    Acidificación                  
+                </div>
+                <div class="tab-pane" id="tab2">
+                    Eutrofización                        
+                </div>
+                <div class="tab-pane" id="tab3"> 
+                    Calentamiento global       
+                </div>
+                <div class="tab-pane" id="tab4">    
+                    Agotamiento de capa de ozono              
+                </div>
+                <div class="tab-pane" id="tab5">
+                    Formación de oxidantes fotoquímicos               
+                </div>
+                <div class="tab-pane" id="tab6">  
+                    Agotamiento de recursos abióticos   
+                </div>
+                <div class="tab-pane" id="tab7">                 
+                    Consumo de energía primaria total
+                </div>
+            </div>
+        </div><!-- .tabbable -->
+        <hr class="hr-new">
+        <p><strong><?php echo $this->translate('Impactos totales relativos al proyecto'); ?></strong></p>
+        <div class="tabbable impact-total">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab8" data-toggle="tab" title="<?php echo $this->translate('Acidificación'); ?>"><?php echo $this->translate('Acidificación'); ?></a></li>
+                <li><a href="#tab9" data-toggle="tab" title="<?php echo $this->translate('Eutrofización'); ?>"><?php echo $this->translate('Eutrofización'); ?></a></li>
+                <li><a href="#tab10" data-toggle="tab" title="<?php echo $this->translate('Calentamiento global'); ?>"><?php echo $this->translate('Calentamiento global'); ?></a></li>
+                <li><a href="#tab11" data-toggle="tab" title="<?php echo $this->translate('Agotamiento de capa de ozono'); ?>"><?php echo $this->translate('Agotamiento de capa de ozono'); ?></a></li>
+                <li><a href="#tab12" data-toggle="tab" title="<?php echo $this->translate('Formación de oxidantes fotoquímicos'); ?>"><?php echo $this->translate('Formación de oxidantes fotoquímicos'); ?></a></li>
+                <li><a href="#tab13" data-toggle="tab" title="<?php echo $this->translate('Agotamiento de recursos abióticos'); ?>"><?php echo $this->translate('Agotamiento de recursos abióticos'); ?></a></li>
+                <li><a href="#tab14" data-toggle="tab" title="<?php echo $this->translate('Consumo de energía primaria total'); ?>"><?php echo $this->translate('Consumo de energía primaria total'); ?></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab8">
+                    Acidificación                    
+                </div>
+                <div class="tab-pane" id="tab9">    
+                    Eutrofización                    
+                </div>
+                <div class="tab-pane" id="tab10">
+                    Calentamiento global        
+                </div>
+                <div class="tab-pane" id="tab11">  
+                    Agotamiento de capa de ozono                  
+                </div>
+                <div class="tab-pane" id="tab12">  
+                    Formación de oxidantes fotoquímicos               
+                </div>
+                <div class="tab-pane" id="tab13">
+                    Agotamiento de recursos abióticos                 
+                </div>
+                <div class="tab-pane" id="tab14">  
+                    Consumo de energía primaria total               
+                </div>
+            </div>
+        </div><!-- .tabbable -->        
+    </div><!-- .span12 -->
+</div><!-- .row-fluid -->       
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step4/step4functions.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step4/step4functions-graphs.js'; ?>"></script>      

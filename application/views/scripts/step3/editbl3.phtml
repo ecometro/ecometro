@@ -1,0 +1,118 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: D3 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bl3'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bl3'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('d3'); ?></span> <?php echo $this->translate(' Calidad del aire.'); ?> <span><?php echo $this->translate('Ventilación. Control.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+			<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>			
+		</div>            
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bl_3; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+	<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">			    
+			    </div>
+			    <div class="tab-pane" id="tab2">
+			    	<?php echo $this->translate('CTE DB-HS. Salubridad. HS 3: Calidad del aire interior'); ?>
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('HADES'); ?></h3>
+					<p><?php echo $this->translate('AI1. Eficiencia de la ventilación en áreas con ventilación natural.'); ?></p>
+					<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Hea 7. Potential for natural ventilation.'); ?>
+					</p>
+					<p><?php echo $this->translate('Para espacios comunes tamaño de ventana y geometría de la estancia, o efectividad de la ventilación demostrada por un programa de cálculo (CIBSE recomendado). La estrategia de ventilación permite dos ratios diferentes de ventilación para ventilaciones rápidas (olores) y prevenir el sobrecalentamiento en verano.'); ?></p>
+					<p><?php echo $this->translate('Hea 8. Indoor air quality.'); ?>
+					</p>
+					<p><?php echo $this->translate('Según tipo de ventilación, distancia a fuentes exteriores de contaminación, minimizar la recirculación. En oficinas, 12 litros por segundo y persona para diluir contaminantes. En áreas con ocupación variable sensores de CO2 conectados al sistema de ventilación o con sistema de alerta para ventilación natural.'); ?></p>					
+					<p><?php echo $this->translate('Hea 12. Microbial contamination.'); ?></p>
+					<p><?php echo $this->translate('Sistemas de agua y humidificación con controles para legionela.'); ?></p>
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('IEQ PR 1. Minimum air quality performance. Alcanzar el mínimo de ventilación según ASHRAE. (O según CEN EN 5251) Especificaciones según ventilación natural o mecánica.'); ?></p>
+					<p><?php echo $this->translate('IEQ C2. Increased ventilation. Aumentar el ratio de ventilación un 30% por encima del estándar, o comprobar la efectividad de la ventilación natural. Comprobar que se alcanzan los requerimientos del manual CIBSE o comprobar la efectividad de la ventilación mediante modelo analítico multizona.'); ?></p>
+					<p><?php echo $this->translate('IEQ C1. Outdoor air delivery monitoring. Sensores de CO2 vinculados al sistema de ventilación (natural o mecánica).'); ?></p>
+					<p><?php echo $this->translate('IEQ C5. Indoor chemical and pollutant source control. Controlar la entrada de contaminantes en el edificio o áreas ocupadas: captura de partículas en la entrada de 3m (rejillas, felpudos), sistema de extracción de aire viciado de locales (lavanderías, fotocopiadoras,...), contenedores cerrados para determinados residuos, filtros exteriores especiales para ventilación mecánica.'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('Q1 Indoor environment'); ?></p>
+					<p><?php echo $this->translate('4 Air quality'); ?>
+						<ul>
+							<li><?php echo $this->translate('4.2 Ventilation'); ?></li>
+							<li><?php echo $this->translate('4.2.1 Ventilation rate. Para sistemas centralizados de ventilación, tasa de ventilación de 25m3/h pers (min) hasta 35m3/h pers o más. Para otros, aumentar un 40% por encima de la regulación. '); ?></li>
+							<li><?php echo $this->translate('4.2.2 Natural ventilation performance. Área de ventana practicable de 1/10 (min) de la superficie de la habitación a 1/6 (max).'); ?></li>
+							<li><?php echo $this->translate('4.2.3 Consideration of outside air intake. La toma de aire se sitúa alejada de fuentes contaminantes o conductos de extracción.'); ?></li>
+							<li><?php echo $this->translate('4.2.4 Air supply planning. El aire exterior no se mezcla con el aire de retorno y se distribuye directamente a las habitaciones.'); ?></li>
+							<li><?php echo $this->translate('4.1 Source control'); ?></li>
+							<li><?php echo $this->translate('4.1.2 Asbestos. No aplicable.'); ?></li>
+							<li><?php echo $this->translate('4.1.3 Mites, mold, etc. Diseño para evitar el crecimiento de ácaros, moho,...  y facilidad de limpieza de suelos y paredes.'); ?></li>
+							<li><?php echo $this->translate('4.1.4 Legionella. Medida para torres de refrigeración y tanques de agua caliente.'); ?></li>
+							<li><?php echo $this->translate('4.3 Operation plan.') ?></li>
+							<li><?php echo $this->translate('4.3.1 CO2 monitoring. No aplicable en apartamentos.'); ?></li>
+						</ul>
+					</p>
+					<h3><?php echo $this->translate('HQE'); ?></h3>
+					<p><?php echo $this->translate('F4: SANTE. Cible 12: Qualité sanitaire des espaces.'); ?></p>
+					<p><?php echo $this->translate('F4: SANTE. Cible 13: Qualité sanitaire de l’air.'); ?></p>
+					<h3><?php echo $this->translate('BNB'); ?></h3>
+					<p><?php echo $this->translate('3 SOCIOCULTURAL AND FUNCTIONAL QUALITY.'); ?>
+						<ul>
+							<li><?php echo $this->translate('3.1 Health, comfort and user satisfaction.'); ?></li>
+							<li><?php echo $this->translate('3.1.3 Indoor air quality.'); ?></li>
+						</ul>
+					</p>					
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

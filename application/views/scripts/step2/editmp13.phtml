@@ -1,0 +1,44 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp13 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+			<?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>
+		<div class="mp">
+            <h2><span class="big"><?php echo $this->translate('mp13'); ?></span> <?php echo $this->translate('Redes locales. Recursos. '); ?> <span><?php echo $this->translate('Conocer los recursos locales.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Conocer si existen materiales locales reutilizables o reciclables y las posibilidades de reutilización de elementos constructivos existentes. Gestión de recursos subterráneos. Conocer el estado de los recursos subterráneos y las posibilidades y riesgos de utilización.'); ?></p>
+		</div>
+		<hr>            
+		<?php $this->successMessages($this->messages); ?>	 	
+		<?php $this->errorMessages($this->errors); ?>
+		<?php echo $this->form_step2_mp_13; ?>
+		<hr>
+            <div class="tabbable">
+			    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			    <div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">	
+			    		<h3><?php echo $this->translate('Herramientas'); ?></h3>
+			    		<p><?php echo $this->translate('E-PRTR.'); ?></p>
+			    		<p><a href="http://prtr.ec.europa.eu/FacilityLevels.aspx" title="http://prtr.ec.europa.eu/FacilityLevels.aspx" target="_blank">http://prtr.ec.europa.eu/FacilityLevels.aspx</a></p>
+			    		<p><?php echo $this->translate('EU. European Environment Agency. Environmental Technologies Atlas'); ?></p>
+			    		<p><a href="http://technologies.ew.eea.europa.eu/atlas_map" title="http://technologies.ew.eea.europa.eu/atlas_map" target="_blank">http://technologies.ew.eea.europa.eu/atlas_map</a></p>
+					</div>
+			    	<div class="tab-pane" id="tab2">			    		
+			    	</div>
+					<div class="tab-pane" id="tab3">						
+					</div>
+					<div class="tab-pane" id="tab4">			      			</div>
+					<div class="tab-pane" id="tab5">	
+						<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+					</div>
+			    </div>
+			</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

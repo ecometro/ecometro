@@ -1,0 +1,59 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp5 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+			<?php 
+				echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".');
+			?>
+		</p>
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('mp5'); ?></span> <?php echo $this->translate('Clima local y efecto isla de calor.'); ?> <span><?php echo $this->translate('Conocer las características climáticas locales.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p>
+				<?php echo $this->translate('Temperatura y humedad: Número de días que se alejan de la zona de confort. Radiación y acceso solar: Conocer las posibilidades de uso de la radiación solar para el diseño solar pasivo y el potencial de generación de renovables. Efecto isla de calor: Identificar las posibles variaciones sobre los datos climáticos de la estación de medición más cercana. Este efecto se produce por lo general en núcleos urbanos, con un aumento medio de la temperatura local.'); ?>
+			</p>
+		</div>
+        <hr>
+        <?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors);	?>
+        <?php echo $this->form_step2_mp_5; ?>
+       <hr>
+       <div class="tabbable">
+		    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		    <div class="tab-content">
+		    	<div class="tab-pane active" id="tab1">
+					<h3><?php echo $this->translate('Herramientas'); ?></h3>
+					<p><?php echo $this->translate('AEMET:'); ?></p>
+					<p><a href="http://www.aemet.es/" title="http://www.aemet.es/" target="_blank">http://www.aemet.es/</a></p>
+					<p><?php echo $this->translate('Energy plus weather data:'); ?></p>
+					<p><a href="http://apps1.eere.energy.gov/buildings/energyplus/cfm/weather_data.cfm" title="http://apps1.eere.energy.gov/buildings/energyplus/cfm/weather_data.cfm" target="_blank">http://apps1.eere.energy.gov/buildings/energyplus/cfm/weather_data.cfm</a></p>
+					<p><?php echo $this->translate('Climat consultant: '); ?></p>
+					<p><a href="http://www.energy-design-tools.aud.ucla.edu/" title="http://www.energy-design-tools.aud.ucla.edu/" target="_blank">http://www.energy-design-tools.aud.ucla.edu/</a></p>
+					<p><?php echo $this->translate('Infraestructura de datos espaciales del MARM. Geoportal'); ?></p>
+					<p><a href="http://sig.marm.es/geoportal/" title="http://sig.marm.es/geoportal/" target="_blank">http://sig.marm.es/geoportal/</a></p>
+					<p><?php echo $this->translate('Radiación solar y potencial de fotovoltaica:'); ?></p>
+					<p><a href="http://re.jrc.ec.europa.eu/pvgis/" title="http://re.jrc.ec.europa.eu/pvgis/" target="_blank">http://re.jrc.ec.europa.eu/pvgis/</a></p>
+		    	</div>
+		    	<div class="tab-pane" id="tab2">
+		      	
+		    	</div>
+				<div class="tab-pane" id="tab3">
+		      	
+		    	</div>
+				<div class="tab-pane" id="tab4">
+					<h3><?php echo $this->translate('BNB'); ?></h3>
+					<p><?php echo $this->translate('6 LOCATION PROFILE. 6.1 Location profile.  6.1.2 Conditions at the micro-site'); ?></p>
+		    	</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+				</div>
+		    </div>
+		</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

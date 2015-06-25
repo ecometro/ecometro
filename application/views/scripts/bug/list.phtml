@@ -1,0 +1,15 @@
+<h2><?php echo $this->translate('Current Bugs'); ?></h2>
+<?php echo $this->listToolsForm;?>
+<?php echo $this->paginationControl($this->paginator, 'Sliding', 'partials/_bug_pagination.phtml'); ?>
+<table class='spreadsheet' cellspacing='0'>
+	<tr>
+		<th>&nbsp;</th>
+		<th><?php echo $this->translate('Date'); ?></th>
+		<th><?php echo $this->translate('Priority'); ?></th>
+		<th><?php echo $this->translate('Status'); ?></th>
+		<th><?php echo $this->translate('URL'); ?></th>
+		<th><?php echo $this->translate('Submitter'); ?></th>
+		<th><?php echo $this->translate('Description'); ?></th>
+	</tr>
+	<?php echo $this->partialLoop('bug/table-row.phtml', $this->paginator); ?>
+</table>

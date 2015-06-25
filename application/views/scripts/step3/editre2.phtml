@@ -1,0 +1,110 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R2 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're2'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're2'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r2'); ?></span> <?php echo $this->translate('Suelo desarrollado.'); ?> <span><?php echo $this->translate(' ¿Cuál es el tratamiento que se le está dando al suelo?'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+	        <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<ul>
+				<li>- <?php echo $this->translate('Conocer el estado de contaminación del suelo, tanto para la protección de los ecosistemas como para la salud humana.'); ?></li>
+				<li>- <?php echo $this->translate('Conocer si previamente se ha desarrollado una actividad con potencial de contaminación del suelo, o si existen indicios de presencia de contaminantes.'); ?></li>
+				<li>- <?php echo $this->translate('Conocer los usos, actividades y tipo de desarrollo que tiene y ha tenido el suelo previamente, disminuyendo la superficie de ocupación de suelo nuevo.'); ?></li>	
+				<li>- <?php echo $this->translate('Recuperar o restaurar los valores locales y la calidad del suelo.'); ?></li>
+			</ul>
+		</div>               
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_re_2; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+	<div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">	
+				<h3><?php echo $this->translate('Herramientas'); ?></h3>
+				<p><?php echo $this->translate('MARM. Guía Técnica de aplicación del RD 9/2005, de 14 de enero, por el que se establece la relación de actividades potencialmente contaminantes del suelo y los criterios y estándares para la declaración de suelos contaminados.'); ?></p>
+				<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/suelos-contaminados/" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/suelos-contaminados/" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/suelos-contaminados/</a></p>							
+				<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/suelos-contaminados/guia_tecnica_contaminantes_suelo_declaracion_suelos_tcm7-3204.pdf" title=" http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/suelos-contaminados/guia_tecnica_contaminantes_suelo_declaracion_suelos_tcm7-3204.pdf" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/suelos-contaminados/guia_tecnica_contaminantes_suelo_declaracion_suelos_tcm7-3204.pdf</a></p>
+				<p><?php echo $this->translate('IDEE: Infraestructura de datos espaciales de España.'); ?></p>
+				<p><a href="http://www.idee.es/" title="http://www.idee.es/" target="_blank">http://www.idee.es/</a></p>
+				<p><?php echo $this->translate('IDEAGE: Infraestructura de Datos Espaciales de la Administración General del Estado.'); ?></p>
+				<p><a href="http://www.ideage.es" title="http://www.ideage.es" target="_blank">http://www.ideage.es</a></p>
+				<p><?php echo $this->translate('SIOSE: Sistema de Información sobre Ocupación del Suelo de España.'); ?></p>
+				<p><?php echo $this->translate('(Ministerio de Fomento. Infraestructura de datos espaciales)'); ?></p>
+				<p><?php echo $this->translate('CORINE ocupación del suelo.'); ?></p>
+				<p><a href="http://www.idee.es/clientesIGN/analisis_territorial/index.html" title="http://www.idee.es/clientesIGN/analisis_territorial/index.html" target="_blank">http://www.idee.es/clientesIGN/analisis_territorial/index.html</a></p>
+			</div>
+			<div class="tab-pane" id="tab2">		
+			    <p><?php echo $this->translate('Real Decreto 9/2005 Suelos Contaminados.'); ?></p>				
+			</div>
+			<div class="tab-pane" id="tab3">			      	
+				<h3><?php echo $this->translate('MARM. BPIA. Banco público de indicadores ambientales.'); ?></h3>
+				<p><?php echo $this->translate('SUELO'); ?></p>
+					<ul>
+						<li><?php echo $this->translate('Cambios en la ocupación del suelo: Superficies artificiales.'); ?></li>
+						<li><?php echo $this->translate('Superficie con riesgo de desertificación.'); ?></li>
+						<li><?php echo $this->translate('Superficie afectada por erosión.'); ?></li>
+						<li><?php echo $this->translate('Superficie artificial en la costa.'); ?></li>
+						<li><?php echo $this->translate('Suelos contaminados.'); ?></li>
+					</ul>	 	
+			</div>
+			<div class="tab-pane" id="tab4">
+			    <h3><?php echo $this->translate('BREEAM'); ?></h3>
+				<p><?php echo $this->translate('LE 2 Contaminated land. Desarrollo sobre suelo contaminado significativamente – rehabilitación.'); ?></p>
+				<p><?php echo $this->translate('11.0 Land use and ecology/ LE1 Reuse of land. Al menos el 75% de la huella del desarrollo está en suelo previamente desarrollado para uso industrial, comercial o residencial en los últimos 50 años.'); ?></p>
+				<h3><?php echo $this->translate('LEED'); ?></h3>
+				<p><?php echo $this->translate('SS C3 Brownfield redevelopment. Desarrollo sobre suelo contaminado o sobre suelo industrial abandonado.'); ?></p>
+				<p><?php echo $this->translate('SS C1 Site selection. El desarrollo no se sitúa en suelos: de alto valor agrícola/  no desarrollado con una elevación superior a 1,5 metros del "100 year flood"/ hábitat de alguna especie amenazada o protegida/ a menos de 30 m de humedales/ a menos de 15 m de un cuerpo de agua/ zona verde pública'); ?></p>
+				<h3><?php echo $this->translate('OTROS'); ?></h3>
+				<p><?php echo $this->translate('MGM. Evaluación medioambiental para la ordenación territorial y la planificación urbanística.'); ?></p>
+			</div>
+			<div class="tab-pane" id="tab5">
+				<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+			</div>
+		</div>
+	</div><!-- .tabbable -->						
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

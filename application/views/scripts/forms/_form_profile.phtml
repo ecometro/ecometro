@@ -1,0 +1,58 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<form class="form-horizontal login" id="profile" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>" enctype="<?php echo $this->element->getAttrib('enctype'); ?>">
+	<fieldset>
+		<legend><?php echo $this->translate('Editar perfil:') ?></legend>
+		<div class="control-group">						
+				<?php if($view->photo): ?>
+					<img style="text-align: left;" src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'profiles/' . $view->photo; ?>" width="" height="" alt="">
+				<?php else: ?>
+					<img style="text-align: left;" src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'user-default.png'; ?>" width="" height="" alt=""> 
+				<?php endif; ?>			
+		</div>	
+		<div class="control-group">
+			<?php echo $this->element->user_photo_profile; ?>
+		</div>
+		<div class="control-group">			
+			<?php echo $this->element->user_username_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_email_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_firstname_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_lastname_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_company_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_city_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_province_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_country_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_web_profile; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_nuevo_pswd; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_rp_nuevo_pswd; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->user_role; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->csrfVerification; ?>
+		</div>	
+		<div class="controls">
+			<?php echo $this->element->user_submit_profile; ?>
+		</div>
+	</fieldset>
+</form>

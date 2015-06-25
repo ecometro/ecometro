@@ -1,0 +1,62 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp8 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">		
+		<p class="intro">			
+			<?php 
+				echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".');
+			?>
+		</p>
+		<div class="mp">
+            <h2><span class="big"><?php echo $this->translate('mp8'); ?></span> <?php echo $this->translate('Radiación no ionizante.'); ?> <span><?php echo $this->translate('Campos electromagnéticos.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Conocer los niveles de radiación no ionizante en la zona para considerar medidas de protección.'); ?></p>
+		</div>
+		<hr>            
+        <?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors); ?>
+		<?php echo $this->form_step2_mp_8; ?>
+        <hr>
+            <div class="tabbable">
+			    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			    <div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">
+			        	<h3><?php echo $this->translate('Herramientas'); ?></h3>
+						<p><?php echo $this->translate('Principio de precaución.'); ?></p>
+						<p><?php echo $this->translate('- MITYC. Infoantenas. Niveles de exposición a antenas de telefonía móvil.'); ?></p>
+						<p><a href="http://geoportal.mityc.es/VCTEL/vcne.do" title="http://geoportal.mityc.es/VCTEL/vcne.do" target="_blank">http://geoportal.mityc.es/VCTEL/vcne.do</a></p>
+						<p><?php echo $this->translate('- IGN. Cartografía Magnética.'); ?></p>
+						<p><a href="http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Geofisica/Geomagnetismo/cartografia_magnetica/default.htm" title="http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Geofisica/Geomagnetismo/cartografia_magnetica/default.htm" target="_blank">http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Geofisica/Geomagnetismo/cartografia_magnetica/default.htm</a></p>
+						<p><?php echo $this->translate('Red eléctrica de España:'); ?></p>					
+						<p><a href="http://www.ree.es/medio_ambiente/ma-campos-salud.asp" title="http://www.ree.es/medio_ambiente/ma-campos-salud.asp" target="_blank">http://www.ree.es/medio_ambiente/ma-campos-salud.asp</a></p>
+					</div>
+			    	<div class="tab-pane" id="tab2">			      	
+						<p><?php echo $this->translate('REAL DECRETO 1066/2001, de 28 de septiembre, por el que se aprueba el Reglamento que establece condiciones de protección del dominio público radioeléctrico, restricciones a las emisiones radioeléctricas y medidas de protección sanitaria frente a emisiones radioeléctricas. ORDEN CTE/23/2002, de 11 de enero, por la que se establecen condiciones para la presentación de determinados estudios y certificaciones por operadores de servicios de radiocomunicaciones.'); ?></p>
+			    	</div>
+					<div class="tab-pane" id="tab3">
+						<p><?php echo $this->translate('En desarrollo: Atlas de radiación natural en Europa, con algunos datos de: indoor radon, geogenic radon, cosmic radiation. Y en proceso de discusión para: outdoor radon, terrestrial gamma dose rate,  Sources of terrestrial radiation (geochemical map),  Water (ground water, surface water),  Exposure (internal, external), Total dose by natural radiation.'); ?></p>
+						<p><a href="http://www.radon.eu/workshop2010/pres/gruber.pdf" title="http://www.radon.eu/workshop2010/pres/gruber.pdf" target="_blank">http://www.radon.eu/workshop2010/pres/gruber.pdf</a></p>
+						<p><?php echo $this->translate('Más información en: EU JRC, Radioactivity Environmental Monitoring (REM):'); ?></p>
+						<p><a href="http://rem.jrc.ec.europa.eu/RemWeb/Index.aspx" title="http://rem.jrc.ec.europa.eu/RemWeb/Index.aspx" target="_blank">http://rem.jrc.ec.europa.eu/RemWeb/Index.aspx</a></p>
+						<p><?php echo $this->translate('Niveles de referencia: REAL DECRETO 1066/2001'); ?></p>
+						<p><?php echo $this->translate('CARS. Informe sobre radiofrecuencias y salud (2007-2008).'); ?></p>
+						<p><a href="http://ccars.es/sites/default/files/ccars_-_informe_sobre_radiofrecuencias_y_salud_2007-2008.pdf" title="http://ccars.es/sites/default/files/ccars_-_informe_sobre_radiofrecuencias_y_salud_2007-2008.pdf" target="_blank">http://ccars.es/sites/default/files/ccars_-_informe_sobre_radiofrecuencias_y_salud_2007-2008.pdf</a></p>
+					</div>
+					<div class="tab-pane" id="tab4">
+			      		<h3><?php echo $this->translate('OTROS'); ?></h3>
+						<p><?php echo $this->translate('Valores indicativos Baubiologie para las zonas de descanso.'); ?></p>
+						<p><a href="http://www.baubiologie.es/" title="http://www.baubiologie.es/" target="_blank">http://www.baubiologie.es/</a></p>
+						<p><?php echo $this->translate('Valores de referencia para campos eléctricos alternos (bajas frecuencias), campos magnéticos alternos (bajas frecuencias), ondas electromagnéticas (altas frecuencias), campos eléctricos continuos (electrostática) campos magnéticos continuos (magnetostática) perturbaciones geológicas (campo magnético y radiación terrestre)'); ?></p>
+					</div>
+					<div class="tab-pane" id="tab5">	
+						<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+					</div>
+			    </div>
+			</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

@@ -1,0 +1,19 @@
+<form class="form-horizontal login" id="login" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<fieldset>
+		<legend><?php echo $this->translate('Iniciar sesión'); ?></legend>
+			<div class="control-group">
+      			<?php echo $this->element->user_login; ?>
+    		</div>
+            <div class="control-group">
+      			<?php echo $this->element->user_pswd_login; ?>
+             </div>                   		             
+             <div class="controls">
+             		<?php echo $this->element->csrfVerificationLogin; ?>
+        			<?php echo $this->element->user_submit_login; ?>
+        			<p class="help-block">
+                    	<a href="<?php echo $this->url(array('controller' => 'account', 'action' => 'lostpswd'), 'accountRoute'); ?>" title="<?php echo $this->translate('He olvidado mi contraseña'); ?>"><?php echo $this->translate('He olvidado mi contraseña'); ?></a>
+                        <a href="<?php echo $this->url(array('controller' => 'account', 'action' => 'lostuser'), 'accountRoute'); ?>" title="<?php echo $this->translate('He olvidado mi nombre de usuario'); ?>"><?php echo $this->translate('He olvidado mi nombre de usuario'); ?></a>
+                    </p>
+     		</div>		
+	</fieldset>
+</form>

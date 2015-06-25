@@ -1,0 +1,55 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp10 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro"><?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('mp10'); ?></span> <?php echo $this->translate('Redes locales. Movilidad. Dotaciones y acceso al transporte público.'); ?> <span><?php echo $this->translate('Conocer las redes de transporte locales para garantizar una movilidad sostenible de los usuarios del edificio.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+			<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Asegurar que la situación del edificio tiene un buen acceso a transporte público y redes para peatones y bicicletas. Distancia a tren, metro, tranvía, autobús. Frecuencia de servicio. Metros lineales y superficie de viario para coches, peatones y bicicletas.'); ?></p>
+		</div>
+		<hr>		
+		<?php $this->successMessages($this->messages); ?>	 	
+	    <?php $this->errorMessages($this->errors); ?>
+		<?php echo $this->form_step2_mp_10; ?>
+        <hr>
+        <div class="tabbable">
+			    <?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			    <div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">			        	
+						<p><?php echo $this->translate('Distancia objetiva caminando del lugar del edificio a la estación de transporte público, autobus o tren/tranvía. Frecuencia diaria. Superficie de viario en un radio de 500m.'); ?></p>
+					</div>
+			    	<div class="tab-pane" id="tab2">			    		
+			    	</div>
+					<div class="tab-pane" id="tab3">						
+					</div>
+					<div class="tab-pane" id="tab4">
+			      		<h3><?php echo $this->translate('BREEAM'); ?></h3>
+						<p><?php echo $this->translate('Tra 1 Provision of public transport. Según el índie de accesibildad Breeam. Depende de: la distancia a la parada, el tipo de transporte y la frecuencia.'); ?></p>
+						<p><?php echo $this->translate('Tra 5 Travel plan. No aplicable en multiresidencial.'); ?></p>
+						<h3><?php echo $this->translate('LEED'); ?></h3>
+						<p><?php echo $this->translate('SS C4.1 Alternative transportation: public transportation access. A menos de 800m a pie de una estación ferroviaria, o a menos de 400m a pie de una o más paradas de al menos dos lineas de autobús.'); ?></p>
+						<h3><?php echo $this->translate('HQE'); ?></h3>
+						<p><?php echo $this->translate('Cible 1 (Building relationship with its immediate environment)'); ?></p>
+						<p><?php echo $this->translate('Cible 1.2 - Site analysis and organization'); ?></p>
+						<h3><?php echo $this->translate('BNB'); ?></h3>
+						<p><?php echo $this->translate('6 LOCATION PROFILE. 6.1 Location profile. 6.1.4 Public transport connections.'); ?></p>
+						<h3><?php echo $this->translate('OTROS'); ?></h3>
+						<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">(http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf)</a></p>
+						<p><?php echo $this->translate('Ámbito 03 Movilidad.'); ?></p>
+						<p><?php echo $this->translate('Punto 10 Espacio viario para transporte público. habitantes con cobertura a menos de 300 metros de una parada de transporte público/ número total de habitantes (deseable >80% población). En núcleos pequeños, número de servicios interurbanos por núcleo urbano.'); ?></p>
+					</div>
+					<div class="tab-pane" id="tab5">	
+						<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>		      	
+					</div>
+			    </div>
+			</div><!-- .tabbable -->
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

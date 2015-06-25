@@ -1,0 +1,24 @@
+<?php
+	// get step and class name 
+	$step = explode('-', $this->attribs);	
+	$form = (substr($step[1], 0, 2));	
+	$count = (substr($step[1], 2, strlen($step[1])));
+	// echo $count;
+	$next = $count + 1;
+	$prev = $count - 1;
+?>
+<a class="boton black volver" href="<?php echo $this->url(array('controller' => $step[0], 'action' => 'index'), $step[0] . 'Route'); ?>" title="<?php echo $this->translate('Volver a menú'); ?>"><?php echo $this->translate('Volver a menú'); ?></a>
+<?php if($this->prev != false): ?>
+	<?php if($this->prev_s == null): ?>
+		<a class="boton black volver" href="<?php echo $this->url(array('controller' => $step[0], 'action' => 'edit' . $form . $prev), $step[0] . 'Route'); ?>" title="<?php echo $this->translate('Ficha Anterior'); ?>"><?php echo $this->translate('Ficha Anterior'); ?></a>
+	<?php else: ?>
+		<a class="boton black volver" href="<?php echo $this->url(array('controller' => $step[0], 'action' => 'edit' . $this->prev_s), $step[0] . 'Route'); ?>" title="<?php echo $this->translate('Ficha Anterior'); ?>"><?php echo $this->translate('Ficha Anterior'); ?></a>
+	<?php endif; ?>	
+<?php endif; ?>
+<?php if($this->next != false): ?>
+	<?php if($this->next_s == null): ?>	
+		<a class="boton black volver" href="<?php echo $this->url(array('controller' => $step[0], 'action' => 'edit' . $form . $next), $step[0] . 'Route'); ?>" title="<?php echo $this->translate('Ficha Siguiente'); ?>"><?php echo $this->translate('Ficha Siguiente'); ?></a>
+	<?php else: ?>
+		<a class="boton black volver" href="<?php echo $this->url(array('controller' => $step[0], 'action' => 'edit' . $this->next_s), $step[0] . 'Route'); ?>" title="<?php echo $this->translate('Ficha Siguiente'); ?>"><?php echo $this->translate('Ficha Siguiente'); ?></a>
+	<?php endif; ?>
+<?php endif; ?>

@@ -1,0 +1,72 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 2 :: Mp1 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 2)); ?>
+<div class="row-fluid">
+	<div class="span12">		
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('mp1'); ?></span> <?php echo $this->translate('Compacidad y complejidad.'); ?> <span><?php echo $this->translate('Conocer la compacidad y complejidad del área, caracterizando la eficiencia urbana.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Densidad de habitantes (hab/ha), densidad de viviendas (nºviv/ha), suelo urbano municipal (m²/ha), volumen edificado (m³), zonas verdes (m²), número y tipo de actividades, superficie de uso no residencial (m²) Cálculo para un radio de 500m del lugar (o total barrio)'); ?></p>
+		</div>
+        <hr> 
+        <?php $this->successMessages($this->messages); ?>	           
+	    <?php $this->errorMessages($this->errors); ?>			
+        <?php echo $this->form_step2_mp_1; ?>
+        <hr>				
+		<div class="tabbable">
+			<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			    <div class="tab-content">
+			    	<div class="tab-pane active" id="tab1">
+						<h3><?php echo $this->translate('Herramientas'); ?></h3>
+						<p><?php echo $this->translate('MFOM. Sistema de información urbana. SIU.'); ?></p>
+						<p><a href="http://siu.vivienda.es/siu/PortalSiu.html" title="http://siu.vivienda.es/siu/PortalSiu.html" target="_blank">http://siu.vivienda.es/siu/PortalSiu.html</a></p>
+						<p><?php echo $this->translate('INE. Cifras de población, padrón municipal.'); ?></p>
+						<p><a href="http://www.ine.es" title="http://www.ine.es" target="_blank">http://www.ine.es</a></p>
+						<p><?php echo $this->translate('Información catastral.Dirección general del catastro.'); ?></p>
+						<p><a href="http://www.catastro.meh.es/" title="http://www.catastro.meh.es/" target="_blank">http://www.catastro.meh.es/</a></p>
+			    	</div>
+			    	<div class="tab-pane" id="tab2">			      	
+						<p><?php echo $this->translate('Planeamiento urbano'); ?></p>
+			    	</div>
+			      <div class="tab-pane" id="tab3">			      	
+						<p><?php echo $this->translate('Grupo de trabajo de Indicadores de Sostenibilidad de la Red de Redes de Desarrollo Local Sostenible. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+						<p><a hre="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf</a></p>
+						<h3><?php echo $this->translate('MARM. BPIA. Banco público de indicadores ambientales.'); ?></h3>
+						<p><?php echo $this->translate('MEDIO URBANO: Calidad del aire en medio urbano: Concentraciones de NO2. Calidad del aire en medio urbano: Concentraciones de Ozono. Calidad del aire en medio urbano: Concentraciones de partículas (PM10). Calidad del aire en medio urbano: Evolución de los principales contaminantes (NO2, PM10, O3). Participación ciudadana en políticas ambientales. Patrimonio monumental de las ciudades. Presión urbana en el territorio. Ruido ambiental'); ?></p>													 	
+			    	</div>
+					<div class="tab-pane" id="tab4">
+			      		<h3><?php echo $this->translate('BREEAM'); ?></h3>
+						<p><?php echo $this->translate('Tra 2 proximity to amenities.'); ?></p>
+						<p><?php echo $this->translate('A menos de 500m de servicios básicos (alimentación, buzón, cajero).'); ?></p>
+						<p><?php echo $this->translate('A menos de 1.000m de otros servicios.'); ?></p>
+						<h3><?php echo $this->translate('LEED'); ?></h3>
+						<p><?php echo $this->translate('SS C2. Development density and community connectivity.'); ?></p>
+						<p><?php echo $this->translate('Option 1. Densidad de desarrollo mínima de 13.800 m2 por ha.'); ?></p>
+						<p><?php echo $this->translate('Option 2. El lugar está situado: en suelo previamente desarrollado, a menos de 800m de un área residencial con una densidad de 10 unidades por cada 0,4ha., a menos de 800m de 10 servicios básicos con acceso peatonal.'); ?></p>
+						
+						<h3><?php echo $this->translate('BNB'); ?></h3>
+						<p><?php echo $this->translate('6 LOCATION PROFILE.'); ?></p>
+						<p><?php echo $this->translate('6.1 Location profile.'); ?></p>
+						<p><?php echo $this->translate('6.1.5 Vicinity to user-specific services.'); ?></p>
+						<h3><?php echo $this->translate('OTROS'); ?></h3>
+						<p><?php echo $this->translate('BCN Ecologia. Indicadores sintéticos que caracterizan el modelo de ciudad compacta, compleja, eficiente y estable. Indicadores: compacidad C y ompacidad corregida, Cc, y complejidad H'); ?></p>
+						<p><a href="http://www.bcnecologia.net/documentos/indicadores.pdf" title="http://www.bcnecologia.net/documentos/indicadores.pdf" target="_blank">http://www.bcnecologia.net/documentos/indicadores.pdf</a></p>
+						<p><?php echo $this->translate('ECOURBANO'); ?></p>
+						<p><a href="http://www.ecourbano.es/indicadores.asp?ind=si" title="http://www.ecourbano.es/indicadores.asp?ind=si" target="_blank">http://www.ecourbano.es/indicadores.asp?ind=si</a></p>
+						<p><?php echo $this->translate('MAGRAMA gobierno de España'); ?></p>
+						<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/desarrollo-medio-am-urb/default.aspx" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/desarrollo-medio-am-urb/default.aspx" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/desarrollo-medio-am-urb/default.aspx</a></p>
+			    	</div>
+					<div class="tab-pane" id="tab5">
+						<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+					</div>
+			    </div>
+			</div><!-- .tabbable -->						
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo 'http://ecometro' . '/skins/ecometro/js/step2/step2functions.js'; ?>"></script>

@@ -1,0 +1,54 @@
+	<?php if ($this->pageCount > 1):
+		// you need to add each of the request parameters to url
+		$params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+		$controller = $params['controller'];
+		// remove the system parameters
+		unset($params['module']);
+		unset($params['controller']);
+		unset($params['action']);
+	?>
+	<div class="paginationControl">
+		<!-- Previous page link -->
+		<?php if (isset($this->previous)): ?>
+			<a href="<?php echo $this->url(array_merge(
+			$params, array('page' => $this->previous))); ?>" title="<?php echo $this->translate('Anterior'); ?>">
+			&lt; <?php echo $this->translate('Anterior'); ?>
+			</a> |
+		<?php else: ?>
+			<span class="disabled">&lt; <?php echo $this->translate('Anterior'); ?></span> |
+		<?php endif; ?>
+		<!-- Numbered page links -->
+		<?php foreach ($this->pagesInRange as $page): ?>
+			<?php if ($page != $this->current): ?>
+				<?php if($controller == 'profile'): ?>
+					<a href="<?php echo $this->url(array_merge($params,
+					array('page' => $page)), 'profileListRoute'); ?>" title="<?php echo $page; ?>">
+					<?php echo $page; ?>
+					</a> |
+				<?php elseif($controller == 'projects'): ?>
+					<a href="<?php echo $this->url(array_merge($params,
+					array('page' => $page)), 'projectsEvaluatedRoute'); ?>" title="<?php echo $page; ?>">
+					<?php echo $page; ?>
+					</a> |
+				<?php else: ?>
+					<a href="<?php echo $this->url(array_merge($params,
+					array('page' => $page)), 'accountListRoute'); ?>" title="<?php echo $page; ?>">
+					<?php echo $page; ?>
+					</a> |
+				<?php endif; ?>
+			<?php else: ?>
+				<?php echo $page; ?> |
+		<?php endif;
+			endforeach;
+		?>
+		<!-- Next page link -->
+		<?php if (isset($this->next)): ?>
+			<a href="<?php echo $this->url(
+			array_merge($params, array('page' => $this->next))); ?>" title="<?php echo $this->translate('Siguiente'); ?>">
+			<?php echo $this->translate('Siguiente'); ?> &gt;
+			</a>
+		<?php else: ?>
+			<span class="disabled"><?php echo $this->translate('Siguiente'); ?> &gt;</span>
+		<?php endif; ?>
+	</div>
+<?php endif; ?>

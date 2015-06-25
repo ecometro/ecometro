@@ -1,0 +1,119 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R1 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're1'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're1'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r1'); ?></span> <?php echo $this->translate('Compacidad y complejidad.'); ?> <span><?php echo $this->translate('¿Cuál es la aportación del proyecto hacia la mejora de la eficiencia urbana?'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+	        <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>			
+	        <ul>
+	            <li>- <?php echo $this->translate('Adaptación y mejora de la eficiencia del área urbana.'); ?></li>
+				<li>- <?php echo $this->translate('Valoración respecto al lugar.'); ?></li>
+				<li>- <?php echo $this->translate('Compacidad para un uso eficiente de los recursos.'); ?></li>
+				<li>- <?php echo $this->translate('Complejidad en usos y funciones como indicador de diversidad.'); ?></li>
+	        </ul>
+        </div>          
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	</div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">	
+	<div class="span9">
+		<div class="span7">						
+            <?php echo $this->form_step3_re_1; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>            
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+					<ul>
+						<li>- <?php echo $this->translate('Número de viviendas: densidad de viviendas acorde con el entorno. (nº viv/ha).'); ?></li>
+						<li>- <?php echo $this->translate('Suelo de uso público: Área de parcela abierta para uso público en relación a la superficie de suelo urbano municipal (m²/ha)'); ?></li>
+						<li>- <?php echo $this->translate('Volumen edificado: Volumen acorde con el entorno (m³),'); ?></li>
+						<li>- <?php echo $this->translate('Zonas verdes: Área de parcela vegetada (m² en proyección horizontal)'); ?></li>
+						<li>- <?php echo $this->translate('Superficie de uso no residencial: Área construida dedicada a otros usos, incluyendo locales de uso comunitario (y excluyendo accesos y escaleras) (m²)'); ?></li>
+					</ul>
+					<h3><?php echo $this->translate('Herramientas'); ?></h3>
+					<p><?php echo $this->translate('Cálculo para un radio de 500m del lugar (o total barrio)'); ?></p>
+					<p><?php echo $this->translate('MFOM. Sistema de información urbana. SIU.'); ?></p>
+					<p><a href="http://siu.vivienda.es/siu/PortalSiu.html" title="http://siu.vivienda.es/siu/PortalSiu.html" target="_blank">http://siu.vivienda.es/siu/PortalSiu.html</a></p>
+					<p><?php echo $this->translate('INE. Cifras de población, padrón municipal.'); ?></p>
+					<p><a href=" http://www.ine.es" title=" http://www.ine.es" target="_blank">http://www.ine.es</a></p>
+					<p><?php echo $this->translate('Información catastral. Dirección general del catastro.'); ?></p>
+					<p><a href="http://www.catastro.meh.es/" title="http://www.catastro.meh.es/" target="_blank">http://www.catastro.meh.es/</a></p>
+			    </div>
+			    <div class="tab-pane" id="tab2">						
+			    </div>
+			    <div class="tab-pane" id="tab3">			      	
+					<p><?php echo $this->translate('Grupo de trabajo de Indicadores de Sostenibilidad de la Red de Redes de Desarrollo Local Sostenible.'); ?></p>
+					<p><a hre="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/desarrollo-medio-am-urb/#para1" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/desarrollo-medio-am-urb/#para1" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/desarrollo-medio-am-urb/#para1</a></p>
+					<p><?php echo $this->translate('Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+					<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf</a></p>	 	
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Tra 2 proximity to amenities.'); ?></p>
+					<ul>
+						<li>- <?php echo $this->translate('A menos de 500m de servicios básicos (alimentación, buzón, cajero).'); ?></li>
+						<li>- <?php echo $this->translate('A menos de 1.000m de otros servicios.'); ?></li>
+					</ul>
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('SS C2. Development density and community connectivity.'); ?></p>
+					<p><?php echo $this->translate('Option 1. Densidad de desarrollo mínima de 13.800 m2 por ha.'); ?></p>
+					<p><?php echo $this->translate('Option 2. El lugar está situado:'); ?></p>
+					<p><?php echo $this->translate('En suelo previamente desarrollado:');?></p>
+					<ul>
+						<li>- <?php echo $this->translate('A menos de 800m de un área residencial con una densidad de 10 unidades por cada 0,4ha.'); ?></li>
+						<li>- <?php echo $this->translate('A menos de 800m de 10 servicios básicos con acceso peatonal.'); ?></li>
+					</ul>						
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('BCN Ecologia. Indicadores sintéticos que caracterizan el modelo de ciudad compacta, compleja, eficiente y estable. Indicadores: compacidad C y ompacidad corregida, Cc, y complejidad H'); ?></p>
+					<p><a href="http://www.ecourbano.es/imag/pdf/INDICADORES%20CIUDADES%20GRANDES%20Y%20MEDIANAS.pdf" title="http://www.ecourbano.es/imag/pdf/INDICADORES%20CIUDADES%20GRANDES%20Y%20MEDIANAS.pdf" target="_blank">http://www.ecourbano.es/imag/pdf/INDICADORES%20CIUDADES%20GRANDES%20Y%20MEDIANAS.pdf</a></p>
+					<p><a href="http://www.ecourbano.es/imag/pdf/SISTEMA%20MUNICIPAL%20DE%20INDICADORES%20SOSTENIBILIDAD.pdf" title="http://www.ecourbano.es/imag/pdf/SISTEMA%20MUNICIPAL%20DE%20INDICADORES%20SOSTENIBILIDAD.pdf" target="_blank">http://www.ecourbano.es/imag/pdf/SISTEMA%20MUNICIPAL%20DE%20INDICADORES%20SOSTENIBILIDAD.pdf</a></p>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->						
+</div><!-- .row-fluid -->
+
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

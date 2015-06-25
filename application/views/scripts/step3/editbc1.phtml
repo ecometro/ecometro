@@ -1,0 +1,94 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: M1 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bc1'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bc1'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('m1'); ?></span> <?php echo $this->translate('Recursos.'); ?> <span><?php echo $this->translate('Ciclo de vida de los materiales.'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Análisis de ciclo de vida de los materiales desde la extracción hasta la puerta de la obra. Incluye los impactos: calentamiento global, agotamiento de capa de ozono, acidificación, eutrofización, creación de ozono fotoquímico, agotamiento de recursos abióticos-elementos, agotamiento de recursos abióticos-combustibles fósiles.');?>
+			</p>
+			<p><?php echo $this->translate('Incluye las fases: la extracción, transporte a la fábrica y fabricación (el transporte a obra queda incluido dentro del criterio "materiales locales".'); ?>
+			</p>
+		</div>            
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bc_1; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">					
+					<h3><?php echo $this->translate('Herramientas'); ?></h3>
+					<p><?php echo $this->translate('Cumplimentar la tabla de inventario de ACV de materiales (enlace). También disponible en www.ecometro.es'); ?></p>
+			    </div>
+			    <div class="tab-pane" id="tab2">						
+			    </div>
+			    <div class="tab-pane" id="tab3">			      	
+					<p><?php echo $this->translate('CML-IA Characterisation Factors'); ?></p>
+					<p><a hre="http://cml.leiden.edu/software/data-cmlia.html" title="http://cml.leiden.edu/software/data-cmlia.html" target="_blank">http://cml.leiden.edu/software/data-cmlia.html</a></p>					 	
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('HADES'); ?></h3>
+					<p><?php echo $this->translate('RN3. Impacto de los materiales de construcción.'); ?></p>
+					<p><?php echo $this->translate('Reutilización y uso de materiales reciclados'); ?></p>
+					<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Mat 1. Materials Specification (major building elements).'); ?></p>
+					<p><?php echo $this->translate('Valoración según la "Green guide rating" para paredes exteriores, ventanas, cubiertas, forjados, divisiones interiores, acabados.'); ?></p>
+					<p><?php echo $this->translate('Mat 2. Hard landscaping and boundary protection.'); ?></p>
+					<p><?php echo $this->translate('Al menos el 80% de los materiales tienen A o A+ según  la "Green guide to specification"');?></p>
+					<p><?php echo $this->translate('Mat 6. Insulation.'); ?></p>
+					<p><?php echo $this->translate('Baja energía incorporada de los aislantes respecto a sus propiedades térmicas.'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('LR2'); ?></p>
+					<p><?php echo $this->translate('Resources & materials.'); ?>
+						<ul>
+							<li><?php echo $this->translate('2.1 Reducing usage of materials.'); ?></li>
+							<li><?php echo $this->translate('Puntuación por reducir el uso de materiales para la estructura, dependiendo de la resistencia de los elementos estructurales (exceptuando estructura de madera).'); ?></li>
+							<li><?php echo $this->translate('3.1 Use of materials without harmful substances.'); ?></li>
+							<li><?php echo $this->translate('De 0 a 4 tipos de materiales (adhesivos, sellantes, impermeabilizantes, pinturas,...) sin sustancias especificadas en la legislación PRTR (COV y otros).'); ?></li>
+						</ul>
+					</p>
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('Herramienta MIVES-EHE-08-V01. Cálculo del índice de contribución  la sostenibilidad (ICES) según el anejo 13 de la EHE-08.'); ?></p>
+					<p><a href="http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/ORGANOS_COLEGIADOS/CPH/SOTENIB_ESTRUC/" title="http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/ORGANOS_COLEGIADOS/CPH/SOTENIB_ESTRUC/" target="_blank">http://www.fomento.gob.es/MFOM/LANG_CASTELLANO/ORGANOS_COLEGIADOS/CPH/SOTENIB_ESTRUC/</a></p>					
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->						
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

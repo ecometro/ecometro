@@ -1,0 +1,8 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Informe :: ')); 
+?>
+<?php echo $this->partial('partials/project_menu.phtml', array('project_id' => $this->project_id)); ?>
+<p><?php echo $this->translate('Informe'); ?></p>
+<p>
+	<a href="<?php echo $this->url(array('controller' => 'report', 'action' => 'download', 'project_id' => $this->project_id), 'reportRoute'); ?>" title="<?php echo $this->translate('Descarga PDF'); ?>"><?php echo $this->translate('Descarga PDF'); ?></a>
+</p>

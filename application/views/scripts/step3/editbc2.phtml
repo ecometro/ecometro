@@ -1,0 +1,89 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: M2 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bc2'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bc2'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro"><?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('m2'); ?></span> <?php echo $this->translate('Recursos.'); ?> <span><?php echo $this->translate('Origen de los materiales.'); ?></span></h2>
+		</div>
+        <div class="descripcion">
+        	<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Reutilizando materiales se evitan los impactos asociados a la extracción de materiales, transporte a fábrica, y fabricación. La reutilización supone la no transformación o procesado del producto reutilizado.'); ?>
+			</p>
+		</div>                        
+        <hr>											
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bc_2; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">					
+					<h3><?php echo $this->translate('Herramientas'); ?></h3>
+					<p><?php echo $this->translate('Cumplimentar la tabla de inventario de ACV de materiales'); ?></p>
+					<p><?php echo $this->translate('También disponible en www.ecometro.es'); ?></p>
+			    </div>
+			    <div class="tab-pane" id="tab2">						
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Mat 3 Reuse of facade.'); ?></p>
+					<p><?php echo $this->translate('Al menos el 50% (área) de la fachada es reutilizada, y al menos el 80% (peso) de la fachada reutilizada es de material reutilizado in-situ.'); ?></p>					
+					<p><?php echo $this->translate('Mat 4 Reuse of structure.'); ?></p>
+					<p><?php echo $this->translate('Al menos el 80% (volumen) de la estructura primaria es reutilizada sin alteraciones significativas. Para ampliaciones, la estructura reutilizada supone al menos el 50% (volumen) de la estructura.'); ?></p>
+					<p><?php echo $this->translate('Wst 2. Recycled aggregates.'); ?></p>
+					<p><?php echo $this->translate('25% (peso o vol) de áridos reciclados o secundarios.');?></p>					
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('MR C1.1 Building reuse - Maintain existing walls, floor and roof. Mantener la estructura y envolvente existentes desde un 55% a un 95%.'); ?></p>
+					<p><?php echo $this->translate('MR C1.2 Building reuse - Maintain interior non-structural elements. Mantener al menos el 50% (área) de los elementos interiores (tabiquería, puertas, pavimentos, techos).'); ?>
+					</p>
+					<p><?php echo $this->translate('MR C3 Materials reuse. Del 5% al 10% (respecto al coste total de materiales) de material reutilizado. Componentes instalados permanentemente (se pueden excluir componentes mecánicos, eléctricos, ascensores,... ).'); ?></p>
+					<p><?php echo $this->translate('MR C4 Recycled content. Materiales con contenido reciclado. La suma del contenido reciclado post-consumidor más la mitad del contenido reciclado pre-consumidor es del 10% al 20% (coste).'); ?></p>
+					<p><?php echo $this->translate('MR C6 Rapidly renewable materials. Al menos 2,5% (coste) de materiales renovables rápidamente (procedentes de plantas con un ciclo de recolección de 10 años o menos).'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('LR2 Resources & materials.'); ?>
+						<ul>
+							<li><?php echo $this->translate('2.2 Continuing use of existing structural frame etc. Reutilizar el esqueleto existente. )'); ?></li>
+							<li><?php echo $this->translate('2.3 Use of recycled materials as structural frame materials. Utilizar materiales reciclados en la estructura principal (incluyendo cimentaciones de estructuras de madera) con marcado Eco MarK, según legislación japonesa.'); ?></li>
+							<li><?php echo $this->translate('2.4 Use of recycled materials as non-structural materials.Puntuación según la cantidad de tipos diferentes de materiales utilizados con marcado Eco Mark o DPI según legislación japonesa.'); ?></li>
+						</ul>
+					</p>										
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

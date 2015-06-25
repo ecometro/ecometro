@@ -1,0 +1,227 @@
+<?php
+	$myNamespace = new Zend_Session_Namespace('myNamespace');	
+	echo $this->doctype();
+?>
+<html lang="es">
+<head>
+<?php
+	echo $this->headMeta();
+	echo $this->headTitle();
+?>
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<?php
+	$this->loadSkin($this->skin);
+	echo $this->headLink();
+?>
+<link rel="shortcut icon" type="image/x-icon"
+	href="<?php echo $this->serverUrl() . "/skins/ecometro/img/favicon.ico"; ?>" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+	// Shortcut with fail-safe usage of $. Keep in mind that a reference
+	// to the jQuery function is passed into the anonymous function.
+	// Use $() without fear of conflicts.
+	jQuery(function ($) {
+
+		$('#addproject').click(function (e) {
+				$('#progress-loading').css('display', 'block');
+				$('#progress-bar').css('display', 'block');
+				$('#progress').css('display', 'block');
+				timer();
+				e.stopPropagation();
+			});			
+	});	
+
+	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+	var id = '<?php if (isset($myNamespace->id)) echo $myNamespace->id; else echo "No id set"; ?>';
+
+	function timer() {
+
+		var logurl = 'http://vivienda.ecometro.org/logs/' + 'log' + id + '.txt';
+
+		if(isChrome || isSafari) {
+
+			$.ajax({url: logurl, async: false, success: function(data){	
+				
+				var progress = data.split('#');
+
+				$('#progress-bar').width(progress[0] + '%');
+			    $('#progress').html(progress[1]);
+
+		  	}, error: function(data){console.log(data.status);}});			
+
+			setTimeout ('timer()', 1000);
+
+		} else {
+
+			$.get(logurl, function(data) {
+
+				var progress = data.split('#');
+
+				$('#progress-bar').width(progress[0] + '%');
+				$('#progress').html(progress[1]);
+
+			});
+
+			setTimeout ('timer()', 1000);
+		}
+	}
+</script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">		
+	<div class="navbar navbar-fixed-top">
+  		<div class="navbar-inner">
+   			<div class="container">
+     			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+      			</a>
+      			<div class="nav-collapse">
+        			<ul class="nav">
+                    	<li class="dropdown first-item verdemasoscuro"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $this->translate('La Asociación'); ?></a>
+                        	<ul class="dropdown-menu">
+                        		<li class="verdemasoscuro-down"><a href="http://ecometro.org"><?php echo $this->translate('Página principal'); ?></a></li>
+                            	<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/la-asociacion/que-hacemos/"><?php echo $this->translate('Qué hacemos'); ?></a></li>
+                        		<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/la-asociacion/junta-directiva/"><?php echo $this->translate('Junta diractiva'); ?></a></li>
+                       	 		<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/la-asociacion/comite-cientifico/"><?php echo $this->translate('Comité científico'); ?></a></li>
+                            	<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/la-asociacion/socios/"><?php echo $this->translate('Socios'); ?></a></li>
+                            	<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/la-asociacion/estatutos/"><?php echo $this->translate('Estatutos'); ?></a></li>
+                            </ul>
+                        </li>
+         				<li class="verdemasoscuro"><a href="http://www.ecometro.org/hazte-socio/"><?php echo $this->translate('Hazte socio'); ?></a></li>
+          				<li class="dropdown verdemasoscuro-derecha"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $this->translate('Financiación'); ?></a>
+                        	<ul class="dropdown-menu">
+                           		<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/financiacion/como-participar/"><?php echo $this->translate('Cómo participar'); ?></a></li>
+                           		<li class="verdemasoscuro-down"><a href="http://www.ecometro.org/financiacion/proyectos-inversion/"><?php echo $this->translate('Proyectos / Inversión'); ?></a></li>
+                            </ul>
+                        </li>
+                        <li class="verdeoscuro-izquierda"><a href="http://www.ecometro.org/evaluar-un-proyecto/"><?php echo $this->translate('Evaluar un proyecto'); ?></a></li>
+                        <li class="verdeoscuro-derecha"><a href="http://vivienda.ecometro.org/proyectos/evaluados/"><?php echo $this->translate('Proyectos evaluados'); ?></a></li>
+                        <li class="dropdown verde-izqder"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $this->translate('Ecología a debate'); ?></a>
+                        	<ul class="dropdown-menu">
+                           		<li class="verde-down"><a href="http://www.ecometro.org/ecologia-a-debate/indicadores/"><?php echo $this->translate('Indicadores'); ?></a></li>
+                        		<li class="verde-down"><a href="http://www.ecometro.org/events/categoria/ecometro/"><?php echo $this->translate('EAD anteriores'); ?></a></li>
+                       	 		<li class="verde-down"><a href="http://www.ecometro.org/ecologia-a-debate/ead-anteriores/"><?php echo $this->translate('Agenda (Próximas EAD)'); ?></a></li>
+                            </ul>
+                        </li>
+                        <li class="verdeclaro-izqder"><a href="http://www.ecometro.org/contacta/"><?php echo $this->translate('Contacta'); ?></a></li>
+                        <li class="verdemasclaro-izqder"><a href="http://blog.ecometro.org"><?php echo $this->translate('Blog'); ?></a></li>
+                        <li class="verdemasclaro-ultimo"><a href="http://www.ecometro.org/forums/"><?php echo $this->translate('Foro'); ?></a></li>
+        			</ul>
+      			</div>
+    		</div>
+        </div>
+	</div>
+	<div class="container">
+			<header class="jumbotron subhead" id="overview">
+				<a href="<?php echo $this->url(array("controller" =>"index", "action"=>"index"), "defaultRoute")?>" title="ecómetro"><h1><?php echo $this->translate('Ecómetro'); ?></h1></a>
+				<?php 
+					$auth = Zend_Auth::getInstance();       
+        			if ($auth->hasIdentity()) 
+        				$url = $this->url(array('controller' => 'profile', 'action' => 'index'), 'profileRoute');        	
+        			else			
+        				$url = $this->url(array('controller' => 'account', 'action' => 'index'), 'accountRoute');        	
+				?>
+				<a href="<?php echo $url; ?>" title="ecómetro"><img src="<?php echo $this->serverUrl() . "/skins/ecometro/img/logo-ecometro-alpha-100x85.png"; ?>" width="100" height="85" alt="ecómetro"></a>
+				<div class="subnav">
+				  <ul class="nav nav-pills">				  	
+				    <li class="active"><a href="<?php echo $this->url(array("controller" =>"index", "action"=>"index", "lang" => 'es'), "defaultRoute")?>" title="<?php echo $this->translate('ESP'); ?>"><?php echo $this->translate('ESP'); ?></a></li>
+				    <li><a href="<?php echo $this->url(array("controller" =>"index", "action"=>"index", "lang" => 'en'), "defaultRoute"); ?>" title="<?php echo $this->translate('ENG'); ?>"><?php echo $this->translate('ENG'); ?></a></li>
+					<?php echo $this->profileLink(); ?>					
+				    </ul>
+				</div><!-- .subnav -->
+			</header><!-- header -->
+			<div id="content">
+
+					<?php echo $this->layout()->content; ?>
+
+			</div><!-- .content -->
+			<footer>
+				<ul class="nav nav-pills">
+			  		<li><a href="http://www.ecometro.org/contacta/" title="<?php echo $this->translate('Contacta'); ?>"><?php echo $this->translate('Contacta'); ?></a></li>
+			 		<li><a href="http://www.ecometro.org/faq/" title="<?php echo $this->translate('FAQ'); ?>"><?php echo $this->translate('FAQ'); ?></a></li>
+			 		<li><a href="#" title="<?php echo $this->translate('Hosting Verde'); ?>"><img class="hostin-verde" height="72" src="http://www.ecometro.org/wp-content/uploads/2013/07/hosting-ecológico.png"></img></a></li>
+			  		<li><a href="#" title="<?php echo $this->translate('Copy'); ?>"><img src="<?php echo $this->serverUrl() . "/skins/ecometro/img/by-nc-sa.eu-copia.jpg"; ?>" width="120" height="42"></a></li>
+			  		<li>
+			  			<p style="text-align: right; padding-top: 11px;  margin-top: 2px;">Síguenos: 
+
+							<a href="https://es-es.facebook.com/ecometro.org"><img src="http://ecometro.org/wp-content/uploads/2014/06/facebook-icon-2.jpg"  ></a>    
+
+							<a href="http://es.linkedin.com/in/ecometro"><img src="http://ecometro.org/wp-content/uploads/2014/06/linkedin_32.png" HSPACE=5></a>
+
+							<a href="https://twitter.com/ecometro_org"><img src="http://ecometro.org/wp-content/uploads/2014/06/twitter-icon-2.jpg" HSPACE=5 ></a>
+
+							<a href="https://plus.google.com/101165399957204291727/videos"><img src="http://ecometro.org/wp-content/uploads/2014/06/google_32.png"></a>
+
+						</p>
+				</li>
+				</ul>
+			    <a class="github" href="#" title="<?php echo $this->translate('Fork me on Github'); ?>"><img src="<?php echo $this->serverUrl() . "/skins/ecometro/img/github.png"; ?>" width="150" height="33" alt="Fork me on Github"></a> 
+			</footer>
+	</div><!-- .container -->
+<?php
+	echo $this->headScript();
+?>
+<script>
+    $(document).scroll(function(){
+    // if has not activated (has no attribute "data-top"
+    if (!$('.subnav').attr('data-top')) {
+        // if already fixed, then do nothing
+        if ($('.subnav').hasClass('subnav-fixed')) return;
+        // remember top position
+        var offset = $('.subnav').offset();
+        $('.subnav').attr('data-top', offset.top);
+    }
+
+    if ($('.subnav').attr('data-top') - $('.subnav').outerHeight() <= $(this).scrollTop())
+        $('.subnav').addClass('subnav-fixed');
+    else
+        $('.subnav').removeClass('subnav-fixed');
+	});
+</script>
+<script>
+	jQuery(function ($) {			
+
+		if(getCookie('alert') == '0'){			
+			$('.cookies').remove();		
+		}
+
+		$('.cerrar-cookies').click(function(){
+			setCookie('alert', 0, 365);
+			$('.cookies').remove();
+
+			return false;
+		});			
+	});
+
+	function getCookie(cname)
+	{
+		var name = cname + '=';
+		var ca = document.cookie.split(';');
+		for(var i = 0; i < ca.length; i++) {
+		  var c = ca[i].trim();
+		  if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+		}
+			
+		return '';
+	} 
+
+	function setCookie(cname, cvalue, exdays)
+	{
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		var expires = 'expires=' + d.toGMTString();
+		document.cookie = cname + '=' + cvalue + '; ' + expires + '; path=/';
+	}
+</script>
+<?php echo $this->partial('partials/_cookies.phtml'); ?>    
+</body>
+<?php
+	$this->addScriptPath(APPLICATION_PATH . '/views/scripts');
+	echo $this->render('util/profiler.phtml');
+?>
+</html>

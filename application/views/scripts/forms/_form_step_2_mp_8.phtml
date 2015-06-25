@@ -1,0 +1,44 @@
+<?php
+	// get instance of view 
+	$view = Zend_Layout::getMvcInstance()->getView(); 
+?>
+<?php 
+	// load in object session fields aplicable si/no from database
+	$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    $myNamespace->{'aplicable_' . $view->project_id . 'mp8'} = $view->fieldsAplicable;
+?>
+<form class="<?php echo $this->element->getAttrib('class'); ?>" id="<?php echo $this->element->getAttrib('id'); ?>" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<table class="forms">
+		<tr class="<?php if($view->fieldsAplicable[1]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+			<td class="column1">x</td>   				  
+			<?php echo $this->element->campos_estaticos; ?>	
+			<td class="column4"><?php echo $view->units[1]; ?></td>
+		</tr>
+		<tr class="<?php if($view->fieldsAplicable[1]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+			<td class="column1">x</td>   				  
+			<?php echo $this->element->radiaciones_naturales; ?>	
+			<td class="column4"><?php echo $view->units[2]; ?></td>
+		</tr>
+		<tr class="<?php if($view->fieldsAplicable[3]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+			<td class="column1">x</td>   				  
+			<?php echo $this->element->baja_frecuencia_campo_magnetico; ?>	
+			<td class="column4"><?php echo $view->units[3]; ?></td>
+		</tr>
+		<tr class="<?php if($view->fieldsAplicable[4]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+			<td class="column1">x</td>   				  
+			<?php echo $this->element->baja_frecuencia_campo_electrico; ?>	
+			<td class="column4"><?php echo $view->units[4]; ?></td>
+		</tr>
+		<tr class="<?php if($view->fieldsAplicable[5]) { echo "aplicable-si"; } else { echo "aplicable-no";  } ?>">
+			<td class="column1">x</td>   				  
+			<?php echo $this->element->alta_frecuencia; ?>	
+			<td class="column4"><?php echo $view->units[5]; ?></td>
+		</tr>
+	</table>	
+	<span class="not-applicable"><?php echo $this->translate('Pinche sobre la x si no procede.'); ?></span>	
+	<?php echo $this->partial('partials/_form_navigation.phtml', array('attribs' => $this->element->getAttrib('id'), 'prev' => true, 'next' => true, 'prev_s' => null, 'next_s' => null)); ?>
+	<?php echo $this->element->submit; ?>
+	<div class="clr"></div>	
+	<label><?php echo $this->translate('Comentarios y especificaciones para la valoración'); ?></label>
+    <?php echo $this->element->comentarios; ?>
+</form>

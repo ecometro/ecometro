@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+<stylesheets>
+<stylesheet>bootstrap/bootstrap.min.css</stylesheet>
+<stylesheet>bootstrap/bootstrap-responsive.min.css</stylesheet>
+<stylesheet>bootstrap/docs.css</stylesheet>
+<stylesheet>bootstrap/prettify.css</stylesheet>
+<stylesheet>style.css</stylesheet>
+</stylesheets>
+</skin>

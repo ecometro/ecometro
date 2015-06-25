@@ -1,0 +1,103 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: D4 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bl4'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bl4'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('d4'); ?></span> <?php echo $this->translate('Energía en uso.'); ?> <span><?php echo $this->translate('Térmicos.'); ?></span></h2>
+		</div>
+		<div class="descripcion">
+			<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>			
+		</div>            
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bl_4; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+	<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+			    	<?php echo $this->translate('Calener. Certificación energética de edificios. Se tomará la calificación energética asociada a la demanda de calefacción y refrigeración, y la demanda para ACS.'); ?>
+			    </div>
+			    <div class="tab-pane" id="tab2">
+			    	<?php echo $this->translate('CTE DB-HE Ahorro de energía. HE1 Limitación de la demanda.'); ?>
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('HADES'); ?></h3>
+					<p><?php echo $this->translate('EA1. Consumo de energía no renovable durante el uso del edificio. Demanda y eficiencia de los sistemas.'); ?></p>					
+					<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Ene 1 Reduction of CO2 emissions. Según las mejoras sobre la regulación. Para nueva construcción según el índice de CO2 (certificación EPC) Incluye dos puntos ejemplares para emisiones menores que 0 y "True zero carbon building"'); ?>
+					</p>
+					<p><?php echo $this->translate('Ene 6 Building fabric performance and avoidance of air infiltration. No aplicable.'); ?></p>
+					<p><?php echo $this->translate('Ene 16 CHP community energy. No aplicable.'); ?>
+					</p>
+					<p><?php echo $this->translate('Ene 17 Residential areas energy consumption. No aplicable.'); ?></p>
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('EA PR2. Minimum energy performance. Modelo energético: Mejorar el 10% respecto al estándar para nueva construcción (un 5% para grandes reformas)'); ?></p>
+					<p><?php echo $this->translate('EA C1 Optimize energy performance. Según simulación (Appendix G  de ANSI/ASHRAE/IESNA 90.1-2007) y porcentaje de coste ahorrado.'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('LR1 Energy.'); ?></p>
+					<p><?php echo $this->translate('1. Building thermal load.'); ?></p>
+					<p><?php echo $this->translate('En apartamentos: Reducción de la carga térmica según el estándar japonés "5.1 Energy- saving Countermeasure grade".'); ?></p>
+					<p><?php echo $this->translate('2. Natural energy utilization.'); ?></p>
+					<p><?php echo $this->translate('2.1 Direct use of natural energy. Uso directo de energía natural (sin esfuerzo mecánico, por ejemplo, iluminación o ventilación natural) Vivienda pasantes y mejora de la eficacia.'); ?></p>
+					<p><?php echo $this->translate('3. Efficiency in building service system. Eficacia de los sistemas.'); ?></p>
+					<h3><?php echo $this->translate('HQE'); ?></h3>
+					<p><?php echo $this->translate('F2 Ecogestion. Cible 4: Gestion de l’énergie'); ?></p>
+					<h3><?php echo $this->translate('OTROS'); ?></h3>
+					<p><?php echo $this->translate('Passivhaus. Limitación de la demanda anual térmica para calefacción y refrigeración de 15 KWh/m2 y demanda total de 120 KWh/m2.'); ?></p>
+					<p><?php echo $this->translate('MARM. Sistema municipal de indicadores de sostenibilidad. 2010.'); ?></p>
+					<p><?php echo $this->translate('4 Metabolismo urbano. Consumo final de energía. (municipal por tipos de energía y sectores de actividad) deseable: Consumo final de energía (sin contabilizar el sector industrial): < 10.000 kWh/hab y año.'); ?></p>
+					<p><?php echo $this->translate('Enlace al documento:'); ?></p>
+					<p><a href="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" title="http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf" target="_blank">http://www.magrama.gob.es/es/calidad-y-evaluacion-ambiental/temas/medio-ambiente-urbano/SISTEMA_MUNICIPAL_INDICADORES_SOSTENIBILIDAD_tcm7-177732.pdf</a></p>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

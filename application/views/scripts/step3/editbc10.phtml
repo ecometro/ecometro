@@ -1,0 +1,112 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: M10 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bc10'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bc10'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('m10'); ?></span> <?php echo $this->translate('Vida útil y fin de vida de los materiales.'); ?> <span></span></h2>
+		</div>
+		<div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>			
+		</div>            
+		<hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bc_10; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->           
+    <div class="clr"></div>
+    <hr>
+        <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+			<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+			    </div>
+			    <div class="tab-pane" id="tab2">			    	
+			    </div>
+			    <div class="tab-pane" id="tab3">			    	
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('HADES'); ?></h3>
+					<p><?php echo $this->translate('RN4. Desmontaje, reutilización y reciclado al final del ciclo de vida.'); ?></p>
+					<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Hea 14 Office space. No aplicable para residencial.'); ?></p>					
+					<p><?php echo $this->translate('Mat 7 Designing for robustness. Identificar las áreas interiores y exteriores del edificio con tránsito. Medidas para la protección y durabilidad, protegiendo y evitando daños en zonas vulnerables.'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('Q2 Quality of service.'); ?></p>
+					<p><?php echo $this->translate('3 Flexibility and adaptability.'); ?></p>
+					<p><?php echo $this->translate('3.1 Spatial margin.'); ?>
+						<ul>
+							<li><?php echo $this->translate('3.1.1 Allowance for floor-to-floor height. En apartamentos, de 2,7m a 3m de altura suelo-suelo.'); ?> 
+							</li>
+							<li>	
+								<?php echo $this->translate('3.1.2 Flexibility in floor layout. Flexibilidad según el ratio longitud de pared/ area.'); ?>
+							</li>
+						</ul>
+					</p>
+					<p><?php echo $this->translate('3.2 Floor load margin. En apartamentos, capacidad de carga de 1800 N/m2 a 2900 N/m2.'); ?></p>
+					<p><?php echo $this->translate('3.3 System renewability. Estrategias para minimizar daños en acabados, estructura,... al reemplazar los conductos.'); ?>
+						<ul>
+							<li><?php echo $this->translate('3.3.1 Ease of air conditioning duct renewal.'); ?></li>
+							<li><?php echo $this->translate('3.3.2 Ease of water supply and drain pipe renewal.'); ?></li>
+							<li><?php echo $this->translate('3.3.3 Ease of electrical wiring renewal.'); ?></li>
+							<li><?php echo $this->translate('3.3.4 Ease of communications cable renewal.'); ?></li>
+							<li><?php echo $this->translate('3.3.5 Ease of equipment renewal.'); ?></li> 
+							<li><?php echo $this->translate('3.3.6 Provision of backup space.'); ?></li>
+						</ul>
+					</p>
+					<p><?php echo $this->translate('1 Service ability.'); ?></p>
+					<p><?php echo $this->translate('1.3 Maintenance management.'); ?>
+						<ul>
+							<li><?php echo $this->translate('1.3.1 Design which considers maintenance management. Estrategias de bajo mantenimiento y fácil limpieza para diferentes elementos constructivos.'); ?> </li>
+							<li><?php echo $this->translate('1.3.2 Securing maintenance management functions. Facilidad para mantenimiento, almacenamiento para limpieza, basuras y estrategias de diseño diversas.'); ?></li>
+						</ul>
+					</p>
+					<p><?php echo $this->translate('2 Durability and reliability.'); ?></p>
+					<p><?php echo $this->translate('2.2 Service life of components.'); ?>
+						<ul>
+							<li><?php echo $this->translate('2.2.1 Service life of structural materials. Nivel de reducción del deterioro de estructuras.'); ?></li>
+							<li><?php echo $this->translate('2.2.2 Necessary refurbishment integral for exterior finishes. Aumentar el periodo de rehabilitación de 10 a 30 años.'); ?></li>
+					 		<li><?php echo $this->translate('2.2.3 Necessary renewal interval for main interior finishes. En apartamentos, aumentar de 10 a 25 años el periodo de renovación de acabados interiores.'); ?></li>
+							<li><?php echo $this->translate('2.2.4 Necessary replacement interval for air conditioning and ventilation ducts. Extender la vida útil de conductos especialmente expuestos (exteriores, cocinas, húmedos,...)'); ?></li>
+							<li><?php echo $this->translate('2.2.5 Necessary renewal interval for HVAC and water supply and drainage pipes. Puntuación según tipo de conducto y tipo de junta.'); ?></li>
+							<li><?php echo $this->translate('2.2.6 Necessary renewal interval for major equipment and service. Vida útil de sistemas de 7 a 30 años.'); ?></li>
+						</ul>
+					</p>
+					<p><?php echo $this->translate('2.3 Appropriate renewal. No aplicable para NC.'); ?></p>
+					<p><?php echo $this->translate('LR2 Resources & materials.'); ?></p>
+					<p><?php echo $this->translate('2.6 Efforts to enhance the reusability of components and materials. Los materiales de acabado se pueden separar fácilmente/ acabados e instalaciones se pueden desmontar/ se usan componentes reutilizables.'); ?></p>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

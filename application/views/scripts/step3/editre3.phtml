@@ -1,0 +1,87 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R3 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're3'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're3'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">		
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r3'); ?></span> <?php echo $this->translate('Cargas de escorrentía y erosión del suelo.'); ?> <span></span></h2>
+		</div>
+        <div class="descripcion">
+            <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>			
+		</div>            
+        <hr>													
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_re_3; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+			<?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->           
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">	
+				<h3><?php echo $this->translate('Herramientas'); ?></h3>
+				<p><?php echo $this->translate('UE. Mapas interactivos de agua.'); ?></p>
+				<p><a href="http://www.eea.europa.eu/themes/water/interactive/water-live-maps/all-water-live-maps" title="http://www.eea.europa.eu/themes/water/interactive/water-live-maps/all-water-live-maps" target="_blank">http://www.eea.europa.eu/themes/water/interactive/water-live-maps/all-water-live-maps</a></p>
+				<p><?php echo $this->translate('SIA Sistema integrado de información del agua.'); ?></p>
+				<p><a href="http://servicios2.marm.es/sia/consultas/servlet/consultas.GlobalFilter?tipo=masiva&sid=generate" title=" http://servicios2.marm.es/sia/consultas/servlet/consultas.GlobalFilter?tipo=masiva&sid=generate" target="_blank">http://servicios2.marm.es/sia/consultas/servlet/consultas.GlobalFilter?tipo=masiva&sid=generate</a></p>
+			</div>
+			<div class="tab-pane" id="tab2">
+			</div>
+			<div class="tab-pane" id="tab3"> 	
+			</div>
+			<div class="tab-pane" id="tab4">
+				<h3><?php echo $this->translate('BREEAM'); ?></h3>
+				<p><?php echo $this->translate('Pol 5 Flood risk. Baja probabilidad de inundación medida de drenaje y atenuación.'); ?></p>
+				<p><?php echo $this->translate('Pol 6 Minimising watercourse pollution. Reducir las cargas de contaminantes (metales pesados, aceites, químicos)  a cursos de agua.'); ?></p>
+				<h3><?php echo $this->translate('LEED'); ?></h3>
+				<p><?php echo $this->translate('SS C 6.1 Stormwater design - Quantity control. Plan de gestión de escorrentías. Dependiendo de la impermeabilidad, tener en cuenta el pico de descarga y el potencial de erosión del suelo.'); ?></p>
+				<p><?php echo $this->translate('SS C 6.2 Stormwater design - Quality control. Gestión del agua de tormentas para promover la infiltración, captar y tratar el 90% del agua de escorrentía.'); ?></p>
+				<h3><?php echo $this->translate('CASBEE'); ?></h3>
+				<p><?php echo $this->translate('LR3 Off-site environment. 2.3 Load on local infrastructure. 2.3.1 Reduction of rainwater discharge loads. Permeabilidad del suelo y estrategias de almacenamiento temporal.'); ?></p>
+			</div>
+			<div class="tab-pane" id="tab5">
+				<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+			</div>
+		</div>
+	</div><!-- .tabbable -->						
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

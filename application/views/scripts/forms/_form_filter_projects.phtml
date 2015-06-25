@@ -1,0 +1,8 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<form class="<?php echo $this->element->getAttrib('class'); ?>" id="<?php echo $this->element->getAttrib('id'); ?>" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<fieldset>		
+		<div class="control-group">			
+			<?php echo $this->element->buscar_por_categoria; ?>			
+		</div>		
+	</fieldset>
+</form>

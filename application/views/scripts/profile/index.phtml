@@ -1,0 +1,109 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Evaluar un Proyecto :: ')); 
+?>
+<div class="row-fluid profile">
+	<div class="span5">
+		<?php			
+			if($this->referer != 'project')
+				$this->successMessages($this->messages);	
+		?>		
+		<h2><?php echo $this->translate('Perfil:'); ?></h2>
+		<?php if($this->account->photo): ?>
+	    	<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'profiles/' . $this->account->photo; ?>" width="" height="" alt="">    
+	    <?php else: ?>
+	    	<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'user-default.png'; ?>" width="" height="" alt="">    
+	    <?php endif; ?>
+	    <form action="<?php echo $this->url(array('controller' => 'profile', 'action' => 'edit'), 'profileRoute'); ?>" method="get">
+	    	<button class="boton black" type="submit"><?php echo $this->translate('Editar perfil'); ?></button>
+	    </form>
+	    <dl>
+	    <dt><?php echo $this->translate('Nombre usuario:'); ?></dt>
+		<dd><?php echo $this->account->firstname; ?> <?php echo $this->account->lastname; ?></dd>
+	    <dt><?php echo $this->translate('Correo electrónico:'); ?></dt>
+		<dd><?php echo $this->account->email; ?></dd>
+	    <dt><?php echo $this->translate('Datos de la empresa: '); ?></dt>    
+		<dd><?php echo $this->account->company; ?></dd>
+	    <dt><?php echo $this->translate('Ciudad:'); ?></dt>    
+		<dd><?php echo $this->account->city; ?></dd>
+		<dt><?php echo $this->translate('Provincia:'); ?></dt>    
+		<dd><?php echo $this->account->province; ?></dd>
+	    <dt><?php echo $this->translate('País:'); ?></dt>    
+		<dd><?php echo $this->account->country; ?></dd>
+	    <dt><?php echo $this->translate('Web:'); ?></dt>
+		<dd><a href="<?php echo 'http://' . $this->account->web; ?>" title="<?php echo $this->account->web; ?>" target="_blank"><?php echo $this->account->web; ?></a></dd>
+	    </dl>
+	</div><!-- .span5 -->
+	<div class="span7">	
+		<?php					
+			if($this->referer == 'project')
+				$this->successMessages($this->messages);					
+		?>
+		<section class="proyects">
+			<h2><?php echo $this->translate('Proyectos:'); ?></h2>
+	        <hr>        
+	        <form action="<?php echo $this->url(array('controller' => 'project', 'action' => 'create'), 'projectRoute'); ?>" method="get">
+	        	<button class="boton red" type="submit" id="addproject"><?php echo $this->translate('Añadir nuevo proyecto'); ?></button>
+	        </form>
+	        <div id="progress-loading"><div id="progress-bar"></div></div>
+	        <div id="progress"></div>
+	        <hr>
+	        <?php if (count($this->paginator) > 0): ?>
+				<h2><?php echo $this->translate('Otros proyectos:'); ?></h2>
+				<?php echo $this->paginationControl($this->paginator, 'Sliding', 'partials/_pagination.phtml'); ?>
+				<?php foreach($this->paginator AS $project): ?>
+					<article class="other-proyects <?php if($project->completed)echo "green"; ?>">
+						<header class="header-project">
+							<div class="row-fluid">
+								<div class="span8">
+									<h3><?php echo $project->nombre_del_proyecto; ?></h3>
+								</div>
+								<div class="span4">
+									<?php if($project->completed): ?>
+										<div class="state complete"><?php echo $this->translate('Proyecto completo'); ?></div>
+									<?php else: ?>
+										<div class="state incomplete"><?php echo $this->translate('Proyecto incompleto'); ?></div>
+									<?php endif; ?>	
+								</div>
+							</div>
+						</header>
+						<div class="row-fluid">
+		                	<div class="span6">
+								<div class="picture">
+								<?php if($project->photo): ?>
+									<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'projects/' .  $project->photo; ?>" width="" height="" alt="">
+								<?php else: ?>
+									<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . '150x100.gif'; ?>" width="150" height="100" alt="">
+								<?php endif; ?>	
+								</div>
+								<div class="graphic" style="position: relative; width: 110px; height: 110px;">
+									<img style="padding-left: 5px; padding-top: 5px;" src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'graphs/' .  $project->s_photo; ?>" width="" height="100" alt="100">
+									<div style="position: absolute; top:0; left:0;">
+							        	<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'ecometro-graph-small.png'; ?>" width="110" height="110" alt="<?php echo $this->translate('Gráfico provisional:'); ?>">
+							      </div>
+								</div>
+							</div>
+		                    <div class="span6">
+		                        <div class="description">
+									<p><?php echo $project->breve_descripcion; ?></p>
+									<div class="botons">
+										<a href="<?php echo $this->url(array('controller' => 'step1', 'action' => 'edit', 'project_id' => $project->id), 'step1Route'); ?>" title="<?php echo $this->translate('Editar'); ?>" ><?php echo $this->translate('Editar'); ?></a>
+										<a href="<?php echo $this->url(array('controller' => 'project', 'action' => 'delete', 'project_id' => $project->id), 'projectIdRoute'); ?>" title="<?php echo $this->translate('Eliminar'); ?>" ><?php echo $this->translate('Eliminar'); ?></a>
+										<p class="publico">
+											<span><?php echo $this->translate('Público') ?></span>
+											<a href="<?php echo $this->url(array('controller' => 'project', 'action' => 'editpublic', 'project_id' => $project->id, 'public' => 1), 'projectPublicRoute'); ?>" title="<?php echo $this->translate('si'); ?>" class="si"><?php echo $this->translate('si') ?></a> <a href="<?php echo $this->url(array('controller' => 'project', 'action' => 'editpublic', 'project_id' => $project->id, 'public' => 0), 'projectPublicRoute'); ?>" title="<?php echo $this->translate('no') ?>" class="no"><?php echo $this->translate('no'); ?></a>
+										</p>
+										<a class="clr" href="#" title="<?php echo $this->translate('Compartir en redes'); ?>"><?php echo $this->translate('Compartir en redes'); ?></a>
+										<a href="<?php echo $this->url(array('controller' => 'report', 'project_id' => $project->id), 'reportRoute'); ?>" title="<?php echo $this->translate('Ver informe'); ?>"><?php echo $this->translate('Ver informe'); ?></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>						
+				<?php endforeach; ?>
+			<?php else: ?>
+				<?php echo $this->translate('No hay proyectos'); ?>
+			<?php endif; ?> 
+		</section>	
+	</div><!-- .span7 -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/projects-evaluated/main.js'; ?>"></script>

@@ -1,0 +1,108 @@
+<div class="izquierda">
+  <h4><?php echo $this->translate('Gráfico provisional:'); ?></h4>
+  <?php if($this->l_photo == null): ?>
+    <img src="http://placehold.it/200x200" width="200" height="200" alt="<?php echo $this->translate('Gráfico provisional:'); ?>">
+  <?php else: ?>
+    <div style="position: relative; width: 220px; height: 220px;">
+      <img style="padding-left: 10px; padding-top: 10px;" src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'graphs/' .  $this->l_photo; ?>" width="200" height="200" alt="<?php echo $this->translate('Gráfico provisional:'); ?>">
+      <div style="position: absolute; top:0; left:0;">
+        <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'ecometro-graph.png'; ?>" width="220" height="220" alt="<?php echo $this->translate('Gráfico provisional:'); ?>">
+      </div>
+    </div>
+  <?php endif; ?>  
+</div>
+<div class="puntuacion">
+  <h4><?php echo $this->translate('Puntuación provisional:'); ?></h4>
+  <table>
+    <tbody>
+      <tr>
+        <td class="puntuacion1">
+          <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_r.png'; ?>" alt="<?php echo $this->translate('Relación Entorno'); ?>" width="20" height="">
+        </td>
+        <td class="puntuacion2"><?php echo $this->translate('Entorno'); ?></td>
+        <td class="puntuacion3"><?php echo $this->data[3]; ?></td>
+        <?php if($this->step5): ?>
+          <td rowspan="5">
+            <table class="grafico-puntuacion">
+              <thead>
+                <tr>
+                  <th colspan="4"><?php echo $this->translate('Total'); ?></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2" colspan="4" class="puntuacion1">
+                    <?php 
+                      echo $this->data[0] + 
+                          $this->data[1] +
+                          $this->data[2] + 
+                          $this->data[3] + 
+                          $this->data[4]; 
+                    ?></td>
+                </tr>        
+                <tr>
+                  <td class="puntuacion1"></td>
+                  <td class="puntuacion2"></td>
+                  <td class="puntuacion3"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="puntuacion1"><?php echo $this->translate('HUELLA HIDRICA'); ?></td>
+                  <td class="puntuacion2"></td>
+                  <td class="puntuacion3"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class="puntuacion1"><?php echo $this->translate('HUELLA CARBONO'); ?></td>
+                  <td class="puntuacion2">54</td>
+                  <td class="puntuacion3">tn</td>
+                  <td>CO2</td>
+                </tr>
+                <tr>
+                  <td class="puntuacion1"><?php echo $this->translate('CERTIF. ENERGETICA'); ?></td>
+                  <td class="puntuacion2">15</td>
+                  <td class="puntuacion3">Wh/m2</td>
+                  <td>A++</td>
+                </tr>
+              </tbody>
+              <tfoot></tfoot>
+            </table>
+          </td>
+        <?php endif; ?>
+  			</tr>
+        <tr>
+   				<td class="puntuacion1"><img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_m.png'; ?>" alt="<?php echo $this->translate('Materiales'); ?>" width="20" height=""></td>
+    			<td class="puntuacion2"><?php echo $this->translate('Materiales'); ?></td>
+    			<td class="puntuacion3"><?php echo $this->data[4]; ?></td>
+  			</tr>
+        <tr>
+   				<td class="puntuacion1"><img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_d.png'; ?>" alt="<?php echo $this->translate('Diseño'); ?>" width="20" height=""></td>
+    			<td class="puntuacion2"><?php echo $this->translate('Diseño'); ?></td>
+    			<td class="puntuacion3"><?php echo $this->data[0]; ?></td>
+  			</tr>
+        <tr>
+   				<td class="puntuacion1"><img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_a.png'; ?>" alt="<?php echo $this->translate('Agua'); ?>" width="20" height=""></td>
+    			<td class="puntuacion2"><?php echo $this->translate('Agua'); ?></td>
+    			<td class="puntuacion3"><?php echo $this->data[1]; ?></td>
+  			</tr>
+        <tr>
+   				<td class="puntuacion1"><img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_e.png'; ?>" alt="<?php echo $this->translate('Energía'); ?>" width="20" height=""></td>
+    			<td class="puntuacion2"><?php echo $this->translate('Energía'); ?></td>
+    			<td class="puntuacion3"><?php echo $this->data[2]; ?></td>
+  			</tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" class="puntuacion1"><?php echo $this->translate('Ecómetro'); ?></td>
+          <td class="puntuacion1">
+            <?php 
+              echo $this->data[0] + 
+                  $this->data[1] +
+                  $this->data[2] + 
+                  $this->data[3] + 
+                  $this->data[4]; 
+          ?></td>
+        </tr>
+      </tfoot>
+	</table>
+</div>

@@ -1,0 +1,140 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: R4 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 're4'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 're4'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">		
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('r4'); ?></span> <?php echo $this->translate('Biodiversidad y hábitat en el proyecto.'); ?> <span></span></h2>
+		</div>
+        <div class="descripcion">
+	        <p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Mejoras sobre el ecosistema y hábitat. Riqueza de especies. Protección del paisaje y hábitat. Ocupación o huella del edificio. Conocer las características ecológicas del suelo a desarrollar y su entorno; con el fin de proteger, preservar y/o restaurar el hábitat. Paisaje, clima, agua, ecosistemas, topografía, vistas,... .');
+			?></p>
+		</div>
+        <hr>
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+	<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_re_4; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">
+		    <?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+		<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">	
+				<h3><?php echo $this->translate('Herramientas'); ?></h3>
+				<p><?php echo $this->translate('MARM. Geoportal, mapas, banco de datos de la naturaleza'); ?></p>
+				<p><a href="http://sig.marm.es/geoportal/" title="http://sig.marm.es/geoportal/" target="_blank">http://sig.marm.es/geoportal/</a></p>
+			</div>
+			<div class="tab-pane" id="tab2">
+			</div>
+			<div class="tab-pane" id="tab3">
+				<p><?php echo $this->translate('Efecto barrera de las infraestructuras.'); ?></p>	
+				<p><a href="http://www.magrama.gob.es/es/biodiversidad/temas/conservacion-de-especies-amenazadas/vertebrados/Copia_de_index2010-10-28_20.59.29.8783.aspx" title="http://www.magrama.gob.es/es/biodiversidad/temas/conservacion-de-especies-amenazadas/vertebrados/Copia_de_index2010-10-28_20.59.29.8783.aspx" target="_blank">http://www.magrama.gob.es/es/biodiversidad/temas/conservacion-de-especies-amenazadas/vertebrados/Copia_de_index2010-10-28_20.59.29.8783.aspx</a></p>
+				<p><?php echo $this->translate('Medidas correctoras:'); ?></p>
+				<p><a href="http://www.magrama.gob.es/es/biodiversidad/temas/conservacion-de-especies-amenazadas/anexo1_tcm7-20822.pdf" title="http://www.magrama.gob.es/es/biodiversidad/temas/conservacion-de-especies-amenazadas/anexo1_tcm7-20822.pdf" target="_blank">http://www.magrama.gob.es/es/biodiversidad/temas/conservacion-de-especies-amenazadas/anexo1_tcm7-20822.pdf</a></p>
+			</div>
+			<div class="tab-pane" id="tab4">
+				<h3><?php echo $this->translate('HADES'); ?></h3>
+				<p><?php echo $this->translate('PE1. Uso de plantas autóctonas'); ?></p>
+			    <h3><?php echo $this->translate('BREEAM'); ?></h3>
+				<p><?php echo $this->translate('LE 3. Ecological Value of Site and Protection of Ecological Features.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('Suelo de bajo valor ecológico según el formulario técnico Breeam.'); ?></li>
+						<li>- <?php echo $this->translate('Proteger árboles, arbustos y cursos de agua o humedales con valor ecológico.'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('LE 4 Mitigating ecological impact.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('Cambios en el valor ecológico según el tipo de paisaje y cobertura, cambios en el número de especies según "Ecology calculator 1".'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('LE 5 Enhancing site ecology.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('Informe ecológico previo a la actuación realizado por un ecólogo cualificado, con recomendaciones de mejora y protección del ecosistema. Implementación de las recomendaciones y aumento del número de especies según  "Ecology calculator 2".'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('LE 6 Long term impact on biodiversity.'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('Designación de un ecólogo cualificado, que confirme que se cumple la legislación en el proceso de diseño y construcción, y realización de un plan de gestión del hábitat y paisaje que cubra al menos los primeros 5 años. Otras acciones adicionales a llevar a cabo principalmente por la empresa constructora.'); ?></li>
+					</ul>
+				</p>
+				<h3><?php echo $this->translate('LEED'); ?></h3>
+				<p><?php echo $this->translate('SS C1 Site selection.'); ?></p>
+				<p><?php echo $this->translate('El desarrollo no se sitúa en suelos:'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('De alto valor agrícola'); ?></li>
+						<li>- <?php echo $this->translate('No desarrollado con una elevación superior a 1,5 metros del "100 year flood"'); ?></li>
+						<li>- <?php echo $this->translate('Hábitat de alguna especie amenazada o protegida'); ?></li>
+						<li>- <?php echo $this->translate('A menos de 30 m de humedales'); ?></li>
+						<li>- <?php echo $this->translate('A menos de 15 m de un cuerpo de agua/ zona verde pública'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('SS C 5.1 Site development - Protect or restore habitat.'); ?></p>
+				<p><?php echo $this->translate('Para suelos sin desarrollar, limitar la afectación a:'); ?>
+					<ul>
+						<li>- <?php echo $this->translate('12 m del perímetro del edificio'); ?></li>
+						<li>- <?php echo $this->translate('3 m de caminos, patios o aparcamiento en superficie'); ?></li>
+						<li>- <?php echo $this->translate('4,5 m de carreteras'); ?></li>
+						<li>- <?php echo $this->translate('8 m de superficies construidas permeables.'); ?></li>
+					</ul>
+				</p>
+				<p><?php echo $this->translate('Para suelos previamente desarrollados: proteger o restaurar el 50% de la superficie excluyendo el edificio o el 20% del total, incluyendo el edificio.'); ?>
+				</p>
+				<p><?php echo $this->translate('SS C 5.2 Site development - Maximize open space.'); ?></p>
+				<p><?php echo $this->translate('Espacio abierto verde superior a un 25% de los requerimientos locales.'); ?></p>
+				<p><?php echo $this->translate('Superficie verde abierta mayor que la huella del edificio.'); ?></p>
+				<p><?php echo $this->translate('Superficie verde abierta del 20% para lugares sin requerimientos.'); ?></p>
+				<h3><?php echo $this->translate('CASBEE'); ?></h3>
+				<p><?php echo $this->translate('Q3 Outdoor environment on-site.'); ?>
+					<ul>
+						<li><?php echo $this->translate('1 Conservation and creation of biotope. Según los esfuerzos para conservación y creación de hábitat.'); ?></li>
+						<li><?php echo $this->translate('2 Townscape and landscape. Integración en el paisaje.'); ?></li>
+					</ul>
+				</p>
+			</div>
+			<div class="tab-pane" id="tab5">
+				<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+			</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

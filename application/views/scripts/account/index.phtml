@@ -1,0 +1,13 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Cuenta de usuario :: ')); 
+?>
+<div class="row-fluid">
+	<div class="span5">
+		<?php $this->successMessages($this->messages); ?>		
+		<?php echo $this->form_login; ?>
+		<hr>
+		<?php echo $this->form_register; ?>
+	</div><!-- .span5 -->
+	<div class="span7">	            
+	</div><!-- .span7 -->
+</div><!-- .row-fluid -->

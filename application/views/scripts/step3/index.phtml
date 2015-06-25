@@ -1,0 +1,202 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: ')); 
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span5">
+	   <p class="intro">
+            <?php 
+                echo $this->translate('Menú principal del tercer paso:'); 
+            ?>
+        </p>
+        <p class="intro">
+            <?php echo $this->translate('Datos básicos del proyecto.'); ?>
+        </p>
+	   <?php if($this->step1_f_1->nombre_del_proyecto != ''): ?>
+		  <h2 class="grey"><?php echo $this->escape($this->step1_f_1->nombre_del_proyecto); ?></h2>
+	   <?php endif; ?>	
+    	<table class="table table-condensed">
+        	<tr>
+            	<td>
+                    <?php echo $this->translate('Fase del proyecto'); ?>
+                </td>
+    			<td class="right">
+                    <?php echo $this->escape($this->step1_f_1->fase_del_proyecto); ?>
+                </td>
+    		</tr>
+            <tr>
+            	<td><?php echo $this->translate('Lugar'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->lugar); ?></td>
+    		</tr>
+            <tr>
+    			<td><?php echo $this->translate('Latitud'); ?></td>
+    			<td class="right"><?php echo $this->escape($this->step1_f_1->latitud); ?></td>
+    		</tr>
+            <tr>
+            	<td><?php echo $this->translate('Longitud'); ?></td>
+    			<td class="right"><?php echo $this->escape($this->step1_f_1->longitud); ?></td>
+    		</tr>
+            <tr>
+            	<td><?php echo $this->translate('Uso general'); ?></td>
+    			<td class="right"><?php echo $this->escape($this->step1_f_1->uso_principal_del_edificio); ?></td>
+    		</tr>
+            <tr>
+            	<td><?php echo $this->translate('Tipo de proyecto'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->tipo_de_proyecto); ?></td>
+            </tr>
+            <tr>
+            	<td><?php echo $this->translate('Breve descripción'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->breve_descripcion); ?></td>
+            </tr>
+            <tr>
+            	<td><?php echo $this->translate('Nº ocupantes'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->no_de_ocupantes); ?></td>
+            </tr>
+            <tr>
+    			<td><?php echo $this->translate('Superficie de parcela'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->superficie_de_parcela); ?></td>
+            </tr>
+            <tr>
+    			<td><?php echo $this->translate('Superficie ocupada'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->superficie_ocupada); ?></td>
+            </tr>
+            <tr>
+    			<td><?php echo $this->translate('Superficie edificada'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->superficie_edificada); ?></td>
+            </tr>
+            <tr>
+    			<td><?php echo $this->translate('Volumen edificado'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->volumen_edificado); ?></td>
+            </tr>
+            <tr>
+    			<td><?php echo $this->translate('Superficie cubierta'); ?></td>
+                <td class="right"><?php echo $this->escape($this->step1_f_1->superficie_cubierta); ?></td>
+            </tr>
+    	</table>
+	   <hr>   
+        <?php echo $this->partial('partials/_graph_points.phtml', array(
+    'data' => $this->data, 'l_photo' => $this->l_photo, 'step5' => false )); ?>
+	   <div class="clr"></div>
+	   <hr>
+	   <?php echo $this->partial('partials/_project_footer.phtml'); ?>		
+	</div><!-- .span5 -->
+	<div class="span7">
+		<section>
+            		<p class="intro">
+                        <?php echo $this->translate('Matriz de fichas.'); ?>
+                    </p>
+                	<ul>
+                    	<li class="sinempezar"><?php echo $this->translate('Ficha sin empezar'); ?></li>
+                    	<li class="incomplete"><?php echo $this->translate('Ficha incompleta'); ?></li>
+                    	<li class="complete"><?php echo $this->translate('Ficha completa'); ?></li>
+                    </ul>
+                    <table class="table-bordered datos">
+                    	<thead>
+          				<tr>
+           					<th><?php echo $this->translate('Entorno'); ?></th>
+           					<th><?php echo $this->translate('Materiales'); ?></th>
+            				<th><?php echo $this->translate('Diseño'); ?></th>
+            				<th><?php echo $this->translate('Agua'); ?></th>
+                            <th><?php echo $this->translate('Energía'); ?></th>            				
+         				</tr>
+        				</thead>
+                        <tbody>                            
+                            <tr>
+                                <td>
+                                    <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_r.png'; ?>" alt="<?php echo $this->translate('Entorno'); ?>" width="30" height="">
+                                </td>
+                                <td>
+                                    <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_m.png'; ?>" alt="<?php echo $this->translate('Materiales'); ?>" width="30" height="">
+                                </td>
+                                <td>
+                                    <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_d.png'; ?>" alt="<?php echo $this->translate('Diseño'); ?>" width="30" height="">
+                                </td>
+                                <td>
+                                    <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_a.png'; ?>" alt="<?php echo $this->translate('Agua'); ?>" alt="<?php echo $this->translate('Agua'); ?>" width="30" height="">
+                                </td>
+                                <td>
+                                    <img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'icon_e.png'; ?>" alt="<?php echo $this->translate('Energía'); ?>" alt="<?php echo $this->translate('Energía'); ?>" width="30" height="">
+                                </td>
+                            </tr>                             
+	  						<tr>
+	    						<td class="<?php echo $this->re1class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre1', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('r1') . ': ' . $this->translate('Compacidad y complejidad  edificatoria.'); ?>"><?php echo $this->translate('r1'); ?></a></h5><p><?php echo $this->translate('Compacidad y complejidad  edificatoria.'); ?></p></td>
+	    						<td class="<?php echo $this->bc1class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc1', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('m1') . ': ' . $this->translate('Recursos. Ciclo de vida de los materiales.'); ?>"><?php echo $this->translate('m1'); ?></a></h5><p><?php echo $this->translate('Recursos. Ciclo de vida de los materiales.'); ?></p></td>
+                                <td class="<?php echo $this->bl1class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbl1', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('d1') . ': ' . $this->translate('Confort higrotérmico.'); ?>"><?php echo $this->translate('d1'); ?></a></h5><p><?php echo $this->translate('Confort higrotérmico.'); ?></p></td>
+                            	<td class="<?php echo $this->ga1class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editga1', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('a1') . ': ' . $this->translate('Consumo de agua potable (cantidad).'); ?>"><?php echo $this->translate('a1'); ?></a></h5><p><?php echo $this->translate('Consumo de agua potable (cantidad).'); ?></p></td>                            	
+                            	<td class="<?php echo $this->ge1class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editge1', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('e1') . ': ' . $this->translate('Energías renovables in-situ. Emisiones de CO2eq.'); ?>"><?php echo $this->translate('e1'); ?></a></h5><p><?php echo $this->translate('Energías renovables in-situ. Emisiones de CO2eq.'); ?></p></td>                            
+							</tr>
+							<tr>
+    						<td class="<?php echo $this->re2class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre2', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('r2') . ': ' . $this->translate('Suelo desarrollado.'); ?>"><?php echo $this->translate('r2'); ?></a></h5><p><?php echo $this->translate('Suelo desarrollado.'); ?></p></td>
+                            <td class="<?php echo $this->bc2class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc2', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('m2') . ': ' . $this->translate('Recursos. Origen de los materiales.'); ?>"><?php echo $this->translate('m2'); ?></a></h5><p><?php echo $this->translate('Recursos. Origen de los materiales.'); ?></p></td>
+                            <td class="<?php echo $this->bl2class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbl2', 'project_id' => $this->project_id), 'step3Route'); ?>" title="<?php echo $this->translate('d2') . ': ' . $this->translate('Calidad de la luminación, acceso solar, vistas, ruido.'); ?>"><?php echo $this->translate('d2'); ?></a></h5><p><?php echo $this->translate('Calidad de la iluminación, acceso solar, vistas, ruido.'); ?></p></td>
+                            <td class="<?php echo $this->ga2class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editga2', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('a2'); ?></a></h5><p><?php echo $this->translate('Control del agua de suministro. (calidad del agua).'); ?></p></td>
+                            <td class="<?php echo $this->ge2class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editge2', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('e2'); ?></a></h5><p><?php echo $this->translate('Tecnologías para la reducción de emisiones de carbono.'); ?></p></td>
+						</tr>
+                        <tr>
+    						<td class="<?php echo $this->re3class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre3', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r3'); ?></a></h5><p><?php echo $this->translate('Cargas de escorrentía y erosión del suelo.'); ?></p></td>
+                            <td class="<?php echo $this->bc3class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc3', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m3'); ?></a></h5><p><?php echo $this->translate('Recursos de la cuna a la puerta. Transporte a obra.'); ?></p></td>
+                            <td class="<?php echo $this->bl3class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbl3', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('d3'); ?></a></h5><p><?php echo $this->translate('Calidad del aire. Ventilación. Control.'); ?></p></td>
+                            <td class="<?php echo $this->ga3class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array("controller" =>"step3", "action"=>"editga3", "project_id" => $this->project_id), "step3Route")?>" title=""><?php echo $this->translate('a3'); ?></a></h5><p><?php echo $this->translate('Cargas de aguas residuales (cantidad).'); ?></p></td>
+                            <td class="<?php echo $this->ge3class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editge3', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('e3'); ?></a></h5><p><?php echo $this->translate('Control en uso de la energía. Información. Monitorización. Mantenimiento.'); ?></p></td>
+						</tr>
+                        <tr>
+    						<td class="<?php echo $this->re4class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre4', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r4'); ?></a></h5><p><?php echo $this->translate('Biodiversidad y hábitat en el proyecto.'); ?></p></td>
+                            <td class="<?php echo $this->bc4class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc4', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m4'); ?></a></h5><p><?php echo $this->translate('Recursos. Materiales con certificación.'); ?></p></td>
+                            <td class="<?php echo $this->bl4class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbl4', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('d4'); ?></a></h5><p><?php echo $this->translate('Energía en uso. Térmicos.'); ?></p></td>
+                            <td class="<?php echo $this->ga4class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editga4', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('a4'); ?></a></h5><p><?php echo $this->translate('Control del agua evacuada.'); ?></p></td>                          
+                            <td class="<?php echo $this->ge4class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editge4', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('e4'); ?></a></h5><p><?php echo $this->translate('Otras Emisiones.'); ?></p></td>
+						</tr>
+                        <tr>
+    						<td class="<?php echo $this->re5class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre5', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r5'); ?></a></h5><p><?php echo $this->translate('Dotaciones y accesibilidad para bicicletas, peatones y coches.'); ?></p></td>
+                            <td class="<?php echo $this->bc5class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc5', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m5'); ?></a></h5><p><?php echo $this->translate('Equipos refrigerantes. Evitar la emisión de gases que perjudiquen la capa de ozono.'); ?></p></td>                            
+                            <td class="<?php echo $this->bl5class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbl5', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('d5'); ?></a></h5><p><?php echo $this->translate('Energía en uso. Otros.'); ?></p></td>
+                            <td class="no-border">&nbsp;</td>
+                            <td></td>
+						</tr>
+						<tr>
+    						<td class="<?php echo $this->re6class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre6', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r6'); ?></a></h5><p><?php echo $this->translate('Clima local y efecto isla de calor.'); ?></p></td>
+                            <td class="<?php echo $this->bc6class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc6', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m6'); ?></a></h5><p><?php echo $this->translate('Compuestos Orgánicos Volátiles en uso. Tasa de emisión.'); ?></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+						</tr>
+						<tr>
+    						<td class="<?php echo $this->re7class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre7', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r7'); ?></a></h5><p><?php echo $this->translate('Calidad del aire. Emisiones locales.'); ?></p></td>
+                            <td class="<?php echo $this->bc7class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc7', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m7'); ?></a></h5><p><?php echo $this->translate('Control en obra. Gestión de residuos.'); ?></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+						</tr>
+						<tr>
+    						<td class="<?php echo $this->re8class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre8', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r8'); ?></a></h5><p><?php echo $this->translate('Ambiente local. Otras emisiones. Luz. Ruido, vibraciones.'); ?></p></td>
+                            <td class="<?php echo $this->bc8class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc8', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m8'); ?></a></h5><p><?php echo $this->translate('Control en obra. Calidad del aire, energía agua materiales.'); ?></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+						</tr>
+						<tr>
+    						<td class="<?php echo $this->re9class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre9', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r9'); ?></a></h5><p><?php echo $this->translate('Radiación no ionizante. Campos electromagnéticos.'); ?></p></td>
+                            <td class="<?php echo $this->bc9class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc9', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m9'); ?></a></h5><p><?php echo $this->translate('Contratación responsable. construcción.'); ?></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+						</tr>
+						<tr>
+    						<td class="<?php echo $this->re10class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre10', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r10'); ?></a></h5><p><?php echo $this->translate('Radiación ionizante. Gas radón.'); ?></p></td>
+                            <td class="<?php echo $this->bc10class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editbc10', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('m10'); ?></a></h5><p><?php echo $this->translate('Vida útil y fin de vida de los materiales.'); ?></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+						</tr>
+						<tr>
+    						<td class="<?php echo $this->re11class; ?>"><h5 class="mp"><a href="<?php echo $this->url(array('controller' => 'step3', 'action' => 'editre11', 'project_id' => $this->project_id), 'step3Route'); ?>" title=""><?php echo $this->translate('r11'); ?></a></h5><p><?php echo $this->translate('Espacio para reciclar basuras y compostaje.');?></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+						</tr>
+						</tbody>
+  					</table>
+                </section>	
+	</div><!-- .span7 -->
+</div><!-- .row-fluid -->

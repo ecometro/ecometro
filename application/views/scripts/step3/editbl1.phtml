@@ -1,0 +1,115 @@
+<?php
+	$this->headTitle()->prepend($this->translate('Paso 3 :: D1 :: ')); 
+?>
+<?php 
+		$myNamespace = new Zend_Session_Namespace('myNamespace');    	
+    	$myNamespace->{'data_' . $this->project_id . 'bl1'} = $this->valueOfEachField;
+    	$myNamespace->{'comments_' . $this->project_id . 'bl1'} = $this->comments;
+?>
+<?php echo $this->partial('partials/_project_menu.phtml', array('project_id' => $this->project_id, 'step' => 3)); ?>
+<div class="row-fluid">
+	<div class="span12">
+		<p class="intro">
+            <?php echo $this->translate('Ve rellenando las fichas. Recuerda que puedes desmarcar los indicadores que no procedan, pinchando sobre la "X".'); ?>
+		</p>		
+		<div class="mp">
+			<h2><span class="big"><?php echo $this->translate('d1'); ?></span> <?php echo $this->translate('Confort higrotérmico.'); ?> <span></span></h2>
+		</div>
+		<div class="descripcion">
+			<p><strong><?php echo $this->translate('Descripción:'); ?></strong></p>
+			<p><?php echo $this->translate('Garantizar el confort en el interior del edificio.'); ?></p>
+		</div>
+        <hr>
+	</div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<?php if($this->messages || $this->errors): ?>
+	<div class="row-fluid">	
+		<div class="span12">
+			<?php $this->successMessages($this->messages); ?>	           
+			<?php $this->errorMessages($this->errors); ?>
+		</div>
+	<div><!-- .row-fluid -->
+<?php endif; ?>
+<div class="row-fluid">
+	<div class="span5 content">
+		<p class="titulo"><?php echo $this->translate('Recuerda los siguientes datos:'); ?></p>
+            <ul>
+            <?php foreach ($this->rememberFieldsData AS $key => $value): ?>
+                <li><span class="titulo"><?php echo $key; ?></span>. <?php echo $value[0]; ?> <strong><?php echo $value[1]; ?></strong> <strong><?php echo $value[2]; ?></strong></li>
+            <?php endforeach; ?>
+            <ul>
+	</div>
+	<div class="span7"></div><!-- .span12 -->
+</div><!-- .row-fluid -->
+<div class="row-fluid">
+	<div class="span9">
+		<div class="span7">			
+            <?php echo $this->form_step3_bl_1; ?>
+		</div><!-- .span7 -->            
+		<div class="span5">			
+            <?php echo $this->partial('partials/_form_grades.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'fieldsAplicable' => $this->fieldsAplicable, 'comments' => $this->comments, 'vectorPoints' => $this->vectorPoints)); ?>          
+		</div>		
+	</div><!-- .span9 -->            
+    <div class="span3 final">
+        <?php echo $this->partial('partials/_form_results.phtml', array('nrColumnsTotal' => $this->nrColumnsTotal, 'weightingFactor' => $this->weightingFactor, 'maximumPoints' => $this->maximumPoints, 'vectorPoints' => $this->vectorPoints, 'valueOfEachField' => $this->valueOfEachField, 'total_max' => $this->total_max, 'total_pct' => $this->total_pct)); ?>
+    </div><!-- .span3 -->            
+    <div class="clr"></div>
+    <hr>
+    <div class="tabbable">
+	<?php echo $this->partial('partials/_form_footer_menu.phtml'); ?>
+		<div class="tab-content">
+			    <div class="tab-pane active" id="tab1">	
+			    	<p><?php echo $this->translate('Climate consultant'); ?></p>		    
+			    </div>
+			    <div class="tab-pane" id="tab2">			    	
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    </div>
+				<div class="tab-pane" id="tab4">
+			      	<h3><?php echo $this->translate('BREEAM'); ?></h3>
+					<p><?php echo $this->translate('Hea 10. Thermal comfort.'); ?></p>
+					<p><?php echo $this->translate('Modelado térmico con software acorde con los requerimientos CIBSE.'); ?></p>
+					<p><?php echo $this->translate('Hea 11. Thermal zoning. '); ?></p>
+					<p><?php echo $this->translate('Sistema de calefacción y aire acondicionado con control del usuario por zonas. La zonificación permite el control para áreas para cada perímetro de 7m de paredes exteriores y zonas centrales (a más de 7m).'); ?></p>
+					<h3><?php echo $this->translate('LEED'); ?></h3>
+					<p><?php echo $this->translate('IEQ 6.2 Controllability of systems - thermal comfort. Capacidad de control de confort para el 50% de los ocupantes y estancias.'); ?></p>
+					<p><?php echo $this->translate('IEQ 7.1 Thermal comfort - design. Sistemas de ventilación y acondicionamiento térmico según AShRAE (o ISO 7730)'); ?></p>
+					<p><?php echo $this->translate('IEQ 7.2 Thermal comfort - verification. Monitorización y encuesta de satisfacción (no aplicable en residencial)'); ?></p>
+					<h3><?php echo $this->translate('CASBEE'); ?></h3>
+					<p><?php echo $this->translate('Q1 Indoor environment.'); ?></p>
+					<p><?php echo $this->translate('2. Thermal comfort.'); ?></p>
+					<p><?php echo $this->translate('2.1 Room temperature control.'); ?>
+						<ul>
+							<li><?php echo $this->translate('2.1.1 Room temperature. Apartamentos: Desde alcanzar temperatura de verano de 20º en invierno y 28º en verano, hasta 22-24º en invierno a 24-26º en verano.'); ?></li>
+							<li><?php echo $this->translate('2.1.2 Variable loads and following-up control. No aplicable en apartamentos.'); ?></li>
+							<li><?php echo $this->translate('2.1.3 Perimeter performance. Según esfuerzos para evitar infiltraciones de calor hacia el interior (aislamiento)'); ?></li>
+							<li><?php echo $this->translate('2.1.4 Zoned control. No aplicable en apartamentos.'); ?></li>
+							<li><?php echo $this->translate('2.1.5 Temperature and humidity control. Según esquemas de control de temperatura y humedad. 2.1.6 Individual control. Controles de temperatura por habitaciones.'); ?></li>
+							<li><?php echo $this->translate('2.1.7 Allowance for after-hours air conditioning. No aplicable apartamentos.'); ?></li>
+							<li><?php echo $this->translate('2.1.8 Monitoring systems. No aplicable residencial.'); ?></li>
+						</ul>
+					</p>
+					<p>
+					<?php echo $this->translate('2.2 Humidity control. En edificio: Sistema de humidificación y deshumidificación para mantener la humedad desde 50% en verano y 40% en invierno, hasta 45-55%. En viviendas: Estrategias para evitar condensaciones y sistemas de control de humedad.'); ?>
+					</p>
+					<p>
+					<?php echo $this->translate('2.3 Type of air conditioning system. El sistema de acondicionamiento considera la distribución vertical de la temperatura y velocidad del aire.'); ?>
+					</p>
+					<h3><?php echo $this->translate('HQE'); ?></h3>
+					<?php echo $this->translate('F3 CONFORT. Cible 8: Confort hygrothermique.'); ?>
+					<h3><?php echo $this->translate('BNB') ?></h3>
+					<p><?php echo $this->translate('3 SOCIOCULTURAL AND FUNCTIONAL QUALITY.'); ?></p>
+					<p><?php echo $this->translate('3.1 Health, comfort and user satisfaction.'); ?>
+						<ul>
+							<li><?php echo $this->translate('3.1.1 Thermal comfort in winter.'); ?></li>
+							<li><?php echo $this->translate('3.1.2 Thermal comfort in summer.'); ?></li>
+						</ul>
+					</p>
+				</div>
+				<div class="tab-pane" id="tab5">
+					<p><a href="http://ecometro.org/forums/" title="http://ecometro.org/forums/" target="_blank">http://ecometro.org/forums/</a></p>			      	
+				</div>
+		</div>
+	</div><!-- .tabbable -->
+</div><!-- .row-fluid -->
+<script type="text/javascript" src="<?php echo $this->serverUrl() . '/skins/ecometro/js/step3/step3functions.js'; ?>"></script>

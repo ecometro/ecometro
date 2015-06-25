@@ -1,0 +1,19 @@
+<?php
+$email = <<< email
+Hello {$account->username},
+
+Tu cuenta del Ecómetro ha sido creada! Para finalizar el proceso 
+de registro, haga click en el enlace de abajo para confirmar su correo
+electrónico.
+
+{$baseurl}/account/confirm/key/{$account->recovery}
+
+Una vez confirmada, podrá acceder a todas las características del Ecómetro!
+
+Gracias,
+Equipo Ecómetro
+
+Preguntas? Contactanos a hola@ecometro.org
+{$baseurl}
+email;
+?>

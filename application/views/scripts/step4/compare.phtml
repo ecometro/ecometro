@@ -1,0 +1,107 @@
+<!-- Sección B -->
+<div class="row-fluid">    
+    <div class="span12">
+        <div class="mp" id="acv-fase-proyecto">
+            <h2><?php echo $this->translate('Comparar información medioambiental de productos'); ?></h2>
+        </div>    
+        <p><?php echo $this->translate('Para comparar el impacto entre dos productos, selecciona a continuación en la tabla "Capítulo" y "Producto" de cada uno de los materiales que quieras comparar. Sólo se pueden comparar productos del mismo capítulo. A continuación pulsa "Mostrar gráfica comparativa". Obtendrás una gráfica con el balance en cada una de las categorías de impacto de los productos seleccionados. Puedes comparar un máximo de 2 productos.'); ?></p>        
+        <ul>
+            <li><?php echo $this->translate('- Para hacer el balance comparativo introduce la cantidad de Kg correspondiente por producto, excepto en el caso de los Hormigones, que tendrás que introducir la cantidad de m3. Las unidades se establecen por defecto.'); ?></li>
+            <li><?php echo $this->translate('- Hemos fijado la vida útil por producto en 50 años.'); ?></li>
+            <li><?php echo $this->translate('- Pulsa Borrar para comenzar de nuevo.'); ?></li>
+        </ul>
+        <hr class="hr-new">
+                        <div id="flash" class="etapa-success">&nbsp;</div>
+                        <div id="errors" class="etapa-error"></div>
+                        <table class="table-bordered etapas">
+                            <tr>
+                                <th scope="col" class="first">&nbsp;</th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Capítulo'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Familia de productos'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Producto'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Cantidad'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Unidad'); ?></th>                          
+                                <th scope="col" class="claro"><?php echo $this->translate('Origen del producto'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Emplazamiento fabricante'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Distancia distribuidor obra (km)'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Tipo de transporte'); ?></th>
+                                <th scope="col" class="claro"><?php echo $this->translate('Vida útil producto (años)'); ?></th>
+                            </tr>
+                            <tr class="">
+                                <td class="column1">        
+                                    <span class="del-1">x</span>
+                                </td>
+                                <td class="editable">
+                                    <select name="familymaterials" class="familymaterials-1 arrow"></select>
+                                </td>
+                                <td class="editable">
+                                    <select name="familyproducts" class="familyproducts-1 arrow">
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <td class="editable">
+                                    <select name="products" class="products-1 arrow">
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <td class="editable"><input type="text" name="qty" size="10" class="qty-1 acvinput" value=""></td>
+                                <td><span class="unit-1">&nbsp;</span></td>
+                                <td class="editable">
+                                    <span class="productorigin-1">
+                                        <select name="productorigin" class="products-1 arrow">
+                                            <option></option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <td class="editable">
+                                    <span class="emplazamiento_fabricante-1">
+                                        <select name="emplazamiento_fabricante" class="products-1 arrow">
+                                            <option></option>
+                                        </select>
+                                    </span>
+                                </td>
+                                <td class="editable">
+                                    <span class="distancia-distribuidor-obra-1">
+                                        <input type="text" name="distancia-distribuidor-obra" size="10" class="qty-1 acvinput" value="">
+                                    </span>
+                                </td>
+                                <td class="editable">
+                                    <span class="transporttype-1">
+                                        <select name="transporttype" class="products-1 arrow">
+                                            <option></option>
+                                        </select>
+                                    </span></td>
+                                <td><span class="vida_util_producto-1">&nbsp;</span></td>
+                            </tr>
+                            <tr class="plus">
+                                <td class="border-right">&nbsp;</td>
+                                <td class="button-plus"><a class="insert-material" href="#" title="<?php echo $this->translate('Insertar material'); ?>">+</a></td>
+                                <td>&nbsp;</td>                
+                                <td>&nbsp;</td>                
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>                                    
+                        <span class="not-applicable"><?php echo $this->translate('Pinche sobre la X si no procede.'); ?></span>
+                        <span class="not-applicable"><?php echo $this->translate('Pinche sobre el + para añadir una fila.'); ?></span>                                         
+    </div>
+    <div class="span12">
+        <div class="span5">
+            <a class="boton black izquierda" href="#" title="<?php echo $this->translate('Borrar datos'); ?>"> <?php echo $this->translate('Borrar datos'); ?></a>
+            <a class="boton black izquierda results" href="#" title="<?php echo $this->translate('Mostrar gráfica comparativa'); ?>"><?php echo $this->translate('Mostrar gráfica comparativa'); ?></a>
+        </div><!-- .span4 -->  
+        <div class="span7">
+            <div id="placeholder" style="width:800px; height:300px;">Gráfico</div><div class="legends"></div>
+        </div><!-- .span8 -->                          
+    </div>
+    <div class="span12">    
+        <a class="boton black izquierda" href="<?php echo $this->url(array('controller' => 'step4', 'action' => 'index', 'project_id' => $this->project_id), 'step4Route'); ?>" title="<?php echo $this->translate('Volver a menú de Análisis de ciclo de vida'); ?>"> <?php echo $this->translate('Volver a menú de Análisis de ciclo de vida'); ?></a>
+        <button class="boton red derecha" type="submit"><?php echo $this->translate('Guardar'); ?></button>
+        <div class="clr"></div>
+    </div>                      
+</div><!-- .row-fluid -->

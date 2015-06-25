@@ -1,0 +1,9 @@
+<div class="cookies" style="width: 100%; position: absolute; top:0; left: 0; background-color: #CD1E3B; color: #fff; z-index: 9999;">
+	<div class="left" style="width: 88%; float: left; margin: 1% 1% 0 1%;">
+		<p><strong><?php echo $this->translate('Uso de Cookies'); ?></strong></p>
+		<p><?php echo $this->translate('Utilizamos cookies propias y de terceros, para realizar el análisis de la navegación de los usuarios. Si continúas navegando, consideramos que aceptas su uso. Puedes cambiar la configuración u obtener'); ?> <a href="<?php echo $this->url(array('controller' => 'cookie', 'action' => 'index'), 'defaultRoute'); ?>" title="Política de Cookies" target="_blank" style="color: #fff; text-decoration: underline;"><?php echo $this->translate('más información aquí.'); ?></a></p>
+	</div>
+	<div class="right" style="width: 10%; float: right;">
+		<a href="" style="color: #fff;" class="cerrar-cookies" title="<?php echo $this->translate('Cerrar'); ?>">[x] <?php echo $this->translate('Cerrar'); ?></a>
+	</div>
+</div>	

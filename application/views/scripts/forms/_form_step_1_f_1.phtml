@@ -1,0 +1,75 @@
+<?php $view = Zend_Layout::getMvcInstance()->getView(); ?>
+<form class="<?php echo $this->element->getAttrib('class'); ?>" id="<?php echo $this->element->getAttrib('id'); ?>" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>" enctype="<?php echo $this->element->getAttrib('enctype'); ?>">
+	<fieldset>
+		<div class="control-group">
+			<div class="left"></div>
+			<div class="right">
+				<?php if($view->photo): ?>
+					<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . 'projects/' .  $view->photo; ?>" width="" height="" alt="">
+				<?php else: ?>
+					<img src="<?php echo $this->serverUrl() . Zend_Registry::get('config')->paths->frontend->images . '150x100.gif'; ?>" width="150" height="100" alt="">
+				<?php endif; ?>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->photo; ?>
+		</div>
+        <div class="control-group">
+      		<?php echo $this->element->nombre_del_proyecto; ?>
+        </div>
+         <div class="control-group">
+      		<?php echo $this->element->fase_del_proyecto; ?>
+        </div>
+		<hr>
+		<div class="control-group">
+			<?php echo $this->element->lugar; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->latitud; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->longitud; ?>
+		</div>
+		<hr>
+		<div class="control-group">
+			<?php echo $this->element->uso_principal_del_edificio; ?>			
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->tipo_de_proyecto; ?>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->breve_descripcion; ?>
+		</div>
+		<hr>
+		<div class="control-group">
+			<?php echo $this->element->no_de_ocupantes; ?><span class="m2">p</span>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->superficie_de_parcela; ?><span class="m2">m<sup>2</sup></span>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->superficie_ocupada; ?><span class="m2">m<sup>2</sup></span>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->superficie_edificada; ?><span class="m2">m<sup>2</sup></span>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->volumen_edificado; ?><span class="m2">m<sup>3</sup></span>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->superficie_cubierta; ?><span class="m2">m<sup>2</sup></span>
+			</div>
+		</div>
+		<div class="control-group">
+			<?php echo $this->element->csrfVerification; ?>
+		</div>	
+		<div class="controls">
+			<?php echo $this->element->submit; ?>
+		</div>
+	</fieldset>
+</form>

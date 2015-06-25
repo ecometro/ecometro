@@ -1,0 +1,12 @@
+<form class="form-horizontal login" id="lost" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<fieldset>
+		<legend><?php echo $this->translate('Escribe tu correo para iniciar el proceso de recuperación de contraseña.'); ?></legend>
+   		<div class="control-group">
+      		<?php echo $this->element->user_email_lost; ?>
+    	</div>     	      	    	       
+      <div class="controls">
+          <?php echo $this->element->csrfVerification; ?>
+        	<?php echo $this->element->user_submit_lost; ?>        
+     	</div>
+	</fieldset>			
+</form>

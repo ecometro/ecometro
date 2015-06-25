@@ -1,0 +1,27 @@
+<form class="form-horizontal login" id="register" action="<?php echo $this->element->getAction(); ?>" method="<?php echo $this->element->getMethod(); ?>">
+	<fieldset>
+      <legend><?php echo $this->translate('Registrarse (nuevos usuarios). Necesario para iniciar sesión'); ?></legend>
+      <div class="control-group">
+        <?php echo $this->element->user_register; ?>
+      </div>
+      <div class="control-group">
+        <?php echo $this->element->user_email_register; ?>
+      </div>
+      <div class="control-group">
+        <?php echo $this->element->user_pswd_register; ?>
+      </div>
+      <div class="control-group">
+        <?php echo $this->element->user_rp_pswd_register; ?>
+      </div>  
+      <div class="control-group condiciones-legales">              
+        <?php echo $this->partial('partials/_condiciones_legales.phtml'); ?>
+      </div>                			            
+      <div class="controls">
+        <p class="help-block">                	
+          <?php echo $this->element->user_acpt_register; ?>
+        </p>
+        <?php echo $this->element->csrfVerificationRegister; ?>
+        <?php echo $this->element->user_submit_register; ?>
+      </div>
+	</fieldset>
+</form>
